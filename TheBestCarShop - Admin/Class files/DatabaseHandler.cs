@@ -4,9 +4,9 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Net.Http.Headers;
-using System.Windows.Forms;
 using Dapper;
-using TheBestCarShop.Class_files;
+using TheBestCarShop___Admin;
+
 
 namespace TheBestCarShop
 {
@@ -310,7 +310,7 @@ namespace TheBestCarShop
             }
             else
             {
-                form_SystemMessage failure = new form_SystemMessage("Sorry.", "We couldn't find this item.");
+                //changed                
             }
             return affected;
         }
@@ -338,33 +338,7 @@ namespace TheBestCarShop
             }
             return affected;
         }
-        public List<OrderDetail> GetKartList(int shoppingKartID)
-        {
-            string query =  "SELECT * " +
-                            "FROM OrderDetails " +
-                            "WHERE OrderID = @kartID";
-            
-            List<OrderDetail> shoppingKartList = new List<OrderDetail>();
-            try
-            {
-                SqlConnection connection = new SqlConnection(this.connectionString);
-
-                IEnumerable<OrderDetail> queryResult = 
-                    connection.Query<OrderDetail>(query, new
-                                    {
-                                        kartID = shoppingKartID
-                                    });
-                shoppingKartList = queryResult.ToList<OrderDetail>();
-                
-                connection.Close();
-            }
-            catch(Exception DatabaseHandlerException)
-            {
-                Console.WriteLine(DatabaseHandlerException.Message);
-            }
-
-            return shoppingKartList;
-        }
+        
         public int UpdateQuantityInKart(int shoppingKartID, int productID, int newQuantity)
         {
             string update = "UPDATE OrderDetails " +
@@ -523,11 +497,11 @@ namespace TheBestCarShop
 
             if (affected == 1)
             {
-                form_SystemMessage success = new form_SystemMessage("Success!", $"Data has been updated!");
+                //changed
             }
             else
             {
-                form_SystemMessage failure = new form_SystemMessage("Failure!", "Something went wrong.");
+                //changed
             }
             
             connection.Close();
@@ -553,38 +527,7 @@ namespace TheBestCarShop
         }
         
         //OTHER
-        public List<ShoppingHistoryPosition> GetCustomerHistory(int ClientID)
-        {
-            string select = 
-                "SELECT ReceivedDate, SentDate, DeliveredDate, " +
-                "Products.Name as Name, OrderDetails.Price as Price, OrderDetails.Quantity as Quantity " +
-                "FROM Orders " +
-                    "INNER JOIN " +
-                    "OrderDetails " +
-                        "ON Orders.OrderID = OrderDetails.OrderID " +
-                    "INNER JOIN " +
-                    "Products " +
-                    "ON OrderDetails.ProductID = Products.ProductID " +
-                "WHERE IsPlaced = 'true' AND CustomerID = @clientID ";
-            List<ShoppingHistoryPosition> shoppingHistory = new List<ShoppingHistoryPosition>();
-            
-            try
-            {
-                SqlConnection connection = new SqlConnection(this.connectionString);
-                shoppingHistory = connection
-                    .Query<ShoppingHistoryPosition>(select, new
-                                                    { 
-                                                        clientID = ClientID 
-                                                    })
-                    .ToList<ShoppingHistoryPosition>();
-                connection.Close();
-            }
-            catch(Exception DatabaseHandlerException)
-            {
-                Console.WriteLine(DatabaseHandlerException.Message);
-            }
-            return shoppingHistory;
-        }
+        
     }
 }
 
