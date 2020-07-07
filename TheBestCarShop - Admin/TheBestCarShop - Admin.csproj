@@ -79,7 +79,7 @@
     <Compile Include="TODO\ProductStatsWindow.xaml.cs">
       <DependentUpon>ProductStatsWindow.xaml</DependentUpon>
     </Compile>
-    <Page Include="IN PROGRESS\StartingWindow.xaml">
+    <Page Include="Windows\StartingWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -90,7 +90,7 @@
     <Compile Include="Class files\Client.cs" />
     <Compile Include="Class files\DatabaseHandler.cs" />
     <Compile Include="Class files\Product.cs" />
-    <Compile Include="IN PROGRESS\StartingWindow.xaml.cs">
+    <Compile Include="Windows\StartingWindow.xaml.cs">
       <DependentUpon>StartingWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
@@ -151,10 +151,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Windows\" />
+    <Folder Include="IN_PROGRESS\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Icons\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Windows\logo_dark.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
