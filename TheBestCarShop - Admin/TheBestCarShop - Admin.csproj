@@ -70,7 +70,7 @@
     <Compile Include="TODO\ClientStatsWindow.xaml.cs">
       <DependentUpon>ClientStatsWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="TODO\LoggedInWindow.xaml.cs">
+    <Compile Include="IN_PROGRESS\LoggedInWindow.xaml.cs">
       <DependentUpon>LoggedInWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="TODO\ProductListWindow.xaml.cs">
@@ -110,7 +110,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="TODO\LoggedInWindow.xaml">
+    <Page Include="IN_PROGRESS\LoggedInWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -150,9 +150,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="IN_PROGRESS\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Resource Include="Icons\logo.png" />
   </ItemGroup>

@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace TheBestCarShop___Admin.TODO
+namespace TheBestCarShop___Admin
 {
     /// <summary>
     /// Interaction logic for ProductStatsWindow.xaml

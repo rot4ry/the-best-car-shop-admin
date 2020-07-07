@@ -12,7 +12,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using TheBestCarShop___Admin.TODO;  //remove?
 
 namespace TheBestCarShop___Admin
 {
@@ -30,9 +29,6 @@ namespace TheBestCarShop___Admin
         
         private void loginButton_Click(object sender, RoutedEventArgs e)
         {
-            //LOGIN LOGIC
-            //DB CONNECTION, CHECKING VALIDATION
-
             string username = @usernameTextBox.Text;
             string password = @actualPasswordBox.Password;
             
