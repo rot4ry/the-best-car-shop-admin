@@ -27,25 +27,30 @@ namespace TheBestCarShop___Admin
         {
             InitializeComponent();
         }
-            
-
+        
         private void loginButton_Click(object sender, RoutedEventArgs e)
         {
             //LOGIN LOGIC
             //DB CONNECTION, CHECKING VALIDATION
-            //if(login && password !ok)
-            //infoLabel.Content = "alert text"
-            string username = usernameTextBox.Text;
-            string password = actualPasswordBox.Password;
+
+            string username = @usernameTextBox.Text;
+            string password = @actualPasswordBox.Password;
             
-            
+            bool validationResult = 
+                databaseHandler.CheckLoginData(username, password);
 
-
-
-            //if(login && password ok) 
-            LoggedInWindow loggedInWindow = new LoggedInWindow();
-            loggedInWindow.Show();
-            this.Close();
+            if (validationResult)
+            {
+                LoggedInWindow loggedInWindow = new LoggedInWindow();
+                loggedInWindow.Show();
+                this.Close();
+            }
+            else
+            {
+                infoLabel.Content = "                    Failed to log in.     \n" +
+                                    "Please check your login and password.";
+                infoLabel.Visibility = Visibility.Visible;
+            }
         }
 
         private void clearFieldsButton_Click(object sender, RoutedEventArgs e)
@@ -53,6 +58,7 @@ namespace TheBestCarShop___Admin
             usernameTextBox.Text = "Login";
             passwordTextBox.Text = "Password";
             passwordTextBox.Visibility = Visibility.Visible;
+            infoLabel.Visibility = Visibility.Hidden;
             actualPasswordBox.Password = "";
         }
 

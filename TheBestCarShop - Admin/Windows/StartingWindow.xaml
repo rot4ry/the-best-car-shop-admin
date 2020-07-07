@@ -39,7 +39,8 @@
                 FontWeight="Bold"
                 BorderBrush="OrangeRed"
                 BorderThickness="2" 
-                Click="loginButton_Click"/>
+                Click="loginButton_Click" 
+                IsTabStop="False"/>
 
         <Button x:Name="clearFieldsButton" 
                 Content="Clear fields" 
@@ -56,7 +57,8 @@
                 FontWeight="Bold"
                 BorderBrush="OrangeRed"
                 BorderThickness="2" 
-                Click="clearFieldsButton_Click"/>
+                Click="clearFieldsButton_Click" 
+                IsTabStop="False"/>
 
         <!--TEXTBOXES-->
         <TextBox x:Name="usernameTextBox"
@@ -72,7 +74,10 @@
                  VerticalAlignment="Top"
                  Background="DarkCyan"
                  Foreground="Azure"
-                 BorderBrush="LightGray" GotFocus="usernameTextBox_GotFocus" LostFocus="usernameTextBox_LostFocus"/>
+                 BorderBrush="LightGray"
+                 GotFocus="usernameTextBox_GotFocus" 
+                 LostFocus="usernameTextBox_LostFocus" 
+                 IsTabStop="False"/>
 
         <PasswordBox x:Name="actualPasswordBox"
                  Grid.Column="1" 
@@ -85,7 +90,8 @@
                  BorderBrush="LightGray"
                  HorizontalContentAlignment="Center"
                  VerticalContentAlignment="Center"
-                 LostFocus="actualPasswordBox_LostFocus"/>
+                 LostFocus="actualPasswordBox_LostFocus" 
+                 IsTabStop="False"/>
 
         <TextBox x:Name="passwordTextBox"
                  Grid.Column="1" 
@@ -102,7 +108,8 @@
                  Foreground="Azure"
                  BorderBrush="LightGray" 
                  RenderTransformOrigin="0.5,0.5" 
-                 GotFocus="passwordTextBox_GotFocus"/>
+                 GotFocus="passwordTextBox_GotFocus" 
+                 IsTabStop="False"/>
 
 
         <!--OTHER-->
@@ -121,23 +128,24 @@
         <Image x:Name="logoImage"
                Grid.Column="1" 
                Height="138" 
-               Margin="43,27,43,0" 
+               Margin="43,27,0,0" 
                VerticalAlignment="Top" 
                Source="/TheBestCarShop - Admin;component/Icons/logo_dark.png" 
-               Stretch="Fill"/>
+               Stretch="Fill" 
+               HorizontalAlignment="Left" 
+               Width="176"/>
 
-        <Label x:Name="infoLabel" 
-               Content="alert info" 
+        <Label x:Name="infoLabel"
                Grid.Column="1" 
-               HorizontalAlignment="Stretch" 
-               Margin="10,175,10,5" 
-               VerticalAlignment="Stretch" 
-               Height="Auto" 
-               Width="Auto"
+               HorizontalAlignment="Center" 
+               Margin="10,0,10,122" 
+               VerticalAlignment="Bottom" 
+               Height="43" 
+               Width="242"
+               VerticalContentAlignment="Center"
                HorizontalContentAlignment="Center"
-               VerticalContentAlignment="Bottom"
                FontSize="11"
-               Foreground="Ivory"
-               Visibility="Hidden"/>
+               Foreground="Ivory" 
+               Grid.RowSpan="2"/>
     </Grid>
 </Window>

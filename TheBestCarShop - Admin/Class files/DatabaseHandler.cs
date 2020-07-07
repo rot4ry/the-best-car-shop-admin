@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Net.Http.Headers;
+using System.Windows.Controls;
 using Dapper;
 
 namespace TheBestCarShop___Admin
@@ -142,9 +143,32 @@ namespace TheBestCarShop___Admin
             
             return affected;
         }
+
         public bool CheckLoginData(string username, string password)
         {
-            //to update
+            string select = "SELECT * FROM Clients " +
+                            "WHERE Username = @username " +
+                            "AND Password = @password ";
+
+            Client requestedClient = new Client();
+
+            try
+            {
+                SqlConnection connection = new SqlConnection(this.connectionString);
+                requestedClient = connection.Query<Client>(select,
+                                        new
+                                        {
+                                            username = username,
+                                            password = password
+                                        }).FirstOrDefault();
+                if (requestedClient != null)
+                    return true;
+            }
+            catch(Exception DatabaseHandlerException)
+            {
+                Console.WriteLine(DatabaseHandlerException.Message);
+            }
+            return false;
         }
 
         public Client GetClientDetails(string username)
