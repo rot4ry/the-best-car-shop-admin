@@ -12,23 +12,41 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TheBestCarShop___Admin.TODO;
 
 namespace TheBestCarShop___Admin
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for StartingWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class StartingWindow : Window
     {
-        public MainWindow()
+        public StartingWindow()
         {
             InitializeComponent();
+        }
+            
+
+        private void loginButton_Click(object sender, RoutedEventArgs e)
+        {
+            //LOGIN LOGIC
+            //DB CONNECTION, CHECKING VALIDATION
+            
+            LoggedInWindow loggedInWindow = new LoggedInWindow();
+            loggedInWindow.Show();
+            this.Close();
         }
 
         private void clearFieldsButton_Click(object sender, RoutedEventArgs e)
         {
             usernameTextBox.Text = "Login";
             passwordTextBox.Text = "Password";
+        }
+
+        private void passwordTextBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            //disable visibility, switch focus to actualPasswordTextBox
+            //when aPTB loses focus, it enables visibility if aPTB not changed
         }
     }
 }
