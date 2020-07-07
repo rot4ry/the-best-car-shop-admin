@@ -159,8 +159,5 @@
   <ItemGroup>
     <Resource Include="Icons\logo_dark.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Windows\logo_dark.png" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using TheBestCarShop___Admin.TODO;
+using TheBestCarShop___Admin.TODO;  //remove?
 
 namespace TheBestCarShop___Admin
 {
@@ -21,6 +21,8 @@ namespace TheBestCarShop___Admin
     /// </summary>
     public partial class StartingWindow : Window
     {
+        private DatabaseHandler databaseHandler = new DatabaseHandler();
+        
         public StartingWindow()
         {
             InitializeComponent();
@@ -31,7 +33,16 @@ namespace TheBestCarShop___Admin
         {
             //LOGIN LOGIC
             //DB CONNECTION, CHECKING VALIDATION
+            //if(login && password !ok)
+            //infoLabel.Content = "alert text"
+            string username = usernameTextBox.Text;
+            string password = actualPasswordBox.Password;
             
+            
+
+
+
+            //if(login && password ok) 
             LoggedInWindow loggedInWindow = new LoggedInWindow();
             loggedInWindow.Show();
             this.Close();
@@ -41,12 +52,34 @@ namespace TheBestCarShop___Admin
         {
             usernameTextBox.Text = "Login";
             passwordTextBox.Text = "Password";
+            passwordTextBox.Visibility = Visibility.Visible;
+            actualPasswordBox.Password = "";
         }
 
         private void passwordTextBox_GotFocus(object sender, RoutedEventArgs e)
         {
-            //disable visibility, switch focus to actualPasswordTextBox
-            //when aPTB loses focus, it enables visibility if aPTB not changed
+            passwordTextBox.Visibility = Visibility.Hidden;
+            actualPasswordBox.Focus();
+        }
+
+        private void actualPasswordBox_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if(actualPasswordBox.Password == "")
+            {
+                passwordTextBox.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void usernameTextBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            if(usernameTextBox.Text == "Login")
+                usernameTextBox.Clear();
+        }
+
+        private void usernameTextBox_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (usernameTextBox.Text == "")
+                usernameTextBox.Text = "Login";                
         }
     }
 }
