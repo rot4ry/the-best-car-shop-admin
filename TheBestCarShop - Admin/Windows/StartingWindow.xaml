@@ -130,7 +130,7 @@
                Height="138" 
                Margin="43,27,0,0" 
                VerticalAlignment="Top" 
-               Source="/TheBestCarShop - Admin;component/Icons/logo_dark.png" 
+               Source="logo_dark.png" 
                Stretch="Fill" 
                HorizontalAlignment="Left" 
                Width="176"/>
