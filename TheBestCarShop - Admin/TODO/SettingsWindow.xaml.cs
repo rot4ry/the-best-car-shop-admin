@@ -12,14 +12,14 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace TheBestCarShop___Admin
+namespace TheBestCarShop___Admin.TODO
 {
     /// <summary>
-    /// Interaction logic for AccountSettingsWindow.xaml
+    /// Interaction logic for SettingsWindow.xaml
     /// </summary>
-    public partial class AccountSettingsWindow : Window
+    public partial class SettingsWindow : Window
     {
-        public AccountSettingsWindow()
+        public SettingsWindow()
         {
             InitializeComponent();
         }

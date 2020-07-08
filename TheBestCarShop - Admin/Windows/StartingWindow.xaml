@@ -8,7 +8,8 @@
         Title="SG-Admin: Log in" 
         Height="552.6" 
         Width="404.333"
-        Background="Gray" WindowStartupLocation="CenterScreen">
+        Background="Gray" 
+        WindowStartupLocation="CenterScreen">
 
     <Grid Margin="10,0,2,1">
         <Grid.RowDefinitions>

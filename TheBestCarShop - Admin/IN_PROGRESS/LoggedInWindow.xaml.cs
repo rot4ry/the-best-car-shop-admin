@@ -31,50 +31,61 @@ namespace TheBestCarShop___Admin
         private void productsButton_Click(object sender, RoutedEventArgs e)
         {
             //show a list of products based on filters
+            //TODO
         }
 
         private void newProductButton_Click(object sender, RoutedEventArgs e)
         {
             //add a new product
+            //TODO
         }
 
         private void productStatsButton_Click(object sender, RoutedEventArgs e)
         {
             //show product statistics
+            //TODO
         }
 
-        
+
         //USERS BUTTONS
         private void viewAdminsButton_Click(object sender, RoutedEventArgs e)
         {
             //show administrators list
+            //TODO
         }
 
         private void viewUsersButton_Click(object sender, RoutedEventArgs e)
         {
             //show all normal users
+            //TODO
         }
 
         private void newAdminButton_Click(object sender, RoutedEventArgs e)
         {
             //add a new administrator
+            //TODO
         }
 
         private void clientStatsButton_Click(object sender, RoutedEventArgs e)
         {
             //show clients statistics
+            //TODO
         }
 
 
         //OTHER BUTTONS
         private void accountButton_Click(object sender, RoutedEventArgs e)
         {
-            //show account details
+            AccountSettingsWindow asw = new AccountSettingsWindow(_ACCOUNTOWNER);
+            this.Hide();
+            asw.ShowDialog();
+            this.Show();
         }
 
         private void settingsButton_Click(object sender, RoutedEventArgs e)
         {
             //show settings, change theme?
+            //TODO
         }
 
         private void logoutButton_Click(object sender, RoutedEventArgs e)

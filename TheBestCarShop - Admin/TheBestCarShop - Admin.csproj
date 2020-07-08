@@ -58,11 +58,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="TODO\AccountSettingsWindow.xaml.cs">
+    <Compile Include="IN_PROGRESS\AccountSettingsWindow.xaml.cs">
       <DependentUpon>AccountSettingsWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="TODO\CategoryStatsWindow.xaml.cs">
-      <DependentUpon>CategoryStatsWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="TODO\ClientListWindow.xaml.cs">
       <DependentUpon>ClientListWindow.xaml</DependentUpon>
@@ -79,6 +76,10 @@
     <Compile Include="TODO\ProductStatsWindow.xaml.cs">
       <DependentUpon>ProductStatsWindow.xaml</DependentUpon>
     </Compile>
+    <Page Include="TODO\SettingsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\StartingWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -90,15 +91,14 @@
     <Compile Include="Class files\Client.cs" />
     <Compile Include="Class files\DatabaseHandler.cs" />
     <Compile Include="Class files\Product.cs" />
+    <Compile Include="TODO\SettingsWindow.xaml.cs">
+      <DependentUpon>SettingsWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\StartingWindow.xaml.cs">
       <DependentUpon>StartingWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="TODO\AccountSettingsWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="TODO\CategoryStatsWindow.xaml">
+    <Page Include="IN_PROGRESS\AccountSettingsWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

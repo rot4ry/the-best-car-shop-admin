@@ -9,7 +9,8 @@
         Height="549" 
         Width="669"
         Background="Gray" 
-        ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
+        ResizeMode="CanMinimize" 
+        WindowStartupLocation="CenterScreen">
 
     <Grid>
         <Grid.ColumnDefinitions>
@@ -25,30 +26,35 @@
 
         <!--COSMETICS-->
         <Rectangle x:Name="leftRectangle"  
-                Fill="DarkSlateGray" 
-                Stroke="DarkSlateGray" 
-                Margin="-2,-2,1,-3" 
-                Grid.RowSpan="2"/>
+                    Fill="DarkSlateGray" 
+                    Stroke="DarkSlateGray" 
+                    Margin="-2,-2,1,-3" 
+                    Grid.RowSpan="2"/>
 
         <Rectangle x:Name="topRectangle"
-                Grid.Column="1" 
-                Fill="DimGray" 
-                Margin="0,-2,0,0" 
-                Stroke="DimGray" Height="92" VerticalAlignment="Top" Grid.RowSpan="2"/>
+                    Grid.Column="1" 
+                    Fill="DimGray" 
+                    Margin="0,-2,0,0" 
+                    Stroke="DimGray" 
+                    Height="92" 
+                    VerticalAlignment="Top" 
+                    Grid.RowSpan="2"/>
 
         <Image x:Name="logoImage" 
-                Margin="10,-1,10,0" 
-                Source="/TheBestCarShop - Admin;component/Icons/logo_darker.png" Height="99" VerticalAlignment="Top" Grid.RowSpan="2"/>
+                    Margin="10,-1,10,0" 
+                    Source="/TheBestCarShop - Admin;component/Icons/logo_darker.png" Height="99" VerticalAlignment="Top" Grid.RowSpan="2"/>
 
         <Label x:Name="welcomeLabel" 
-                Content="Welcome, administrator." 
-                Grid.Column="1" 
-                Margin="20,0,10,0"
-                HorizontalContentAlignment="Left"
-                VerticalContentAlignment="Center"
-                FontSize="28"
-                FontWeight="Light"
-                Foreground="Orange" Height="82" VerticalAlignment="Top"/>
+                    Content="Welcome, administrator." 
+                    Grid.Column="1" 
+                    Margin="20,0,10,0"
+                    HorizontalContentAlignment="Left"
+                    VerticalContentAlignment="Center"
+                    FontSize="28"
+                    FontWeight="Light"
+                    Foreground="Orange" 
+                    Height="82" 
+                    VerticalAlignment="Top"/>
 
 
         <!--BUTTONS-->
@@ -64,7 +70,8 @@
                 Foreground="OrangeRed"
                 BorderBrush="OrangeRed"
                 FontSize="14"
-                FontWeight="Bold" Click="accountButton_Click"/>
+                FontWeight="Bold" 
+                Click="accountButton_Click"/>
 
         <Button x:Name="settingsButton" 
                 Content="Settings" 
@@ -78,7 +85,8 @@
                 Foreground="OrangeRed"
                 BorderBrush="OrangeRed"
                 FontSize="14"
-                FontWeight="Bold" Click="settingsButton_Click"/>
+                FontWeight="Bold" 
+                Click="settingsButton_Click"/>
 
         <Button x:Name="logoutButton" 
                 Content="Log out" 
@@ -107,7 +115,8 @@
                   Margin="10,180,0,0" 
                   Grid.Row="1" 
                   VerticalAlignment="Top" 
-                  Width="438" Grid.Column="1">
+                  Width="438" 
+                  Grid.Column="1">
 
             <Grid Margin="10,-9,-2,0">
                 <Grid.RowDefinitions>
@@ -128,7 +137,8 @@
                         FontSize="14"
                         FontWeight="Bold" 
                         HorizontalAlignment="Left" 
-                        Width="191" Click="viewAdminsButton_Click"/>
+                        Width="191" 
+                        Click="viewAdminsButton_Click"/>
 
                 <Button x:Name="viewUsersButton" 
                         Content="View clients" 
@@ -143,7 +153,8 @@
                         FontWeight="Bold" 
                         RenderTransformOrigin="0.717,0.507" 
                         HorizontalAlignment="Right" 
-                        Width="191" Click="viewUsersButton_Click"/>
+                        Width="191" 
+                        Click="viewUsersButton_Click"/>
 
                 <Button x:Name="newAdminButton" 
                         Content="Add a new admin" 
@@ -156,7 +167,8 @@
                         BorderThickness="2"
                         FontSize="14"
                         FontWeight="Bold" 
-                        Grid.Row="1" Click="newAdminButton_Click"/>
+                        Grid.Row="1" 
+                        Click="newAdminButton_Click"/>
 
                 <Button x:Name="clientStatsButton" 
                         Content="Client statistics" 
@@ -169,7 +181,8 @@
                         BorderThickness="2"
                         FontSize="14"
                         FontWeight="Bold" 
-                        Grid.Row="2" Click="clientStatsButton_Click"/>
+                        Grid.Row="2" 
+                        Click="clientStatsButton_Click"/>
 
             </Grid>
         </GroupBox>
@@ -206,7 +219,10 @@
                         BorderBrush="OrangeRed"
                         BorderThickness="2"
                         FontSize="14"
-                        FontWeight="Bold" HorizontalAlignment="Left" Width="201" Click="productsButton_Click"/>
+                        FontWeight="Bold" 
+                        HorizontalAlignment="Left" 
+                        Width="201" 
+                        Click="productsButton_Click"/>
 
                 <Button x:Name="newProductButton" 
                         Content="Add a new product" 
@@ -218,7 +234,10 @@
                         BorderBrush="OrangeRed"
                         BorderThickness="2"
                         FontSize="14"
-                        FontWeight="Bold" HorizontalAlignment="Right" Width="191" Click="newProductButton_Click"/>
+                        FontWeight="Bold" 
+                        HorizontalAlignment="Right" 
+                        Width="191" 
+                        Click="newProductButton_Click"/>
 
                 <Button x:Name="productStatsButton" 
                         Content="Product statistics" 
@@ -231,7 +250,8 @@
                         BorderThickness="2"
                         FontSize="14"
                         FontWeight="Bold" 
-                        Grid.Row="2" Click="productStatsButton_Click"/>
+                        Grid.Row="2" 
+                        Click="productStatsButton_Click"/>
 
             </Grid>
         </GroupBox>

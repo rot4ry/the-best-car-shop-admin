@@ -15,13 +15,15 @@ using System.Windows.Shapes;
 namespace TheBestCarShop___Admin
 {
     /// <summary>
-    /// Interaction logic for CategoryStatsWindow.xaml
+    /// Interaction logic for AccountSettingsWindow.xaml
     /// </summary>
-    public partial class CategoryStatsWindow : Window
+    public partial class AccountSettingsWindow : Window
     {
-        public CategoryStatsWindow()
+        private Client _ACCOUNTOWNER;
+        public AccountSettingsWindow(Client _accountOwner)
         {
             InitializeComponent();
+            _ACCOUNTOWNER = _accountOwner;
         }
     }
 }
