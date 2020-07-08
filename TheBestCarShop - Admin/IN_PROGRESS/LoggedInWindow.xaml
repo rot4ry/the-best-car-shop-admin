@@ -5,8 +5,236 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TheBestCarShop___Admin"
         mc:Ignorable="d"
-        Title="LoggedInWindow" Height="450" Width="800">
+        Title="SG-Admin: The Hub" 
+        Height="549" 
+        Width="669"
+        Background="Gray" 
+        ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
+
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="177*"/>
+            <ColumnDefinition Width="458*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="19*"/>
+        </Grid.RowDefinitions>
+
+
+
+        <!--COSMETICS-->
+        <Rectangle x:Name="leftRectangle"  
+                Fill="DarkSlateGray" 
+                Stroke="DarkSlateGray" 
+                Margin="-2,-2,1,-3" 
+                Grid.RowSpan="2"/>
+
+        <Rectangle x:Name="topRectangle"
+                Grid.Column="1" 
+                Fill="DimGray" 
+                Margin="0,-2,0,0" 
+                Stroke="DimGray" Height="92" VerticalAlignment="Top" Grid.RowSpan="2"/>
+
+        <Image x:Name="logoImage" 
+                Margin="10,-1,10,0" 
+                Source="/TheBestCarShop - Admin;component/Icons/logo_darker.png" Height="99" VerticalAlignment="Top" Grid.RowSpan="2"/>
+
+        <Label x:Name="welcomeLabel" 
+                Content="Welcome, administrator." 
+                Grid.Column="1" 
+                Margin="20,0,10,0"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Center"
+                FontSize="28"
+                FontWeight="Light"
+                Foreground="Orange" Height="82" VerticalAlignment="Top"/>
+
+
+        <!--BUTTONS-->
+        <Button x:Name="accountButton" 
+                Content="Account" 
+                Margin="10,0,10,114" 
+                Grid.Row="1" 
+                Height="45" 
+                VerticalAlignment="Bottom"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center"
+                Background="DarkGray"
+                Foreground="OrangeRed"
+                BorderBrush="OrangeRed"
+                FontSize="14"
+                FontWeight="Bold" Click="accountButton_Click"/>
+
+        <Button x:Name="settingsButton" 
+                Content="Settings" 
+                Margin="10,0,10,64" 
+                Grid.Row="1" 
+                Height="45" 
+                VerticalAlignment="Bottom"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center"
+                Background="DarkGray"
+                Foreground="OrangeRed"
+                BorderBrush="OrangeRed"
+                FontSize="14"
+                FontWeight="Bold" Click="settingsButton_Click"/>
+
+        <Button x:Name="logoutButton" 
+                Content="Log out" 
+                Margin="10,0,10,14" 
+                Grid.Row="1" 
+                Height="45" 
+                VerticalAlignment="Bottom"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center"
+                Background="DarkGray"
+                Foreground="OrangeRed"
+                BorderBrush="OrangeRed"
+                FontSize="14"
+                FontWeight="Bold" 
+                Click="logoutButton_Click"/>
+
+
+        <!--USERS SECTION-->
+        <GroupBox x:Name="usersGroupBox"
+                  Header="Control users" 
+                  Foreground="OrangeRed"
+                  FontSize="14"
+                  FontWeight="SemiBold"
+                  HorizontalAlignment="Left" 
+                  Height="226" 
+                  Margin="10,180,0,0" 
+                  Grid.Row="1" 
+                  VerticalAlignment="Top" 
+                  Width="438" Grid.Column="1">
+
+            <Grid Margin="10,-9,-2,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Button x:Name="viewAdminsButton" 
+                        Content="View admins" 
+                        Margin="10,10,0,10" 
+                        HorizontalContentAlignment="Center"
+                        VerticalContentAlignment="Center"
+                        Background="DarkGray"
+                        Foreground="OrangeRed"
+                        BorderBrush="OrangeRed"
+                        BorderThickness="2"
+                        FontSize="14"
+                        FontWeight="Bold" 
+                        HorizontalAlignment="Left" 
+                        Width="191" Click="viewAdminsButton_Click"/>
+
+                <Button x:Name="viewUsersButton" 
+                        Content="View clients" 
+                        Margin="0,10,10,10" 
+                        HorizontalContentAlignment="Center"
+                        VerticalContentAlignment="Center"
+                        Background="DarkGray"
+                        Foreground="OrangeRed"
+                        BorderBrush="OrangeRed"
+                        BorderThickness="2"
+                        FontSize="14"
+                        FontWeight="Bold" 
+                        RenderTransformOrigin="0.717,0.507" 
+                        HorizontalAlignment="Right" 
+                        Width="191" Click="viewUsersButton_Click"/>
+
+                <Button x:Name="newAdminButton" 
+                        Content="Add a new admin" 
+                        Margin="10" 
+                        HorizontalContentAlignment="Center"
+                        VerticalContentAlignment="Center"
+                        Background="DarkGray"
+                        Foreground="OrangeRed"
+                        BorderBrush="OrangeRed"
+                        BorderThickness="2"
+                        FontSize="14"
+                        FontWeight="Bold" 
+                        Grid.Row="1" Click="newAdminButton_Click"/>
+
+                <Button x:Name="clientStatsButton" 
+                        Content="Client statistics" 
+                        Margin="10" 
+                        HorizontalContentAlignment="Center"
+                        VerticalContentAlignment="Center"
+                        Background="DarkGray"
+                        Foreground="OrangeRed"
+                        BorderBrush="OrangeRed"
+                        BorderThickness="2"
+                        FontSize="14"
+                        FontWeight="Bold" 
+                        Grid.Row="2" Click="clientStatsButton_Click"/>
+
+            </Grid>
+        </GroupBox>
+
+
+
+        <!--PRODUCTS SECTION-->
+        <GroupBox x:Name="productsGroupBox"
+                  Header="Control products" 
+                  Foreground="OrangeRed"
+                  FontSize="14"
+                  FontWeight="SemiBold"
+                  HorizontalAlignment="Left" 
+                  Height="151" 
+                  Margin="10,12,0,0" 
+                  Grid.Row="1" 
+                  VerticalAlignment="Top" 
+                  Width="438" 
+                  Grid.Column="1">
+
+            <Grid Margin="0,-9,-2,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Button x:Name="productsButton" 
+                        Content="View products" 
+                        Margin="10,10,0,10" 
+                        HorizontalContentAlignment="Center"
+                        VerticalContentAlignment="Center"
+                        Background="DarkGray"
+                        Foreground="OrangeRed"
+                        BorderBrush="OrangeRed"
+                        BorderThickness="2"
+                        FontSize="14"
+                        FontWeight="Bold" HorizontalAlignment="Left" Width="201" Click="productsButton_Click"/>
+
+                <Button x:Name="newProductButton" 
+                        Content="Add a new product" 
+                        Margin="0,10,10,10" 
+                        HorizontalContentAlignment="Center"
+                        VerticalContentAlignment="Center"
+                        Background="DarkGray"
+                        Foreground="OrangeRed"
+                        BorderBrush="OrangeRed"
+                        BorderThickness="2"
+                        FontSize="14"
+                        FontWeight="Bold" HorizontalAlignment="Right" Width="191" Click="newProductButton_Click"/>
+
+                <Button x:Name="productStatsButton" 
+                        Content="Product statistics" 
+                        Margin="10" 
+                        HorizontalContentAlignment="Center"
+                        VerticalContentAlignment="Center"
+                        Background="DarkGray"
+                        Foreground="OrangeRed"
+                        BorderBrush="OrangeRed"
+                        BorderThickness="2"
+                        FontSize="14"
+                        FontWeight="Bold" 
+                        Grid.Row="2" Click="productStatsButton_Click"/>
+
+            </Grid>
+        </GroupBox>
+
     </Grid>
 </Window>

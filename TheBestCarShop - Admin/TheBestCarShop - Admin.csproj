@@ -151,13 +151,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Windows\logo_dark.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Icons\logo.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Icons\logo_dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\logo_darker.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
