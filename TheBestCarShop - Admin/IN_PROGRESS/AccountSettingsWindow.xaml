@@ -6,15 +6,217 @@
         xmlns:local="clr-namespace:TheBestCarShop___Admin"
         mc:Ignorable="d"
         Title="SG-Admin: Account details" 
-        Height="627" 
+        Height="803.5" 
         Width="528.178"
         Background="Gray" 
         WindowStartupLocation="CenterScreen">
+
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="19*"/>
-            <RowDefinition Height="130*"/>
+            <RowDefinition Height="65*"/>
+            <RowDefinition Height="708*"/>
         </Grid.RowDefinitions>
+
+
+
+        <!--INFO SECTION-->
+        <GroupBox x:Name="accountDetailsGroupBox"
+                  Header="Change your account details" 
+                  Height="231" 
+                  Margin="30,6,30,0" 
+                  Grid.Row="1" 
+                  VerticalAlignment="Top"
+                  HorizontalContentAlignment="Left"
+                  VerticalContentAlignment="Center"
+                  FontSize="20"
+                  FontWeight="Medium"
+                  Foreground="Orange">
+
+            <Grid Margin="-3,-5,-3,-3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="140*"/>
+                    <ColumnDefinition Width="213*"/>
+                    <ColumnDefinition Width="101*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Content="First name" 
+                       Margin="10,3,10,0" 
+                       VerticalAlignment="Top" 
+                       Height="35"
+                       HorizontalContentAlignment="Left"
+                       VerticalContentAlignment="Center"
+                       FontSize="16"
+                       FontWeight="Regular"
+                       Foreground="Orange"/>
+
+                <Label Content="Second name" 
+                       Margin="10,43,10,0" 
+                       Height="35" 
+                       VerticalAlignment="Top"
+                       HorizontalContentAlignment="Left"
+                       VerticalContentAlignment="Center"
+                       FontSize="16"
+                       FontWeight="Regular"
+                       Foreground="Orange"/>
+
+                <Label Content="Username" 
+                       Margin="10,83,10,0" 
+                       Height="35" 
+                       VerticalAlignment="Top"
+                       HorizontalContentAlignment="Left"
+                       VerticalContentAlignment="Center"
+                       FontSize="16"
+                       FontWeight="Regular"
+                       Foreground="Orange"/>
+
+                <Label Content="Email" 
+                       Margin="10,123,10,0" 
+                       Height="35" 
+                       VerticalAlignment="Top"
+                       HorizontalContentAlignment="Left"
+                       VerticalContentAlignment="Center"
+                       FontSize="16"
+                       FontWeight="Regular"
+                       Foreground="Orange"/>
+
+                <Label Content="Phone number" 
+                       Margin="10,163,10,0"
+                       HorizontalContentAlignment="Left"
+                       VerticalContentAlignment="Center"
+                       FontSize="16"
+                       FontWeight="Regular"
+                       Foreground="Orange" 
+                       Height="35" 
+                       VerticalAlignment="Top"/>
+                <TextBox Grid.Column="1" Height="35" Margin="10,3,10,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top"/>
+                <TextBox Height="35" Margin="10,43,10,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Grid.Column="1"/>
+                <TextBox Grid.Column="1" Height="35" Margin="10,83,10,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top"/>
+                <TextBox Grid.Column="1" Height="35" Margin="10,123,10,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top"/>
+                <TextBox Grid.Column="1" Height="35" Margin="10,163,10,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top"/>
+                <Button Grid.Column="2" Margin="10,3,10,0" VerticalAlignment="Top" Height="35"/>
+                <Button VerticalAlignment="Top" Height="35" Grid.Column="2" Margin="10,43,10,0"/>
+                <Button VerticalAlignment="Top" Height="35" Grid.Column="2" Margin="10,83,10,0"/>
+                <Button VerticalAlignment="Top" Height="35" Grid.Column="2" Margin="10,123,10,0"/>
+                <Button Content="Button" VerticalAlignment="Top" Height="35" Grid.Column="2" Margin="10,163,10,0"/>
+
+            </Grid>
+        </GroupBox>
+
+        <!--PASSWORD SECTION-->
+        <GroupBox x:Name="passwordGroupBox" 
+                  Header="Change your password" 
+                  Height="182" 
+                  Margin="30,237,30,0" 
+                  Grid.Row="1" 
+                  VerticalAlignment="Top"
+                  HorizontalContentAlignment="Left"
+                  VerticalContentAlignment="Center"
+                  FontSize="20"
+                  FontWeight="Medium"
+                  Foreground="Orange">
+
+            <Grid Margin="-3,-5,-3,-3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="202*"/>
+                    <ColumnDefinition Width="165*"/>
+                    <ColumnDefinition Width="87*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Content="Old password" 
+                       Margin="10,3,10,0" 
+                       VerticalAlignment="Top" 
+                       Height="32"
+                       HorizontalContentAlignment="Left"
+                       VerticalContentAlignment="Center"
+                       FontSize="16"
+                       FontWeight="Regular"
+                       Foreground="Orange"/>
+
+                <Label Content="Insert new password" 
+                       Margin="10,40,10,0" 
+                       VerticalAlignment="Top" 
+                       Height="32"
+                       HorizontalContentAlignment="Left"
+                       VerticalContentAlignment="Center"
+                       FontSize="16"
+                       FontWeight="Regular"
+                       Foreground="Orange"/>
+
+                <Label Content="Repeat new password" 
+                       Margin="10,77,10,0"
+                       HorizontalContentAlignment="Left"
+                       VerticalContentAlignment="Center"
+                       FontSize="16"
+                       FontWeight="Regular"
+                       Foreground="Orange" 
+                       Height="32" 
+                       VerticalAlignment="Top"/>
+                <Label Content="Confirm" 
+                    Margin="10,114,10,0"
+                    HorizontalContentAlignment="Left"
+                    VerticalContentAlignment="Center"
+                    FontSize="16"
+                    FontWeight="Regular"
+                    Foreground="Orange" 
+                    Height="32" 
+                    VerticalAlignment="Top"/>
+
+            </Grid>
+        </GroupBox>
+
+        <!--DELETE ACCOUNT SECTION-->
+        <GroupBox x:Name="deleteGroupBox" 
+            Header="Delete your account" 
+            Height="144" 
+            Margin="30,424,30,0" 
+            Grid.Row="1" 
+            VerticalAlignment="Top"
+            HorizontalContentAlignment="Left"
+            VerticalContentAlignment="Center"
+            FontSize="20"
+            FontWeight="Medium"
+            Foreground="Orange">
+
+            <Grid Margin="-3,-5,-3,-3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="95*"/>
+                    <ColumnDefinition Width="132*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Content="Enter your password" 
+                    HorizontalAlignment="Left" 
+                    Margin="10,3,0,0" 
+                    VerticalAlignment="Top" 
+                    Height="32" 
+                    Width="164"
+                    HorizontalContentAlignment="Left"
+                    VerticalContentAlignment="Center"
+                    FontSize="16"
+                    FontWeight="Regular"
+                    Foreground="Orange"/>
+
+                <Label Content="Repeat your password" 
+                    Margin="10,40,10,0" 
+                    VerticalAlignment="Top" 
+                    Height="32"
+                    HorizontalContentAlignment="Left"
+                    VerticalContentAlignment="Center"
+                    FontSize="16"
+                    FontWeight="Regular"
+                    Foreground="Orange"/>
+                <Label Content="Confirm " 
+                    Margin="10,77,10,0" 
+                    VerticalAlignment="Top" 
+                    Height="32"
+                    HorizontalContentAlignment="Left"
+                    VerticalContentAlignment="Center"
+                    FontSize="16"
+                    FontWeight="Regular"
+                    Foreground="Orange"/>
+
+            </Grid>
+        </GroupBox>
+
 
         <!--COSMETICS-->
         <Rectangle x:Name="topRectangle" 
@@ -23,88 +225,12 @@
 
         <Label x:Name="topLabel" 
                Content="Account details" 
-               HorizontalAlignment="Left" 
-               Margin="16,7,0,12" 
-               Width="500"
+               Margin="16,7,4,12"
                HorizontalContentAlignment="Left"
                VerticalContentAlignment="Center"
                FontSize="28"
                FontWeight="Light"
                Foreground="Orange" />
-        
-        <!--INFO SECTION-->
-        <GroupBox x:Name="accountDetailsGroupBox"
-                  Header="Change your account details" 
-                  Height="226" 
-                  Margin="30,19,30,0" 
-                  Grid.Row="1" 
-                  VerticalAlignment="Top">
-            
-            <Grid Margin="-3,-5,-3,-3">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="124*"/>
-                    <ColumnDefinition Width="204*"/>
-                    <ColumnDefinition Width="107*"/>
-                </Grid.ColumnDefinitions>
-                
-                <Label Content="First name" 
-                       Margin="10,10,10,0" 
-                       VerticalAlignment="Top" 
-                       Height="35"/>
-                
-                <Label Content="Second name" 
-                       Margin="10,50,10,0" 
-                       Height="35" 
-                       VerticalAlignment="Top"/>
-                
-                <Label Content="Username" 
-                       Margin="13,90,10,0" 
-                       Height="35" 
-                       VerticalAlignment="Top"/>
-                
-                <Label Content="Email" 
-                       Margin="10,130,10,0" 
-                       Height="35" 
-                       VerticalAlignment="Top"/>
-                
-                <Label Content="Phone number" 
-                       Margin="10,170,10,0" 
-                       Height="35"
-                       VerticalAlignment="Top"/>
-                
-            </Grid>
-        </GroupBox>
-        
-        <!--PASSWORD SECTION-->
-        <GroupBox x:Name="passwordGroupBox" 
-                  Header="Change your password" 
-                  Height="167" 
-                  Margin="30,262,30,0" 
-                  Grid.Row="1" 
-                  VerticalAlignment="Top">
-            
-            <Grid Margin="-3,-5,-3,-3">
-                <Label Content="Old password" 
-                       HorizontalAlignment="Left" 
-                       Margin="10,20,0,0" 
-                       VerticalAlignment="Top" 
-                       Height="32" 
-                       Width="133"/>
-                
-                <Label Content="New password" 
-                       HorizontalAlignment="Left" 
-                       Margin="10,52,0,0" 
-                       VerticalAlignment="Top" 
-                       Height="32" Width="141"/>
-                
-                <Label Content="Repeat new password" 
-                       HorizontalAlignment="Left" 
-                       Margin="10,82,0,0" 
-                       VerticalAlignment="Top" 
-                       Height="32" Width="141"/>
-                
-            </Grid>
-        </GroupBox>
-        
+
     </Grid>
 </Window>
