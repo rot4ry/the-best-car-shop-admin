@@ -19,11 +19,12 @@ namespace TheBestCarShop___Admin
     /// </summary>
     public partial class AccountSettingsWindow : Window
     {
-        private Client _ACCOUNTOWNER;
+        private Client _ACCOUNTOWNER = new Client();
         public AccountSettingsWindow(Client _accountOwner)
         {
             InitializeComponent();
             _ACCOUNTOWNER = _accountOwner;
+            
         }
     }
 }

@@ -19,7 +19,7 @@
 
 
 
-        <!--INFO SECTION-->
+        <!--ACCOUNT DETAILS SECTION-->
         <GroupBox x:Name="accountDetailsGroupBox"
                   Header="Change your account details" 
                   Height="231" 
@@ -39,6 +39,7 @@
                     <ColumnDefinition Width="101*"/>
                 </Grid.ColumnDefinitions>
 
+                <!--FIRST NAME-->
                 <Label Content="First name" 
                        Margin="10,3,10,0" 
                        VerticalAlignment="Top" 
@@ -49,6 +50,35 @@
                        FontWeight="Regular"
                        Foreground="Orange"/>
 
+                <TextBox x:Name="fnameTB" 
+                         Grid.Column="1" 
+                         Height="35" 
+                         Margin="10,3,10,0" 
+                         TextWrapping="Wrap" 
+                         Text="Binding firstname" 
+                         VerticalAlignment="Top"
+                         Background="DarkCyan"
+                         Foreground="Azure"
+                         BorderBrush="DimGray"
+                         HorizontalContentAlignment="Left"
+                         VerticalContentAlignment="Center"
+                         FontSize="16"
+                         FontWeight="Regular"/>
+
+                <Button x:Name="updateFnameButton"
+                        Content="fname"
+                        Grid.Column="2" 
+                        Margin="10,3,10,0" 
+                        VerticalAlignment="Top" 
+                        Height="35"
+                        Background="DarkGray"
+                Foreground="OrangeRed"
+                FontSize="14"
+                FontWeight="Bold"
+                BorderBrush="OrangeRed"
+                BorderThickness="2" />
+
+                <!--SECOND NAME-->
                 <Label Content="Second name" 
                        Margin="10,43,10,0" 
                        Height="35" 
@@ -58,7 +88,36 @@
                        FontSize="16"
                        FontWeight="Regular"
                        Foreground="Orange"/>
+                
+                <TextBox x:Name="snameTB" 
+                         Height="35" 
+                         Margin="10,43,10,0" 
+                         TextWrapping="Wrap" 
+                         Text="Binding sname" 
+                         VerticalAlignment="Top" 
+                         Grid.Column="1"
+                         Background="DarkCyan"
+                         Foreground="Azure"
+                         BorderBrush="DimGray"
+                         HorizontalContentAlignment="Left"
+                         VerticalContentAlignment="Center"
+                         FontSize="16"
+                         FontWeight="Regular"/>
 
+                <Button x:Name="updateSnameButton"
+                        Content="sname"
+                        VerticalAlignment="Top" 
+                        Height="35" 
+                        Grid.Column="2" 
+                        Margin="10,43,10,0"
+                        Background="DarkGray"
+                        Foreground="OrangeRed"
+                        FontSize="14"
+                        FontWeight="Bold"
+                        BorderBrush="OrangeRed"
+                        BorderThickness="2" />
+
+                <!--USERNAME-->
                 <Label Content="Username" 
                        Margin="10,83,10,0" 
                        Height="35" 
@@ -68,8 +127,37 @@
                        FontSize="16"
                        FontWeight="Regular"
                        Foreground="Orange"/>
+                
+                <TextBox x:Name="usernameTB"
+                         Grid.Column="1" 
+                         Height="35" 
+                         Margin="10,83,10,0" 
+                         TextWrapping="Wrap" 
+                         Text="Binding username" 
+                         VerticalAlignment="Top"
+                         Background="DarkCyan"
+                         Foreground="Azure"
+                         BorderBrush="DimGray"
+                         HorizontalContentAlignment="Left"
+                         VerticalContentAlignment="Center"
+                         FontSize="16"
+                         FontWeight="Regular"/>
 
-                <Label Content="Email" 
+                <Button x:Name="updateUnameButton"
+                        Content="uname"
+                        VerticalAlignment="Top" 
+                        Height="35" 
+                        Grid.Column="2" 
+                        Margin="10,83,10,0"
+                        Background="DarkGray"
+                        Foreground="OrangeRed"
+                        FontSize="14"
+                        FontWeight="Bold"
+                        BorderBrush="OrangeRed"
+                        BorderThickness="2" />
+               
+                <!--MAIL-->
+                <Label Content="E-mail" 
                        Margin="10,123,10,0" 
                        Height="35" 
                        VerticalAlignment="Top"
@@ -78,7 +166,37 @@
                        FontSize="16"
                        FontWeight="Regular"
                        Foreground="Orange"/>
+                
+                <TextBox x:Name="mailTB" 
+                         Grid.Column="1" 
+                         Height="35" 
+                         Margin="10,123,10,0" 
+                         TextWrapping="Wrap" 
+                         Text="Binding mail" 
+                         VerticalAlignment="Top"
+                         Background="DarkCyan"
+                         Foreground="Azure"
+                         BorderBrush="DimGray"
+                         HorizontalContentAlignment="Left"
+                         VerticalContentAlignment="Center"
+                         FontSize="16"
+                         FontWeight="Regular"/>
 
+                <Button x:Name="updateMailButton"
+                        Content="email"
+                        VerticalAlignment="Top" 
+                        Height="35" 
+                        Grid.Column="2" 
+                        Margin="10,123,10,0"
+                        Background="DarkGray"
+                        Foreground="OrangeRed"
+                        FontSize="14"
+                        FontWeight="Bold"
+                        BorderBrush="OrangeRed"
+                        BorderThickness="2" />
+
+                
+                <!--PHONE-->
                 <Label Content="Phone number" 
                        Margin="10,163,10,0"
                        HorizontalContentAlignment="Left"
@@ -88,16 +206,34 @@
                        Foreground="Orange" 
                        Height="35" 
                        VerticalAlignment="Top"/>
-                <TextBox Grid.Column="1" Height="35" Margin="10,3,10,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top"/>
-                <TextBox Height="35" Margin="10,43,10,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Grid.Column="1"/>
-                <TextBox Grid.Column="1" Height="35" Margin="10,83,10,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top"/>
-                <TextBox Grid.Column="1" Height="35" Margin="10,123,10,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top"/>
-                <TextBox Grid.Column="1" Height="35" Margin="10,163,10,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top"/>
-                <Button Grid.Column="2" Margin="10,3,10,0" VerticalAlignment="Top" Height="35"/>
-                <Button VerticalAlignment="Top" Height="35" Grid.Column="2" Margin="10,43,10,0"/>
-                <Button VerticalAlignment="Top" Height="35" Grid.Column="2" Margin="10,83,10,0"/>
-                <Button VerticalAlignment="Top" Height="35" Grid.Column="2" Margin="10,123,10,0"/>
-                <Button Content="Button" VerticalAlignment="Top" Height="35" Grid.Column="2" Margin="10,163,10,0"/>
+                
+                <TextBox x:Name="phoneTB" 
+                         Grid.Column="1" 
+                         Height="35" 
+                         Margin="10,163,10,0" 
+                         TextWrapping="Wrap" 
+                         Text="Binding phone" 
+                         VerticalAlignment="Top"
+                         Background="DarkCyan"
+                         Foreground="Azure"
+                         BorderBrush="DimGray"
+                         HorizontalContentAlignment="Left"
+                         VerticalContentAlignment="Center"
+                         FontSize="16"
+                         FontWeight="Regular"/>
+                
+                <Button x:Name="updatePhoneButton"
+                        Content="phone" 
+                        VerticalAlignment="Top" 
+                        Height="35" 
+                        Grid.Column="2" 
+                        Margin="10,163,10,0"
+                        Background="DarkGray"
+                        Foreground="OrangeRed"
+                        FontSize="14"
+                        FontWeight="Bold"
+                        BorderBrush="OrangeRed"
+                        BorderThickness="2" />
 
             </Grid>
         </GroupBox>
@@ -117,9 +253,8 @@
 
             <Grid Margin="-3,-5,-3,-3">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="202*"/>
-                    <ColumnDefinition Width="165*"/>
-                    <ColumnDefinition Width="87*"/>
+                    <ColumnDefinition Width="97*"/>
+                    <ColumnDefinition Width="130*"/>
                 </Grid.ColumnDefinitions>
 
                 <Label Content="Old password" 
@@ -151,6 +286,7 @@
                        Foreground="Orange" 
                        Height="32" 
                        VerticalAlignment="Top"/>
+
                 <Label Content="Confirm" 
                     Margin="10,114,10,0"
                     HorizontalContentAlignment="Left"
@@ -160,6 +296,17 @@
                     Foreground="Orange" 
                     Height="32" 
                     VerticalAlignment="Top"/>
+
+                <Button Content="Update password" 
+                        Grid.Column="1" 
+                        Margin="34,114,34,0" 
+                        VerticalAlignment="Top" Height="32"
+                        Background="DarkGray"
+                        Foreground="OrangeRed"
+                        FontSize="14"
+                        FontWeight="Bold"
+                        BorderBrush="OrangeRed"
+                        BorderThickness="2" />
 
             </Grid>
         </GroupBox>
@@ -204,6 +351,7 @@
                     FontSize="16"
                     FontWeight="Regular"
                     Foreground="Orange"/>
+
                 <Label Content="Confirm " 
                     Margin="10,77,10,0" 
                     VerticalAlignment="Top" 
