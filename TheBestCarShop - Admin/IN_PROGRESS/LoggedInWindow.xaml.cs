@@ -24,6 +24,8 @@ namespace TheBestCarShop___Admin
         {
             InitializeComponent();
             _ACCOUNTOWNER = _accountOwner;
+            Console.WriteLine(_ACCOUNTOWNER.FirstName);
+            Console.WriteLine(_accountOwner.FirstName);
         }
 
         

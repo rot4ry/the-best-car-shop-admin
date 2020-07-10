@@ -66,7 +66,7 @@
                          VerticalContentAlignment="Center"
                          FontSize="16"
                          FontWeight="Regular"
-                         Text="{Binding _ACCOUNTOWNER.FirstName, Mode=OneWay}"/>
+                         Text="{Binding _ACCOUNTOWNER.FirstName, Mode=OneWay,UpdateSourceTrigger=PropertyChanged}"/>
 
                 <Button x:Name="updateFnameButton"
                         Content="fname"

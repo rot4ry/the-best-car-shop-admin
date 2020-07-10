@@ -33,9 +33,9 @@ namespace TheBestCarShop___Admin
                 if (value != firstName)
                 {
                     firstName = value;
-                    
-                }
-                    
+                    //PropertyChanged.Invoke(this, new PropertyChangedEventArgs("FirstName")); 
+                    //throws an exception, probably not receiving an instance of Client
+                }  
             } 
         }
 
