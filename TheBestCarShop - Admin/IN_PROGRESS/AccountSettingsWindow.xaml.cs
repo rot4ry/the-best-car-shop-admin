@@ -26,5 +26,10 @@ namespace TheBestCarShop___Admin
             _ACCOUNTOWNER = _accountOwner;
             
         }
+
+        private void Window_Activated(object sender, EventArgs e)
+        {
+
+        }
     }
 }
