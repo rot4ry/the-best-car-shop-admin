@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel;
 
 namespace TheBestCarShop___Admin
 {
@@ -12,7 +6,7 @@ namespace TheBestCarShop___Admin
     {
         public int ClientID { get; set; }
 
-        
+
         public string Country { get; set; }
         public string City { get; set; }
         public string Street { get; set; }
@@ -25,38 +19,97 @@ namespace TheBestCarShop___Admin
 
         //changable
         private string firstName;
-        public string FirstName {
-            
-            get { return firstName; }
-        
-            set {
-                 
+        public string FirstName
+        {
+            get
+            {
+                return firstName;
+            }
+
+            set
+            {
                 if (firstName != value)
                 {
                     firstName = value;
                     PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("FirstName"));
-                    //throws an exception, probably not receiving an instance of Client
-                    Console.WriteLine(firstName);
-                }  
-            } 
+                }
+            }
         }
 
-        
+
         private string secondName;
-        public string SecondName { get; set; }
+        public string SecondName
+        {
+            get
+            {
+                return secondName;
+            }
+
+            set
+            {
+                if (secondName != value)
+                {
+                    secondName = value;
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SecondName"));
+                }
+            }
+        }
 
 
         private string email;
-        public string Email { get; set; }
+        public string Email
+        {
+            get
+            {
+                return email;
+            }
+
+            set
+            {
+                if (email != value)
+                {
+                    email = value;
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Email"));
+                }
+            }
+        }
 
 
         private string phoneNumber;
-        public string PhoneNumber { get; set; }
+        public string PhoneNumber
+        {
+            get
+            {
+                return phoneNumber;
+            }
+
+            set
+            {
+                if (phoneNumber != value)
+                {
+                    phoneNumber = value;
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("PhoneNumber"));
+                }
+            }
+        }
 
         private string username;
-        public string Username { get; set; }
-
-        //changable but not visible for the user, thus not using OnPropertyChanged
+        public string Username
+        {
+            get
+            {
+                return username;
+            }
+            set
+            {
+                if (username != value)
+                {
+                    username = value;
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Username"));
+                }
+            }
+        }
+        //changable but not visible for the user
         public string Password { get; set; }
 
         public event PropertyChangedEventHandler PropertyChanged;

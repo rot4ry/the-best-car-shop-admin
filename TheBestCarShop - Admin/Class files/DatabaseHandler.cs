@@ -161,6 +161,7 @@ namespace TheBestCarShop___Admin
                                             username = username,
                                             password = password
                                         }).FirstOrDefault();
+
                 if (requestedClient != null)
                     return true;
             }

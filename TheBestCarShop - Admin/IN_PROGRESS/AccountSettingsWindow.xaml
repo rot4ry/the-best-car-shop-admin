@@ -104,7 +104,8 @@
                          HorizontalContentAlignment="Left"
                          VerticalContentAlignment="Center"
                          FontSize="16"
-                         FontWeight="Regular"/>
+                         FontWeight="Regular"
+                         Text="{Binding SecondName, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
 
                 <Button x:Name="updateSnameButton"
                         Content="sname"
@@ -117,7 +118,7 @@
                         FontSize="14"
                         FontWeight="Bold"
                         BorderBrush="OrangeRed"
-                        BorderThickness="2" />
+                        BorderThickness="2" Click="updateSnameButton_Click" />
 
                 <!--USERNAME-->
                 <Label Content="Username" 
