@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -29,12 +30,13 @@ namespace TheBestCarShop___Admin
             get { return firstName; }
         
             set {
-                
-                if (value != firstName)
+                 
+                if (firstName != value)
                 {
                     firstName = value;
-                    //PropertyChanged.Invoke(this, new PropertyChangedEventArgs("FirstName")); 
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("FirstName"));
                     //throws an exception, probably not receiving an instance of Client
+                    Console.WriteLine(firstName);
                 }  
             } 
         }
@@ -58,5 +60,27 @@ namespace TheBestCarShop___Admin
         public string Password { get; set; }
 
         public event PropertyChangedEventHandler PropertyChanged;
+
+        public Client()
+        {
+
+        }
+        public Client(int id, string fname, string sname, string cname, string phone, string email, string country, string city, string street, string postcode, string building, int isadmin, string username, string password)
+        {
+            ClientID = id;
+            FirstName = fname;
+            SecondName = sname;
+            CompanyName = cname;
+            Email = email;
+            PhoneNumber = phone;
+            Country = country;
+            City = city;
+            Street = street;
+            Postcode = postcode;
+            BuildingNumber = building;
+            IsAdmin = isadmin;
+            Username = username;
+            Password = password;
+        }
     }
 }

@@ -22,10 +22,8 @@ namespace TheBestCarShop___Admin
         private Client _ACCOUNTOWNER;
         public LoggedInWindow(Client _accountOwner)
         {
-            InitializeComponent();
             _ACCOUNTOWNER = _accountOwner;
-            Console.WriteLine(_ACCOUNTOWNER.FirstName);
-            Console.WriteLine(_accountOwner.FirstName);
+            InitializeComponent();
         }
 
         

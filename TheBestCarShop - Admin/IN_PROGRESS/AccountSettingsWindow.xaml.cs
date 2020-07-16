@@ -22,14 +22,18 @@ namespace TheBestCarShop___Admin
         private Client _ACCOUNTOWNER;
         public AccountSettingsWindow(Client _accountOwner)
         {
-            InitializeComponent();
             _ACCOUNTOWNER = _accountOwner;
+            InitializeComponent();
+
+            fnameTB.Text = "asd";
             
+
         }
 
         private void Window_Activated(object sender, EventArgs e)
         {
-
+            accountDetailsGroupBox.DataContext = _ACCOUNTOWNER;
+            fnameTB.SetBinding(TextBox.TextProperty, new Binding("FirstName"));
         }
     }
 }
