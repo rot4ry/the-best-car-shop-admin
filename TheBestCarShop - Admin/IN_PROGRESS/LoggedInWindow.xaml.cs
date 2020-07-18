@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using TheBestCarShop___Admin.IN_PROGRESS;
 
 namespace TheBestCarShop___Admin
 {
@@ -21,6 +22,7 @@ namespace TheBestCarShop___Admin
     {
         private Client _ACCOUNTOWNER;
         private DatabaseHandler databaseHandler = new DatabaseHandler();
+
         public LoggedInWindow(Client _accountOwner)
         {
             _ACCOUNTOWNER = _accountOwner;
@@ -37,8 +39,11 @@ namespace TheBestCarShop___Admin
 
         private void newProductButton_Click(object sender, RoutedEventArgs e)
         {
-            //add a new product
             //TODO
+            AddProductWindow apw = new AddProductWindow();
+            this.Hide();
+            apw.ShowDialog();
+            this.Show();
         }
 
         private void productStatsButton_Click(object sender, RoutedEventArgs e)
@@ -81,7 +86,6 @@ namespace TheBestCarShop___Admin
             this.Hide();
             asw.ShowDialog();
             
-            //refreshes _ACCOUNTOWNER data when changed
             _ACCOUNTOWNER = databaseHandler.GetClientDetails(_ACCOUNTOWNER.Username);
             if(_ACCOUNTOWNER != null)
             {
