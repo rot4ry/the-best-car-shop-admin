@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Threading;
 using System.Diagnostics;
+using System.Security.Policy;
+using System.Windows.Threading;
 
 namespace TheBestCarShop___Admin
 {
@@ -131,5 +133,35 @@ namespace TheBestCarShop___Admin
             _ACCOUNTOWNER = databaseHandler.GetClientDetails(_ACCOUNTOWNER.Username);
         }
 
+        
+        //DELETE ACCOUNT BUTTON
+        private void confirmDeleteButton_Click(object sender, RoutedEventArgs e)
+        {
+            string password = D_enterPass.Password;
+            string repeatPassword = D_repeatPass.Password;
+
+            if (password == repeatPassword)
+            {
+                int result = databaseHandler.DeleteUser(_ACCOUNTOWNER.Username, _ACCOUNTOWNER.ClientID);
+                if (result == 1)
+                {
+                    messageBox.Content = " Account deleted successfully.\n   Application will quit now.";
+                    messageBox.Visibility = Visibility.Visible;
+                    
+                    // GREAT
+                    // |
+                    // V
+                    Dispatcher.Invoke(() => { messageBox.UpdateLayout(); }, DispatcherPriority.ContextIdle);
+
+                    // BAD BAD BAD
+                    // |
+                    // V
+                    Thread.Sleep(3000);
+
+                    Application.Current.Shutdown();
+                }                    
+            }
+        }
     }
 }
+

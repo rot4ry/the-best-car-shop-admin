@@ -402,7 +402,7 @@
                        FontWeight="Regular"
                        Foreground="Orange"/>
 
-                <PasswordBox x:Name="D_enterPassPB"
+                <PasswordBox x:Name="D_enterPass"
                              Margin="10,3,10,0" 
                              VerticalAlignment="Top" 
                              Grid.Column="1" 
@@ -427,7 +427,7 @@
                        FontWeight="Regular"
                        Foreground="Orange"/>
 
-                <PasswordBox x:Name="repeatPass" 
+                <PasswordBox x:Name="D_repeatPass" 
                              Margin="10,40,10,0" 
                              VerticalAlignment="Top" 
                              Grid.Column="1" 
@@ -465,7 +465,8 @@
                         FontSize="14"
                         FontWeight="Bold"
                         BorderBrush="OrangeRed"
-                        BorderThickness="2"/>
+                        BorderThickness="2" 
+                        Click="confirmDeleteButton_Click"/>
 
             </Grid>
         </GroupBox>

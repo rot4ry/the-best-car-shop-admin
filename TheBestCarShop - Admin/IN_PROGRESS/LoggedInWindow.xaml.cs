@@ -80,10 +80,13 @@ namespace TheBestCarShop___Admin
             AccountSettingsWindow asw = new AccountSettingsWindow(_ACCOUNTOWNER);
             this.Hide();
             asw.ShowDialog();
-            this.Show();
             
             //refreshes _ACCOUNTOWNER data when changed
             _ACCOUNTOWNER = databaseHandler.GetClientDetails(_ACCOUNTOWNER.Username);
+            if(_ACCOUNTOWNER != null)
+            {
+                this.Show();
+            }
         }
 
         private void settingsButton_Click(object sender, RoutedEventArgs e)

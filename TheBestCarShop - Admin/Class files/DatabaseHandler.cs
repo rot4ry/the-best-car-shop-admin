@@ -237,7 +237,7 @@ namespace TheBestCarShop___Admin
         {
             int affected = 0;
 
-            string delete = "DELETE Clients WHERE Username = @username" +
+            string delete = "DELETE Clients WHERE Username = @username " +
                             "AND ClientID = @userID";
 
             try
