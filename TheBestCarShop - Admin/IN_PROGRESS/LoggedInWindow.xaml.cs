@@ -20,6 +20,7 @@ namespace TheBestCarShop___Admin
     public partial class LoggedInWindow : Window
     {
         private Client _ACCOUNTOWNER;
+        private DatabaseHandler databaseHandler = new DatabaseHandler();
         public LoggedInWindow(Client _accountOwner)
         {
             _ACCOUNTOWNER = _accountOwner;
@@ -80,11 +81,14 @@ namespace TheBestCarShop___Admin
             this.Hide();
             asw.ShowDialog();
             this.Show();
+            
+            //refreshes _ACCOUNTOWNER data when changed
+            _ACCOUNTOWNER = databaseHandler.GetClientDetails(_ACCOUNTOWNER.Username);
         }
 
         private void settingsButton_Click(object sender, RoutedEventArgs e)
         {
-            //show settings, change theme?
+            //show settings, change theme with resources?
             //TODO
         }
 

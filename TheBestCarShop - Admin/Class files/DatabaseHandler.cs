@@ -12,7 +12,7 @@ namespace TheBestCarShop___Admin
 {
     public class DatabaseHandler
     {
-        public string connectionString = @"
+        private string connectionString = @"
                     Data Source=DESKTOP-GSQML5J\MYSERVER;
                     Initial Catalog=TheShop;
                     Integrated Security=True;
@@ -207,19 +207,21 @@ namespace TheBestCarShop___Admin
             }
         }
 
-        public int UpdateClientField(string columnName, string value, string username)
+        public int UpdateClientField(string columnName, string value, string username, int userID)
         {
             int affected = 0;
             string update = "UPDATE Clients " +
-                            $"SET {columnName} = @value " +
-                            "WHERE Username = @username ";
+                           $"SET {columnName} = @value " +
+                            "WHERE Username = @username " +
+                            "AND ClientID = @userID";
             try
             {
                 SqlConnection connection = new SqlConnection(this.connectionString);
                 affected = connection.Execute(update, 
                     new { 
                         value = value, 
-                        username = username 
+                        username = username,
+                        userID = userID
                     });
                 connection.Close();
             }
@@ -230,19 +232,21 @@ namespace TheBestCarShop___Admin
 
             return affected;
         }
-
-        public int DeleteUser(string username)
+        
+        public int DeleteUser(string username, int userID)
         {
             int affected = 0;
 
-            string delete = "DELETE Clients WHERE Username = @username";
+            string delete = "DELETE Clients WHERE Username = @username" +
+                            "AND ClientID = @userID";
 
             try
             {
                 SqlConnection connection = new SqlConnection(this.connectionString);
                 affected = connection.Execute(delete, 
                     new { 
-                        username = username 
+                        username = username,
+                        userID = userID
                     });
                 connection.Close();
             }

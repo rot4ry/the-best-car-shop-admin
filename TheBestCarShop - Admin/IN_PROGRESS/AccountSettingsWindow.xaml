@@ -9,8 +9,7 @@
         Height="527.5" 
         Width="1005.178"
         Background="Gray" 
-        WindowStartupLocation="CenterScreen" 
-        Activated="Window_Activated">
+        WindowStartupLocation="CenterScreen">
 
     <Grid>
         <Grid.RowDefinitions>
@@ -66,10 +65,10 @@
                          VerticalContentAlignment="Center"
                          FontSize="16"
                          FontWeight="Regular"
-                         Text="{Binding FirstName}"/>
+                         Text="{Binding FirstName, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
 
                 <Button x:Name="updateFnameButton"
-                        Content="fname"
+                        Content="Update" 
                         Grid.Column="2" 
                         Margin="10,3,10,0" 
                         VerticalAlignment="Top" 
@@ -79,7 +78,8 @@
                         FontSize="14"
                         FontWeight="Bold"
                         BorderBrush="OrangeRed"
-                        BorderThickness="2" />
+                        BorderThickness="2" 
+                        Click="updateFnameButton_Click" />
 
                 <!--SECOND NAME-->
                 <Label Content="Second name" 
@@ -108,7 +108,7 @@
                          Text="{Binding SecondName, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
 
                 <Button x:Name="updateSnameButton"
-                        Content="sname"
+                        Content="Update" 
                         VerticalAlignment="Top" 
                         Height="35" 
                         Grid.Column="2" 
@@ -118,7 +118,8 @@
                         FontSize="14"
                         FontWeight="Bold"
                         BorderBrush="OrangeRed"
-                        BorderThickness="2" Click="updateSnameButton_Click" />
+                        BorderThickness="2" 
+                        Click="updateSnameButton_Click" />
 
                 <!--USERNAME-->
                 <Label Content="Username" 
@@ -143,10 +144,12 @@
                          HorizontalContentAlignment="Left"
                          VerticalContentAlignment="Center"
                          FontSize="16"
-                         FontWeight="Regular"/>
+                         FontWeight="Regular"
+                         Text="{Binding Username, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"
+                         IsEnabled="false"/>
 
                 <Button x:Name="updateUnameButton"
-                        Content="uname"
+                        Content="Update" 
                         VerticalAlignment="Top" 
                         Height="35" 
                         Grid.Column="2" 
@@ -156,7 +159,9 @@
                         FontSize="14"
                         FontWeight="Bold"
                         BorderBrush="OrangeRed"
-                        BorderThickness="2" />
+                        BorderThickness="2" 
+                        Click="updateUnameButton_Click"
+                        IsEnabled="false"/>
 
                 <!--MAIL-->
                 <Label Content="E-mail" 
@@ -181,10 +186,11 @@
                          HorizontalContentAlignment="Left"
                          VerticalContentAlignment="Center"
                          FontSize="16"
-                         FontWeight="Regular"/>
+                         FontWeight="Regular"
+                         Text="{Binding Email, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
 
                 <Button x:Name="updateMailButton"
-                        Content="email"
+                        Content="Update" 
                         VerticalAlignment="Top" 
                         Height="35" 
                         Grid.Column="2" 
@@ -194,7 +200,8 @@
                         FontSize="14"
                         FontWeight="Bold"
                         BorderBrush="OrangeRed"
-                        BorderThickness="2" />
+                        BorderThickness="2" 
+                        Click="updateMailButton_Click" />
 
 
                 <!--PHONE-->
@@ -220,10 +227,11 @@
                          HorizontalContentAlignment="Left"
                          VerticalContentAlignment="Center"
                          FontSize="16"
-                         FontWeight="Regular"/>
+                         FontWeight="Regular"
+                         Text="{Binding PhoneNumber, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
 
                 <Button x:Name="updatePhoneButton"
-                        Content="phone" 
+                        Content="Update" 
                         VerticalAlignment="Top" 
                         Height="35" 
                         Grid.Column="2" 
@@ -233,7 +241,8 @@
                         FontSize="14"
                         FontWeight="Bold"
                         BorderBrush="OrangeRed"
-                        BorderThickness="2" />
+                        BorderThickness="2" 
+                        Click="updatePhoneButton_Click" />
 
             </Grid>
         </GroupBox>
@@ -242,20 +251,21 @@
         <GroupBox x:Name="passwordGroupBox" 
                   Header="Change your password" 
                   Height="179" 
-                  Margin="507,10,30,0" 
+                  Margin="507,10,0,0" 
                   Grid.Row="1" 
                   VerticalAlignment="Top"
                   HorizontalContentAlignment="Left"
                   VerticalContentAlignment="Center"
                   FontSize="20"
                   FontWeight="Medium"
-                  Foreground="Orange">
+                  Foreground="Orange" HorizontalAlignment="Left" Width="460">
 
             <Grid Margin="-3,-5,-3,-3">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="97*"/>
                     <ColumnDefinition Width="130*"/>
                 </Grid.ColumnDefinitions>
+
                 <!--OLD PASSWORD-->
                 <Label Content="Old password" 
                        Margin="10,3,10,0" 
@@ -350,9 +360,6 @@
                         FontWeight="Bold"
                         BorderBrush="OrangeRed"
                         BorderThickness="2" />
-
-
-
 
             </Grid>
         </GroupBox>
@@ -474,20 +481,20 @@
                FontWeight="Light"
                Foreground="Orange" />
 
-        <TextBlock x:Name="messageBox" 
+        <Label x:Name="messageBox" 
                    HorizontalAlignment="Left" 
                    Margin="507,211,0,0" 
                    Grid.Row="1" 
-                   TextWrapping="Wrap" 
-                   Text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr,  sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr,  sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet." 
+                   Content="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr,  sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr,  sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet." 
+                   VerticalContentAlignment="Center"
+                   HorizontalContentAlignment="Center"
                    VerticalAlignment="Top" 
                    Height="172" 
                    Width="460"
-                   Foreground="Aqua"
+                   Foreground="Orchid"
                    FontSize="18"
                    FontWeight="Regular"
-                   Background="DarkSlateGray"
-                   TextAlignment="Center" 
+                   Background="DimGray"
                    Visibility="Hidden"
                    Padding="2"/>
 

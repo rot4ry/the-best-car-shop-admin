@@ -6,7 +6,6 @@ namespace TheBestCarShop___Admin
     {
         public int ClientID { get; set; }
 
-
         public string Country { get; set; }
         public string City { get; set; }
         public string Street { get; set; }
