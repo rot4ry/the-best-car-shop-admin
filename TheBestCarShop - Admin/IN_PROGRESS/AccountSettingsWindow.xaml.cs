@@ -92,5 +92,44 @@ namespace TheBestCarShop___Admin
             
             messageBox.Visibility = Visibility.Visible;
         }
+
+        //CHANGE PASSWORD BUTTON
+        private void updatePasswordButton_Click(object sender, RoutedEventArgs e)
+        {
+            string oldPassword = CP_oldPass.Password;
+            string newPassword = CP_newPass.Password;
+            string repNewPassword = CP_repeatNewPass.Password;
+
+
+            if (oldPassword == "" || newPassword == "" || repNewPassword == "")
+            {
+                messageBox.Content = "Field(s) must not be empty.";
+                messageBox.Visibility = Visibility.Visible;
+            }
+            else if(oldPassword != _ACCOUNTOWNER.Password)
+            {
+                messageBox.Content = "Check your password.";
+                messageBox.Visibility = Visibility.Visible;
+            }
+            else if(newPassword != repNewPassword)
+            {
+                messageBox.Content = "            New passwords do not match. \nMake sure that both of them are the same.";
+                messageBox.Visibility = Visibility.Visible;
+            }
+            else if (oldPassword == _ACCOUNTOWNER.Password &&
+                    newPassword == repNewPassword)
+            {
+                int result = databaseHandler.UpdateClientField("Password", newPassword, _ACCOUNTOWNER.Username, _ACCOUNTOWNER.ClientID);
+
+                if (result == 1)
+                    messageBox.Content = "Password updated successfully!";
+                else
+                    messageBox.Content = "            Something went wrong. \nPassword was not updated.";
+
+                messageBox.Visibility = Visibility.Visible;
+            }
+            _ACCOUNTOWNER = databaseHandler.GetClientDetails(_ACCOUNTOWNER.Username);
+        }
+
     }
 }

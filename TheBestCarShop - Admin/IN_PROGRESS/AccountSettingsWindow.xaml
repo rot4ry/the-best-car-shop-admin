@@ -258,7 +258,9 @@
                   VerticalContentAlignment="Center"
                   FontSize="20"
                   FontWeight="Medium"
-                  Foreground="Orange" HorizontalAlignment="Left" Width="460">
+                  Foreground="Orange"
+                  HorizontalAlignment="Left" 
+                  Width="460">
 
             <Grid Margin="-3,-5,-3,-3">
                 <Grid.ColumnDefinitions>
@@ -277,7 +279,7 @@
                        FontWeight="Regular"
                        Foreground="Orange"/>
 
-                <PasswordBox x:Name="oldPass"
+                <PasswordBox x:Name="CP_oldPass"
                              Margin="10,3,10,0" 
                              VerticalAlignment="Top" 
                              Grid.Column="1" 
@@ -301,7 +303,7 @@
                        FontWeight="Regular"
                        Foreground="Orange"/>
 
-                <PasswordBox x:Name="newPass"
+                <PasswordBox x:Name="CP_newPass"
                              Margin="10,40,10,0" 
                              VerticalAlignment="Top" 
                              Grid.Column="1" 
@@ -325,7 +327,7 @@
                        Height="32" 
                        VerticalAlignment="Top"/>
 
-                <PasswordBox x:Name="repeatNewPass" 
+                <PasswordBox x:Name="CP_repeatNewPass" 
                              Margin="10,77,10,0" 
                              VerticalAlignment="Top" 
                              Grid.Column="1" 
@@ -349,7 +351,8 @@
                        Height="32" 
                        VerticalAlignment="Top"/>
 
-                <Button Content="Update password" 
+                <Button x:Name="updatePasswordButton"
+                        Content="Update password" 
                         Grid.Column="1" 
                         Margin="10,114,10,0" 
                         VerticalAlignment="Top" 
@@ -359,7 +362,8 @@
                         FontSize="14"
                         FontWeight="Bold"
                         BorderBrush="OrangeRed"
-                        BorderThickness="2" />
+                        BorderThickness="2" 
+                        Click="updatePasswordButton_Click" />
 
             </Grid>
         </GroupBox>
