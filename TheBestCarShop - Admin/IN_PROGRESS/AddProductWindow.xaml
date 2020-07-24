@@ -6,34 +6,78 @@
         xmlns:local="clr-namespace:TheBestCarShop___Admin.IN_PROGRESS"
         mc:Ignorable="d"
         Title="SG-Admin: Add Product" 
-        Height="549" 
-        Width="669"
+        Height="531" 
+        Width="970"
         Background="Gray" 
         ResizeMode="CanMinimize" 
         WindowStartupLocation="CenterScreen">
     <Grid>
-        
-        <Rectangle x:Name="topRectangle"
-                    Grid.Column="1" 
+        <Grid.RowDefinitions>
+            <RowDefinition Height="217*"/>
+            <RowDefinition Height="34*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="231*"/>
+            <ColumnDefinition Width="207*"/>
+            <ColumnDefinition Width="251*"/>
+            <ColumnDefinition Width="275*"/>
+        </Grid.ColumnDefinitions>
+
+        <Rectangle x:Name="topRectangle" 
                     Fill="DimGray" 
                     Margin="0,-2,0,0" 
                     Stroke="DimGray" 
-                    Height="92" 
-                    VerticalAlignment="Top" 
-                    Grid.RowSpan="2"/>
+                    Height="69" 
+                    VerticalAlignment="Top" Grid.ColumnSpan="4"/>
 
         <Label x:Name="topLabel" 
-                    Content="Welcome, administrator." 
-                    Grid.Column="1" 
+                    Content="Add a new product" 
                     Margin="20,0,10,0"
                     HorizontalContentAlignment="Left"
                     VerticalContentAlignment="Center"
                     FontSize="28"
                     FontWeight="Light"
                     Foreground="Orange" 
-                    Height="82" 
-                    VerticalAlignment="Top"/>
-        
-        
+                    Height="61" 
+                    VerticalAlignment="Top" Grid.ColumnSpan="4"/>
+        <Label Content="Enter part name" VerticalAlignment="Top" Margin="10,202,10,0" Height="26"/>
+        <Label Content="Enter the first year of production" VerticalAlignment="Top" Margin="10,140,10,0" Height="26"/>
+        <Label Content="Enter the last year of production" VerticalAlignment="Top" Margin="10,171,10,0" Height="26"/>
+        <Label Content="Select a model" VerticalAlignment="Top" Margin="10,109,10,0" Height="26"/>
+        <Label Content="Enter part price" VerticalAlignment="Top" Margin="10,295,10,0" Height="26"/>
+        <Label Content="Select a brand" VerticalAlignment="Top" Margin="10,78,10,0" Height="26"/>
+        <Label Content="Select part category" VerticalAlignment="Top" Margin="10,233,10,0" Height="26"/>
+        <Label Content="Select part manufacturer" VerticalAlignment="Top" Margin="10,264,10,0" Height="26"/>
+        <Label Content="Is this part available?" VerticalAlignment="Top" Margin="10,326,10,0" Height="26"/>
+        <Label Content="Enter available quantity" VerticalAlignment="Top" Margin="10,357,10,0" Height="26"/>
+        <Label Content="OR enter a new model name" VerticalAlignment="Top" Margin="10,109,10,0" Grid.Column="2" Height="26"/>
+        <Label Content="OR enter a new brand name" VerticalAlignment="Top" Margin="10,78,10,0" Grid.Column="2" Height="26"/>
+        <Label Content="OR enter a new category name" VerticalAlignment="Top" Margin="10,233,10,0" Grid.Column="2" Height="26"/>
+        <Label Content="OR enter a new part manufacturer name" VerticalAlignment="Top" Margin="10,264,10,0" Grid.Column="2" Height="26"/>
+        <Button Content="Add product" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="57,22,0,0" Grid.Row="1" Height="20"/>
+        <Button Content="Cancel" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="24,22,0,0" Grid.Column="1" Grid.Row="1" Height="20"/>
+        <Button Content="Add another product" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="8,27,0,0" Grid.Column="3" Grid.Row="1" Height="20"/>
+        <TextBox Height="23" Margin="10,78,10,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Grid.Column="3"/>
+        <TextBox Height="26" Margin="10,109,10,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Grid.Column="3"/>
+        <TextBox Height="26" Margin="10,233,10,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Grid.Column="3"/>
+        <TextBox Height="26" Margin="10,264,10,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Grid.Column="3"/>
+        <ComboBox Margin="10,78,10,0" VerticalAlignment="Top" Grid.Column="1" Height="26"/>
+        <ComboBox Margin="10,109,10,0" VerticalAlignment="Top" Grid.Column="1" Height="26"/>
+        <ComboBox Margin="10,233,10,0" VerticalAlignment="Top" Grid.Column="1" Height="26"/>
+        <ComboBox Margin="10,264,10,0" VerticalAlignment="Top" Grid.Column="1" Height="26"/>
+        <ComboBox Margin="10,326,10,0" VerticalAlignment="Top" Grid.Column="1" Height="26"/>
+        <TextBox Height="26" Margin="10,357,10,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Grid.Column="1"/>
+        <RichTextBox Height="26" Margin="10,202,10,0" VerticalAlignment="Top" Grid.Column="1">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text="RichTextBox"/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <TextBox Height="26" Margin="10,140,10,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Grid.Column="1"/>
+        <TextBox Height="26" Margin="10,171,10,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Grid.Column="1"/>
+        <TextBox Height="26" Margin="10,295,10,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Grid.Column="1"/>
+
+
     </Grid>
 </Window>
