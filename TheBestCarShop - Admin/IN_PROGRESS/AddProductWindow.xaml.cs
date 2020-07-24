@@ -14,7 +14,7 @@ using System.Windows.Shapes;
 
 namespace TheBestCarShop___Admin.IN_PROGRESS
 {
-    /// <summary>
+    /// <summary
     /// Interaction logic for AddProductWindow.xaml
     /// </summary>
     public partial class AddProductWindow : Window

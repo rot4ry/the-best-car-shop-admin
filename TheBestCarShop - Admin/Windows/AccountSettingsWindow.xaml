@@ -131,6 +131,7 @@
                        FontSize="16"
                        FontWeight="Regular"
                        Foreground="Orange"/>
+                
 
                 <TextBox x:Name="usernameTB"
                          Grid.Column="1" 

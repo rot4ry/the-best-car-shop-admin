@@ -12,10 +12,12 @@
         ResizeMode="CanMinimize" 
         WindowStartupLocation="CenterScreen">
     <Grid>
+
         <Grid.RowDefinitions>
             <RowDefinition Height="217*"/>
             <RowDefinition Height="34*"/>
         </Grid.RowDefinitions>
+
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="231*"/>
             <ColumnDefinition Width="207*"/>
@@ -23,61 +25,418 @@
             <ColumnDefinition Width="275*"/>
         </Grid.ColumnDefinitions>
 
+        <!--COSMETCS-->
         <Rectangle x:Name="topRectangle" 
-                    Fill="DimGray" 
-                    Margin="0,-2,0,0" 
-                    Stroke="DimGray" 
-                    Height="69" 
-                    VerticalAlignment="Top" Grid.ColumnSpan="4"/>
+                   Fill="DimGray" 
+                   Margin="0,-2,0,0" 
+                   Stroke="DimGray" 
+                   Height="69" 
+                   VerticalAlignment="Top"
+                   Grid.ColumnSpan="4"/>
 
         <Label x:Name="topLabel" 
-                    Content="Add a new product" 
-                    Margin="20,0,10,0"
-                    HorizontalContentAlignment="Left"
-                    VerticalContentAlignment="Center"
-                    FontSize="28"
-                    FontWeight="Light"
-                    Foreground="Orange" 
-                    Height="61" 
-                    VerticalAlignment="Top" Grid.ColumnSpan="4"/>
-        <Label Content="Enter part name" VerticalAlignment="Top" Margin="10,202,10,0" Height="26"/>
-        <Label Content="Enter the first year of production" VerticalAlignment="Top" Margin="10,140,10,0" Height="26"/>
-        <Label Content="Enter the last year of production" VerticalAlignment="Top" Margin="10,171,10,0" Height="26"/>
-        <Label Content="Select a model" VerticalAlignment="Top" Margin="10,109,10,0" Height="26"/>
-        <Label Content="Enter part price" VerticalAlignment="Top" Margin="10,295,10,0" Height="26"/>
-        <Label Content="Select a brand" VerticalAlignment="Top" Margin="10,78,10,0" Height="26"/>
-        <Label Content="Select part category" VerticalAlignment="Top" Margin="10,233,10,0" Height="26"/>
-        <Label Content="Select part manufacturer" VerticalAlignment="Top" Margin="10,264,10,0" Height="26"/>
-        <Label Content="Is this part available?" VerticalAlignment="Top" Margin="10,326,10,0" Height="26"/>
-        <Label Content="Enter available quantity" VerticalAlignment="Top" Margin="10,357,10,0" Height="26"/>
-        <Label Content="OR enter a new model name" VerticalAlignment="Top" Margin="10,109,10,0" Grid.Column="2" Height="26"/>
-        <Label Content="OR enter a new brand name" VerticalAlignment="Top" Margin="10,78,10,0" Grid.Column="2" Height="26"/>
-        <Label Content="OR enter a new category name" VerticalAlignment="Top" Margin="10,233,10,0" Grid.Column="2" Height="26"/>
-        <Label Content="OR enter a new part manufacturer name" VerticalAlignment="Top" Margin="10,264,10,0" Grid.Column="2" Height="26"/>
-        <Button Content="Add product" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="57,22,0,0" Grid.Row="1" Height="20"/>
-        <Button Content="Cancel" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="24,22,0,0" Grid.Column="1" Grid.Row="1" Height="20"/>
-        <Button Content="Add another product" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="8,27,0,0" Grid.Column="3" Grid.Row="1" Height="20"/>
-        <TextBox Height="23" Margin="10,78,10,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Grid.Column="3"/>
-        <TextBox Height="26" Margin="10,109,10,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Grid.Column="3"/>
-        <TextBox Height="26" Margin="10,233,10,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Grid.Column="3"/>
-        <TextBox Height="26" Margin="10,264,10,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Grid.Column="3"/>
-        <ComboBox Margin="10,78,10,0" VerticalAlignment="Top" Grid.Column="1" Height="26"/>
-        <ComboBox Margin="10,109,10,0" VerticalAlignment="Top" Grid.Column="1" Height="26"/>
-        <ComboBox Margin="10,233,10,0" VerticalAlignment="Top" Grid.Column="1" Height="26"/>
-        <ComboBox Margin="10,264,10,0" VerticalAlignment="Top" Grid.Column="1" Height="26"/>
-        <ComboBox Margin="10,326,10,0" VerticalAlignment="Top" Grid.Column="1" Height="26"/>
-        <TextBox Height="26" Margin="10,357,10,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Grid.Column="1"/>
-        <RichTextBox Height="26" Margin="10,202,10,0" VerticalAlignment="Top" Grid.Column="1">
+               Content="Add a new product" 
+               Margin="20,0,10,0"
+               HorizontalContentAlignment="Left"
+               VerticalContentAlignment="Center"
+               FontSize="28"
+               FontWeight="Light"
+               Foreground="Orange" 
+               Height="61" 
+               VerticalAlignment="Top" 
+               Grid.ColumnSpan="4"/>
+
+        <!--CONTENTS-->
+        
+        <!--BRAND-->
+        <Label Content="Select a brand" 
+               VerticalAlignment="Top" 
+               Margin="10,78,10,0" 
+               Height="26"
+               HorizontalContentAlignment="Left"
+               VerticalContentAlignment="Center"
+               FontSize="16"
+               FontWeight="Regular"
+               Foreground="Orange"/>
+
+        <ComboBox x:Name="brandCB" 
+                  Margin="10,78,10,0" 
+                  VerticalAlignment="Top" 
+                  Grid.Column="1" 
+                  Height="26">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                    <GradientStop Color="#FF6F9115" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+        </ComboBox>
+
+        <Label Content="OR enter a new brand name" 
+               VerticalAlignment="Top" 
+               Margin="10,78,10,0" 
+               Grid.Column="2" 
+               Height="26"
+               HorizontalContentAlignment="Left"
+               VerticalContentAlignment="Center"
+               FontSize="16"
+               FontWeight="Regular"
+               Foreground="Orange"/>
+
+        <TextBox x:Name="newBrandTB" 
+                 Height="23" 
+                 Margin="10,78,10,0" 
+                 TextWrapping="Wrap" 
+                 Text="new brand name" 
+                 VerticalAlignment="Top" 
+                 Grid.Column="3"
+                 Background="DarkCyan"
+                 Foreground="Azure"
+                 BorderBrush="DimGray"
+                 HorizontalContentAlignment="Left"
+                 VerticalContentAlignment="Center"
+                 FontSize="16"
+                 FontWeight="Regular"/>
+
+        
+
+        <!--MODEL-->
+        <Label Content="Select a model" 
+               VerticalAlignment="Top" 
+               Margin="10,109,10,0" 
+               Height="26"
+               HorizontalContentAlignment="Left"
+               VerticalContentAlignment="Center"
+               FontSize="16"
+               FontWeight="Regular"
+               Foreground="Orange"/>
+
+        <ComboBox x:Name="modelCB" 
+                  Margin="10,109,10,0" 
+                  VerticalAlignment="Top" 
+                  Grid.Column="1"
+                  Height="26"/>
+
+        <Label Content="OR enter a new model name" 
+               VerticalAlignment="Top" 
+               Margin="10,109,10,0" 
+               Grid.Column="2" 
+               Height="26"
+               HorizontalContentAlignment="Left"
+               VerticalContentAlignment="Center"
+               FontSize="16"
+               FontWeight="Regular"
+               Foreground="Orange"/>
+
+        <TextBox x:Name="newModelTB" 
+                 Height="26" 
+                 Margin="10,109,10,0" 
+                 TextWrapping="Wrap" 
+                 Text="new model name" 
+                 VerticalAlignment="Top" 
+                 Grid.Column="3"
+                 Background="DarkCyan"
+                 Foreground="Azure"
+                 BorderBrush="DimGray"
+                 HorizontalContentAlignment="Left"
+                 VerticalContentAlignment="Center"
+                 FontSize="16"
+                 FontWeight="Regular"/>
+
+        <!--FIRST YEAR OF PRODUCTION-->
+        <Label Content="Enter the first year of production" 
+               VerticalAlignment="Top" 
+               Margin="10,140,10,0" 
+               Height="26"
+               HorizontalContentAlignment="Left"
+               VerticalContentAlignment="Center"
+               FontSize="16"
+               FontWeight="Regular"
+               Foreground="Orange"/>
+
+        <TextBox x:Name="fProdYearTB" 
+                 Height="26" 
+                 Margin="10,140,10,0" 
+                 TextWrapping="Wrap" 
+                 Text="first year" 
+                 VerticalAlignment="Top" 
+                 Grid.Column="1"
+                 Background="DarkCyan"
+                 Foreground="Azure"
+                 BorderBrush="DimGray"
+                 HorizontalContentAlignment="Left"
+                 VerticalContentAlignment="Center"
+                 FontSize="16"
+                 FontWeight="Regular"/>
+
+
+
+        <!--LAST YEAR OF PRODUCTION-->
+        <Label Content="Enter the last year of production" 
+               VerticalAlignment="Top" 
+               Margin="10,171,10,0" 
+               Height="26"
+               HorizontalContentAlignment="Left"
+               VerticalContentAlignment="Center"
+               FontSize="16"
+               FontWeight="Regular"
+               Foreground="Orange"/>
+        
+        <TextBox x:Name="lProdYearTB" 
+                 Height="26" 
+                 Margin="10,171,10,0"
+                 TextWrapping="Wrap" 
+                 Text="last year" 
+                 VerticalAlignment="Top" 
+                 Grid.Column="1"
+                 Background="DarkCyan"
+                 Foreground="Azure"
+                 BorderBrush="DimGray"
+                 HorizontalContentAlignment="Left"
+                 VerticalContentAlignment="Center"
+                 FontSize="16"
+                 FontWeight="Regular"/>
+        
+        <!--PART NAME-->
+        <Label Content="Enter part name" 
+               VerticalAlignment="Top" 
+               Margin="10,202,10,0" 
+               Height="26"
+               HorizontalContentAlignment="Left"
+               VerticalContentAlignment="Center"
+               FontSize="16"
+               FontWeight="Regular"
+               Foreground="Orange"/>
+
+        <RichTextBox x:Name="partNameTB" 
+                     Height="26"
+                     Margin="10,202,10,0"
+                     VerticalAlignment="Top" 
+                     Grid.Column="1"
+                     Background="DarkCyan"
+                     Foreground="Azure"
+                     BorderBrush="DimGray"
+                     HorizontalContentAlignment="Left"
+                     VerticalContentAlignment="Center"
+                     FontSize="16"
+                     FontWeight="Regular">
+            
             <FlowDocument>
                 <Paragraph>
-                    <Run Text="RichTextBox"/>
+                    <Run Text="part name"/>
                 </Paragraph>
             </FlowDocument>
+            
         </RichTextBox>
-        <TextBox Height="26" Margin="10,140,10,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Grid.Column="1"/>
-        <TextBox Height="26" Margin="10,171,10,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Grid.Column="1"/>
-        <TextBox Height="26" Margin="10,295,10,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Grid.Column="1"/>
 
+
+        <!--PART CATEGORY-->
+        <Label Content="Select part category" 
+               VerticalAlignment="Top" 
+               Margin="10,233,10,0" 
+               Height="26"
+               HorizontalContentAlignment="Left"
+               VerticalContentAlignment="Center"
+               FontSize="16"
+               FontWeight="Regular"
+               Foreground="Orange"/>
+
+        <ComboBox x:Name="categoryCB" 
+                  Margin="10,233,10,0" 
+                  VerticalAlignment="Top" 
+                  Grid.Column="1" 
+                  Height="26"/>
+
+        <Label Content="OR enter a new category name" 
+               VerticalAlignment="Top" 
+               Margin="10,233,10,0" 
+               Grid.Column="2" 
+               Height="26"
+               HorizontalContentAlignment="Left"
+               VerticalContentAlignment="Center"
+               FontSize="16"
+               FontWeight="Regular"
+               Foreground="Orange"/>
+
+        <TextBox x:Name="newCategoryTB" 
+                 Height="26" 
+                 Margin="10,233,10,0" 
+                 TextWrapping="Wrap" 
+                 Text="new category name" 
+                 VerticalAlignment="Top" 
+                 Grid.Column="3"
+                 Background="DarkCyan"
+                 Foreground="Azure"
+                 BorderBrush="DimGray"
+                 HorizontalContentAlignment="Left"
+                 VerticalContentAlignment="Center"
+                 FontSize="16"
+                 FontWeight="Regular"/>
+
+
+        <!--PART MANUFACTURER-->
+        <Label Content="Select part manufacturer" 
+               VerticalAlignment="Top" 
+               Margin="10,264,10,0" 
+               Height="26"
+               HorizontalContentAlignment="Left"
+               VerticalContentAlignment="Center"
+               FontSize="16"
+               FontWeight="Regular"
+               Foreground="Orange"/>
+
+        <ComboBox x:Name="manufacturerCB" 
+                  Margin="10,264,10,0" 
+                  VerticalAlignment="Top" 
+                  Grid.Column="1" 
+                  Height="26"/>
+
+        <Label Content="OR enter a new part manufacturer name" 
+               VerticalAlignment="Top" 
+               Margin="10,264,10,0" 
+               Grid.Column="2" 
+               Height="26"
+               HorizontalContentAlignment="Left"
+               VerticalContentAlignment="Center"
+               FontSize="16"
+               FontWeight="Regular"
+               Foreground="Orange"/>
+
+        <TextBox x:Name="newManufacturerTB" 
+                 Height="26" 
+                 Margin="10,264,10,0" 
+                 TextWrapping="Wrap" 
+                 Text="new part manufacturer" 
+                 VerticalAlignment="Top" 
+                 Grid.Column="3"
+                 Background="DarkCyan"
+                 Foreground="Azure"
+                 BorderBrush="DimGray"
+                 HorizontalContentAlignment="Left"
+                 VerticalContentAlignment="Center"
+                 FontSize="16"
+                 FontWeight="Regular"/>
+
+
+        <!--PART PRICE-->
+        <Label Content="Enter part price" 
+               VerticalAlignment="Top" 
+               Margin="10,295,10,0"
+               Height="26"
+               HorizontalContentAlignment="Left"
+               VerticalContentAlignment="Center"
+               FontSize="16"
+               FontWeight="Regular"
+               Foreground="Orange"/>
+
+        <TextBox x:Name="priceTB"
+                 Height="26"
+                 Margin="10,295,10,0" 
+                 TextWrapping="Wrap" 
+                 Text="price" 
+                 VerticalAlignment="Top"
+                 Grid.Column="1"
+                 Background="DarkCyan"
+                 Foreground="Azure"
+                 BorderBrush="DimGray"
+                 HorizontalContentAlignment="Left"
+                 VerticalContentAlignment="Center"
+                 FontSize="16"
+                 FontWeight="Regular"/>
+
+
+        <!--IS AVAILABLE-->
+        <Label Content="Is this part available?" 
+               VerticalAlignment="Top" 
+               Margin="10,326,10,0" 
+               Height="26"
+               HorizontalContentAlignment="Left"
+               VerticalContentAlignment="Center"
+               FontSize="16"
+               FontWeight="Regular"
+               Foreground="Orange"/>
+
+        <ComboBox x:Name="isAvailableCB" 
+                  Margin="10,326,10,0"
+                  VerticalAlignment="Top"
+                  Grid.Column="1" 
+                  Height="26"/>
+
+
+        <!--QUANTITY-->
+        <Label Content="Enter available quantity" 
+               VerticalAlignment="Top" 
+               Margin="10,357,10,0" 
+               Height="26"
+               HorizontalContentAlignment="Left"
+               VerticalContentAlignment="Center"
+               FontSize="16"
+               FontWeight="Regular"
+               Foreground="Orange"/>
+
+        <TextBox x:Name="quantityTB" 
+                 Height="26" 
+                 Margin="10,357,10,0" 
+                 TextWrapping="Wrap" 
+                 Text="quantity" 
+                 VerticalAlignment="Top" 
+                 Grid.Column="1"
+                 Background="DarkCyan"
+                 Foreground="Azure"
+                 BorderBrush="DimGray"
+                 HorizontalContentAlignment="Left"
+                 VerticalContentAlignment="Center"
+                 FontSize="16"
+                 FontWeight="Regular"/>
+
+        
+        <!--BUTTONS-->
+        <Button x:Name="addProductButton" 
+                Content="Add product" 
+                HorizontalAlignment="Left" 
+                VerticalAlignment="Top" 
+                Width="133" 
+                Margin="41,10,0,0" 
+                Grid.Row="1" 
+                Height="48"
+                Background="DarkGray"
+                Foreground="OrangeRed"
+                FontSize="14"
+                FontWeight="Bold"
+                BorderBrush="OrangeRed"
+                BorderThickness="2"/>
+
+        <Button x:Name="cancelButton" 
+                Content="Cancel" 
+                HorizontalAlignment="Left" 
+                VerticalAlignment="Top" 
+                Width="137" 
+                Margin="10,10,0,0" 
+                Grid.Column="1" 
+                Grid.Row="1" 
+                Height="48"
+                Background="DarkGray"
+                Foreground="OrangeRed"
+                FontSize="14"
+                FontWeight="Bold"
+                BorderBrush="OrangeRed"
+                BorderThickness="2"/>
+
+        <Button x:Name="nextProductButton" 
+                Content="Add another product" 
+                HorizontalAlignment="Left" 
+                VerticalAlignment="Top" 
+                Width="183" 
+                Margin="10,10,0,0" 
+                Grid.Column="2" 
+                Grid.Row="1" 
+                Height="48"
+                Background="DarkGray"
+                Foreground="OrangeRed"
+                FontSize="14"
+                FontWeight="Bold"
+                BorderBrush="OrangeRed"
+                BorderThickness="2"/>
 
     </Grid>
 </Window>
