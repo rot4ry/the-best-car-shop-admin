@@ -5,8 +5,35 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TheBestCarShop___Admin.IN_PROGRESS"
         mc:Ignorable="d"
-        Title="AddProductWindow" Height="450" Width="800">
+        Title="SG-Admin: Add Product" 
+        Height="549" 
+        Width="669"
+        Background="Gray" 
+        ResizeMode="CanMinimize" 
+        WindowStartupLocation="CenterScreen">
     <Grid>
+        
+        <Rectangle x:Name="topRectangle"
+                    Grid.Column="1" 
+                    Fill="DimGray" 
+                    Margin="0,-2,0,0" 
+                    Stroke="DimGray" 
+                    Height="92" 
+                    VerticalAlignment="Top" 
+                    Grid.RowSpan="2"/>
+
+        <Label x:Name="topLabel" 
+                    Content="Welcome, administrator." 
+                    Grid.Column="1" 
+                    Margin="20,0,10,0"
+                    HorizontalContentAlignment="Left"
+                    VerticalContentAlignment="Center"
+                    FontSize="28"
+                    FontWeight="Light"
+                    Foreground="Orange" 
+                    Height="82" 
+                    VerticalAlignment="Top"/>
+        
         
     </Grid>
 </Window>

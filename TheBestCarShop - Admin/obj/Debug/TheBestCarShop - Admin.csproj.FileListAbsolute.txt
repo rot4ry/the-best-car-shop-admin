@@ -31,3 +31,4 @@ C:\Users\rot4ry\Desktop\Programowanie_IV_Projekt_2\TheBestCarShop - Admin\obj\De
 C:\Users\rot4ry\Desktop\Programowanie_IV_Projekt_2\TheBestCarShop - Admin\obj\Debug\TheBestCarShop - Admin.pdb
 C:\Users\rot4ry\Desktop\Programowanie_IV_Projekt_2\TheBestCarShop - Admin\obj\Debug\IN_PROGRESS\AddProductWindow.g.cs
 C:\Users\rot4ry\Desktop\Programowanie_IV_Projekt_2\TheBestCarShop - Admin\obj\Debug\IN_PROGRESS\AddProductWindow.baml
+C:\Users\rot4ry\Desktop\Programowanie_IV_Projekt_2\TheBestCarShop - Admin\obj\Debug\TheBestCarShop - Admin.csprojAssemblyReference.cache
