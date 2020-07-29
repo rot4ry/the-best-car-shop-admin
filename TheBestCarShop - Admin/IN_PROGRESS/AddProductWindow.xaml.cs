@@ -25,9 +25,10 @@ namespace TheBestCarShop___Admin.IN_PROGRESS
         public AddProductWindow()
         {
             InitializeComponent();
+            
             brandCB.ItemsSource = databaseHandler.GetBrands();
-            categoryCB.DataContext = databaseHandler.GetCategories();
-            manufacturerCB.DataContext = databaseHandler.GetManufacturers();
+            categoryCB.ItemsSource = databaseHandler.GetCategories();
+            manufacturerCB.ItemsSource = databaseHandler.GetManufacturers();
             isAvailableCB.ItemsSource = new string[] {"", "yes", "no"};
         }
 
@@ -37,6 +38,16 @@ namespace TheBestCarShop___Admin.IN_PROGRESS
             //after a brand is chosen modelCB.DataContext = databaseHandler.GetModels();
             categoryCB.DataContext = databaseHandler.GetCategories();
             manufacturerCB.DataContext = databaseHandler.GetManufacturers();
+        }
+
+        private void cancelButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void addProductButton_Click(object sender, RoutedEventArgs e)
+        {
+            //database insert
         }
     }
 }

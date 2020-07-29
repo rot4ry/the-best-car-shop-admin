@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Net.Http.Headers;
+using System.Runtime.CompilerServices;
 using System.Windows.Controls;
 using Dapper;
 
@@ -45,21 +46,53 @@ namespace TheBestCarShop___Admin
         public List<string> GetBrands()
         {
             List<string> brands = new List<string>();
-            brands.Add("Test 1");
-            brands.Add("Test 2");
+            string select = "SELECT DISTINCT CarBrand " +
+                            "FROM Products ";
+            try
+            {
+                SqlConnection connection = new SqlConnection(this.connectionString);
+                brands = connection.Query<string>(select).ToList<string>();
+            }
+            catch(Exception DatabaseHandlerException)
+            {
+                Console.WriteLine(DatabaseHandlerException.Message);
+            }
 
             return brands;
         }
         public List<string> GetManufacturers()
         {
             List<string> manufacturers = new List<string>();
-            //todo
+            string select = "SELECT DISTINCT Manufacturer " +
+                            "FROM Products ";
+
+            try
+            {
+                SqlConnection connection = new SqlConnection(this.connectionString);
+                manufacturers = connection.Query<string>(select).ToList<string>();
+            }
+            catch (Exception DatabaseHandlerException)
+            {
+                Console.WriteLine(DatabaseHandlerException.Message);
+            }
+
             return manufacturers;
         }
         public List<string> GetCategories()
         {
             List<string> categories = new List<string>();
-            //todo
+            string select = "SELECT DISTINCT Category " +
+                            "FROM Products ";
+            try
+            {
+                SqlConnection connection = new SqlConnection(this.connectionString);
+                categories = connection.Query<string>(select).ToList<string>();
+            }
+            catch (Exception DatabaseHandlerException)
+            {
+                Console.WriteLine(DatabaseHandlerException.Message);
+            }
+
             return categories;
         }
 
