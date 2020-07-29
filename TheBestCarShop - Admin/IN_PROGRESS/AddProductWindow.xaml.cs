@@ -19,9 +19,24 @@ namespace TheBestCarShop___Admin.IN_PROGRESS
     /// </summary>
     public partial class AddProductWindow : Window
     {
+        private DatabaseHandler databaseHandler = new DatabaseHandler();
+        
+
         public AddProductWindow()
         {
             InitializeComponent();
+            brandCB.ItemsSource = databaseHandler.GetBrands();
+            categoryCB.DataContext = databaseHandler.GetCategories();
+            manufacturerCB.DataContext = databaseHandler.GetManufacturers();
+            isAvailableCB.ItemsSource = new string[] {"", "yes", "no"};
+        }
+
+        private void SetContexts()
+        {
+            brandCB.DataContext = databaseHandler.GetBrands();
+            //after a brand is chosen modelCB.DataContext = databaseHandler.GetModels();
+            categoryCB.DataContext = databaseHandler.GetCategories();
+            manufacturerCB.DataContext = databaseHandler.GetManufacturers();
         }
     }
 }

@@ -21,7 +21,8 @@ namespace TheBestCarShop___Admin
                     TrustServerCertificate=False;
                     ApplicationIntent=ReadWrite;
                     MultiSubnetFailover=False";
-        
+
+
         //PRODUCT RELATED METHODS
         public List<Product> GetAvailableProductsList()
         {
@@ -41,6 +42,29 @@ namespace TheBestCarShop___Admin
             }
             return availableProductsList;
         }
+        public List<string> GetBrands()
+        {
+            List<string> brands = new List<string>();
+            brands.Add("Test 1");
+            brands.Add("Test 2");
+
+            return brands;
+        }
+        public List<string> GetManufacturers()
+        {
+            List<string> manufacturers = new List<string>();
+            //todo
+            return manufacturers;
+        }
+        public List<string> GetCategories()
+        {
+            List<string> categories = new List<string>();
+            //todo
+            return categories;
+        }
+
+
+
         public Product GetProduct(int id)
         {
             string query = "SELECT * FROM Products WHERE ProductID = @id";
