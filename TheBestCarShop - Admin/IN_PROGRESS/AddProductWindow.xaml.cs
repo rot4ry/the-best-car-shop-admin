@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -53,9 +54,42 @@ namespace TheBestCarShop___Admin.IN_PROGRESS
         private void addProductButton_Click(object sender, RoutedEventArgs e)
         {
             //database insert
-            AddProductWindow apw = new AddProductWindow();
-            this.Close();
-            apw.ShowDialog();
+
+            string brand = brandCB.Text + newBrandTB.Text;
+            string model = modelCB.Text + newModelTB.Text;
+            
+            
+            string fyear = fProdYearTB.Text;    //check
+            string lyear = lProdYearTB.Text;    //check
+            string price = priceTB.Text;        //check
+            
+            string name = new TextRange(partNameTB.Document.ContentStart, partNameTB.Document.ContentEnd).Text;
+            string category = categoryCB.Text + newCategoryTB.Text;
+            string manufacturer = manufacturerCB.Text + newManufacturerTB.Text;
+            
+            string code = Guid.NewGuid().ToString();
+            
+            string isAvailable = isAvailableCB.Text;
+            string quantity = quantityTB.Text;
+
+            Console.WriteLine(brand);
+            Console.WriteLine(model);
+            Console.WriteLine(fyear);
+            Console.WriteLine(lyear);
+            Console.WriteLine(price);
+            Console.WriteLine(@name);
+            Console.WriteLine(category);
+            Console.WriteLine(manufacturer);
+            Console.WriteLine(code);
+            Console.WriteLine(isAvailable);
+            Console.WriteLine(quantity);
+            
+            
+
+
+            //AddProductWindow apw = new AddProductWindow();
+            //this.Close();
+            //apw.ShowDialog();
         }
         
         //Brand
@@ -161,6 +195,20 @@ namespace TheBestCarShop___Admin.IN_PROGRESS
             else
             {
                 manufacturerCB.IsEnabled = true;
+            }
+        }
+
+        private void isAvailableCB_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if(isAvailableCB.SelectedItem.ToString() == "No")
+            {
+                quantityTB.IsEnabled = false;
+                quantityTB.Text = "0";
+            }
+            else
+            {
+                quantityTB.IsEnabled = true;
+                quantityTB.Text = "";
             }
         }
     }
