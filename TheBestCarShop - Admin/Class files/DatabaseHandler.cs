@@ -58,8 +58,34 @@ namespace TheBestCarShop___Admin
                 Console.WriteLine(DatabaseHandlerException.Message);
             }
 
-            return brands;
+            return (List<string>)brands;
         }
+
+        public List<string> GetModelsByBrand(string brand)
+        {
+            List<string> brandsModels = new List<string>();
+            string select = "SELECT DISTINCT CarModel " +
+                            "FROM Products " +
+                            "WHERE CarBrand = @brand ";
+
+            try
+            {
+                SqlConnection connection = new SqlConnection(this.connectionString);
+                brandsModels = connection.Query<string>(select,
+                                                        new 
+                                                        { 
+                                                            brand = brand 
+                                                        })
+                                                        .ToList<string>();
+            }
+            catch (Exception DatabaseHandlerException)
+            {
+                Console.WriteLine(DatabaseHandlerException.Message);
+            }
+
+            return brandsModels;
+        }
+
         public List<string> GetManufacturers()
         {
             List<string> manufacturers = new List<string>();
