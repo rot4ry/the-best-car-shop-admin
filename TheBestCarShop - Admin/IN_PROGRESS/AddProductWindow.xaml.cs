@@ -53,17 +53,25 @@ namespace TheBestCarShop___Admin.IN_PROGRESS
 
         private void addProductButton_Click(object sender, RoutedEventArgs e)
         {
-            //database insert
-
+            //validate using FluentValidation
             string brand = brandCB.Text + newBrandTB.Text;
             string model = modelCB.Text + newModelTB.Text;
+
+            int fyear;
+            Int32.TryParse(fProdYearTB.Text, out fyear);    //check
+
+            int lyear;
+            Int32.TryParse(lProdYearTB.Text, out lyear);    //check
             
-            
-            string fyear = fProdYearTB.Text;    //check
-            string lyear = lProdYearTB.Text;    //check
-            string price = priceTB.Text;        //check
-            
+            double price;
+            Double.TryParse(priceTB.Text, out price);       //check
+            if(price == 0)
+            {
+                //message box
+            }
+
             string name = new TextRange(partNameTB.Document.ContentStart, partNameTB.Document.ContentEnd).Text;
+            
             string category = categoryCB.Text + newCategoryTB.Text;
             string manufacturer = manufacturerCB.Text + newManufacturerTB.Text;
             
@@ -77,16 +85,15 @@ namespace TheBestCarShop___Admin.IN_PROGRESS
             Console.WriteLine(fyear);
             Console.WriteLine(lyear);
             Console.WriteLine(price);
-            Console.WriteLine(@name);
+            Console.WriteLine(name);
             Console.WriteLine(category);
             Console.WriteLine(manufacturer);
             Console.WriteLine(code);
             Console.WriteLine(isAvailable);
             Console.WriteLine(quantity);
             
+            //database insert
             
-
-
             //AddProductWindow apw = new AddProductWindow();
             //this.Close();
             //apw.ShowDialog();
@@ -198,6 +205,7 @@ namespace TheBestCarShop___Admin.IN_PROGRESS
             }
         }
 
+        //IsAvailable
         private void isAvailableCB_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if(isAvailableCB.SelectedItem.ToString() == "No")

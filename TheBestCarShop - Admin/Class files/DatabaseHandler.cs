@@ -25,6 +25,63 @@ namespace TheBestCarShop___Admin
 
 
         //PRODUCT RELATED METHODS
+        public int AddProduct(string brand, string model, int fyear, int lyear, double price, string name, string category, string manufacturer, string code, string isAvailable, int quantity)
+        {
+            int result = 0;
+            string insert = 
+                "INSERT INTO Products(" +
+                "CarBrand, " +
+                "CarModel, " +
+                "CarFirstProdYear, " +
+                "CarLastProdYear, " +
+                "Price, " +
+                "Name, " +
+                "Category, " +
+                "Manufacturer, " +
+                "Code, " +
+                "IsAvailable, " +
+                "Quantity)  " +
+                "VALUES(" +
+                "@brand, " +
+                "@model, " +
+                "@fyear, " +
+                "@lyear, " +
+                "@price, " +
+                "@name, " +
+                "@category, " +
+                "@manufacturer, " +
+                "@code, " +
+                "@isAvailable, " +
+                "@quantity) ";
+
+            try
+            {
+                SqlConnection connection = new SqlConnection(this.connectionString);
+                result = connection.Execute(insert,
+                                            new
+                                            {
+                                                brand = brand,
+                                                model = model,
+                                                fyear = fyear,
+                                                lyear = lyear,
+                                                price = price,
+                                                name = name,
+                                                category = category,
+                                                manufacturer = manufacturer,
+                                                code = code,
+                                                isAvailable = isAvailable,
+                                                quantity = quantity
+                                            });
+                connection.Close();
+            }
+            catch(Exception DatabaseHandlerException)
+            {
+                Console.WriteLine(DatabaseHandlerException.Message);
+            }
+
+            return result;
+        }
+
         public List<Product> GetAvailableProductsList()
         {
             List<Product> availableProductsList;
@@ -52,6 +109,7 @@ namespace TheBestCarShop___Admin
             {
                 SqlConnection connection = new SqlConnection(this.connectionString);
                 brands = connection.Query<string>(select).ToList<string>();
+                connection.Close();
             }
             catch(Exception DatabaseHandlerException)
             {
@@ -77,6 +135,7 @@ namespace TheBestCarShop___Admin
                                                             brand = brand 
                                                         })
                                                         .ToList<string>();
+                connection.Close();
             }
             catch (Exception DatabaseHandlerException)
             {
@@ -96,6 +155,7 @@ namespace TheBestCarShop___Admin
             {
                 SqlConnection connection = new SqlConnection(this.connectionString);
                 manufacturers = connection.Query<string>(select).ToList<string>();
+                connection.Close();
             }
             catch (Exception DatabaseHandlerException)
             {
@@ -113,6 +173,7 @@ namespace TheBestCarShop___Admin
             {
                 SqlConnection connection = new SqlConnection(this.connectionString);
                 categories = connection.Query<string>(select).ToList<string>();
+                connection.Close();
             }
             catch (Exception DatabaseHandlerException)
             {
