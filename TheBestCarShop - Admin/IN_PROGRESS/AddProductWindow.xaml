@@ -386,7 +386,8 @@
                  HorizontalContentAlignment="Left"
                  VerticalContentAlignment="Center"
                  FontSize="16"
-                 FontWeight="Regular"/>
+                 FontWeight="Regular"
+                 Text="{Binding ProductModel.Quantity, UpdateSourceTrigger=PropertyChanged}"/>
 
 
         <!--BUTTONS-->
@@ -438,7 +439,8 @@
                    Background="SlateGray"
                    Foreground="Orange"
                    FontSize="16"
-                   FontWeight="Normal"/>
+                   FontWeight="Normal"
+                   Text="{Binding ProductModel.Errors, UpdateSourceTrigger=PropertyChanged}"/>
 
     </Grid>
 </Window>

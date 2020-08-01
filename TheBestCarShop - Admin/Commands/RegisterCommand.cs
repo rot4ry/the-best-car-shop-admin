@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media.Media3D;
+using TheBestCarShop___Admin.IN_PROGRESS;
 using TheBestCarShop___Admin.Validators;
 
 namespace TheBestCarShop___Admin.Commands
 {
     public class RegisterCommand : ICommand
     {
-
         private ProductValidator _PRODUCTVALIDATOR = new ProductValidator();
 
         public event EventHandler CanExecuteChanged
@@ -30,17 +30,15 @@ namespace TheBestCarShop___Admin.Commands
             {
                 return false;
             }
-            else
-            {
-                ValidationResult output = _PRODUCTVALIDATOR.Validate(product);
-                return output.IsValid;
-            }
+            ValidationResult output = _PRODUCTVALIDATOR.Validate(product);
+            product.Errors = string.Join("\n", output.Errors);
+            return output.IsValid;
         }
 
         public void Execute(object parameter)
         {
-            Product product = parameter as Product;
             MessageBox.Show("Hello", "Learning", MessageBoxButton.YesNo);
         }
     }
 }
+            

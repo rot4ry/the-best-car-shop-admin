@@ -13,7 +13,7 @@ namespace TheBestCarShop___Admin
         
         public int ProductID { get; private set; }
         
-        
+
         private string carbrand;
         public string CarBrand {
             get { 
@@ -154,6 +154,22 @@ namespace TheBestCarShop___Admin
                 {
                     quantity = value;
                     PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Quantity"));
+                }
+            }
+        }
+
+        private string errors;
+        public string Errors { 
+            get
+            {
+                return errors;
+            }
+            set
+            {
+                if(errors != value)
+                {
+                    errors = value;
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Errors"));
                 }
             }
         }
