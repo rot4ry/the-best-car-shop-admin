@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TheBestCarShop___Admin.IN_PROGRESS"
+        xmlns:viewmodels="clr-namespace:TheBestCarShop___Admin.Viewmodels"
         mc:Ignorable="d"
         Title="SG-Admin: Add Product" 
         Height="588" 
@@ -11,6 +12,11 @@
         Background="Gray" 
         ResizeMode="CanMinimize" 
         WindowStartupLocation="CenterScreen">
+    
+    <Window.DataContext>
+        <viewmodels:AddProductViewModel></viewmodels:AddProductViewModel>
+    </Window.DataContext>
+    
     <Grid>
 
         <Grid.RowDefinitions>
@@ -163,7 +169,8 @@
                  HorizontalContentAlignment="Left"
                  VerticalContentAlignment="Center"
                  FontSize="16"
-                 FontWeight="Regular"/>
+                 FontWeight="Regular"
+                 Text="{Binding ProductModel.CarFirstProdYear, UpdateSourceTrigger=PropertyChanged}"/>
 
 
 
@@ -398,7 +405,9 @@
                 BorderThickness="2" 
                 Click="addProductButton_Click" 
                 Grid.Column="3" 
-                Grid.Row="1"/>
+                Grid.Row="1"
+                Command="{Binding RegisterCommand}"
+                CommandParameter="{Binding ProductModel}"/>
 
         <Button x:Name="cancelButton" 
                 Content="Cancel" 
