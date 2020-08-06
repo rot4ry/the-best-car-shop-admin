@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Net.Http.Headers;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
-using FluentValidation;
+﻿using FluentValidation;
 using TheBestCarShop___Admin.Viewmodels;
 
 namespace TheBestCarShop___Admin.Validators
@@ -26,7 +18,7 @@ namespace TheBestCarShop___Admin.Validators
                 .NotEmpty()
                 .WithMessage("Car model must not be empty.")
                 .Must(x => x.ToString() != "");
-            
+
             RuleFor(x => x.CarFirstProdYear)
                 .NotEmpty()
                 .WithMessage("First year must not be empty.")
@@ -59,19 +51,13 @@ namespace TheBestCarShop___Admin.Validators
                 .GreaterThan(0)
                 .WithMessage("Price must not be negative.");
 
+            RuleFor(x => x.IsAvailable)
+                .InclusiveBetween(false, true)
+                .WithMessage("Availability must be chosen.");
 
-
-            //something's not right
-
-            //RuleFor(x => x.IsAvailable)
-            //    .NotEmpty()
-            //    .WithMessage("Availability must be chosen.");
-
-            
-            //RuleFor(x => x.Quantity)
-            //    .GreaterThanOrEqualTo(0)
-            //    .When(y => y.IsAvailable = true)
-            //    .WithMessage("Quantity must be an integer greater than 0.");
+            RuleFor(x => x.Quantity)
+                .GreaterThanOrEqualTo(0)
+                .WithMessage("Quantity must be an integer greater than 0.");
         }
     }
 }

@@ -26,7 +26,7 @@ namespace TheBestCarShop___Admin.IN_PROGRESS
         private List<string> _ModelSRC          = new List<string>() {""};
         private List<string> _CategorySRC       = new List<string>() {""};
         private List<string> _ManufacturerSRC   = new List<string>() {""};
-        private List<string> _AvailableSRC      = new List<string>(){ "true", "false" };
+        private List<bool> _AvailableSRC      = new List<bool>(){ true, false};
         
         public AddProductWindow()
         {
@@ -53,7 +53,6 @@ namespace TheBestCarShop___Admin.IN_PROGRESS
 
         private void addProductButton_Click(object sender, RoutedEventArgs e)
         {
-            //validate using FluentValidation
             string brand = brandCB.Text + newBrandTB.Text;
             string model = modelCB.Text + newModelTB.Text;
 
@@ -74,16 +73,26 @@ namespace TheBestCarShop___Admin.IN_PROGRESS
             string code = Guid.NewGuid().ToString();
             
             string isAvailable = isAvailableCB.Text;
-            string quantity = quantityTB.Text;
+            
+            int quantity;
+            Int32.TryParse(quantityTB.Text, out quantity);
 
-            
-            //if correct 
-            //database insert
-            
-           
-            //AddProductWindow apw = new AddProductWindow();
-            //this.Close();
-            //apw.ShowDialog();
+
+            int result = databaseHandler.AddProduct(brand, model, fyear, lyear, 
+                                                    price, name, category, manufacturer, 
+                                                    code, isAvailable, quantity);
+            if (result == 1)
+            {
+                MessageBox.Show("Success!", "Product has been added to the database.", MessageBoxButton.OK);
+            }
+            else
+            {
+                MessageBox.Show("Failure!", "Sorry, something went wrong. Please try again and check inserted data.", MessageBoxButton.OK);
+            }
+
+            AddProductWindow apw = new AddProductWindow();
+            this.Close();
+            apw.ShowDialog();
         }
         
         //Brand
@@ -195,7 +204,7 @@ namespace TheBestCarShop___Admin.IN_PROGRESS
         //IsAvailable
         private void isAvailableCB_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if(isAvailableCB.SelectedItem.ToString() == "No")
+            if(isAvailableCB.SelectedItem.ToString().ToLower() == "false")
             {
                 quantityTB.IsEnabled = false;
                 quantityTB.Text = "0";
@@ -203,7 +212,7 @@ namespace TheBestCarShop___Admin.IN_PROGRESS
             else
             {
                 quantityTB.IsEnabled = true;
-                quantityTB.Text = "";
+                quantityTB.Text = "0";
             }
         }
     }

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel;
 
 namespace TheBestCarShop___Admin.Viewmodels
 {
@@ -14,7 +9,7 @@ namespace TheBestCarShop___Admin.Viewmodels
          * This should be used as a representation of what an user can see
          * while trying to add a new product to the database.
          */
-        
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         private string carbrand;
@@ -156,7 +151,23 @@ namespace TheBestCarShop___Admin.Viewmodels
         }
 
         public string PartCode { get; set; }
-        public bool IsAvailable { get; set; }
+
+        private bool isavailable;
+        public bool IsAvailable
+        {
+            get
+            {
+                return isavailable;
+            }
+            set
+            {
+                if (isavailable != value)
+                {
+                    isavailable = value;
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("IsAvailable"));
+                }
+            }
+        }
 
         private int quantity;
         public int Quantity
