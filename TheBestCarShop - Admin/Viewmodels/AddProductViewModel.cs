@@ -11,13 +11,13 @@ namespace TheBestCarShop___Admin.Viewmodels
 {
     public class AddProductViewModel
     {
-        public Product ProductModel { get; set; }
-        public ICommand RegisterCommand { get; set; }
+        public NewProductView ProductModel { get; set; }
+        public ICommand ProductViewCommand { get; set; }
         
         public AddProductViewModel()
         {
-            ProductModel = new Product();
-            RegisterCommand = new RegisterCommand();
+            ProductModel = new NewProductView();
+            ProductViewCommand = new ProductViewCommand();
         }
     }
 }

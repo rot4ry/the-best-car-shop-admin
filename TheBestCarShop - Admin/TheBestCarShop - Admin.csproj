@@ -61,12 +61,13 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Commands\RegisterCommand.cs" />
+    <Compile Include="Commands\ProductViewCommand.cs" />
     <Compile Include="IN_PROGRESS\AddProductWindow.xaml.cs">
       <DependentUpon>AddProductWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Validators\ProductValidator.cs" />
+    <Compile Include="Validators\NewProductValidator.cs" />
     <Compile Include="Viewmodels\AddProductViewModel.cs" />
+    <Compile Include="Viewmodels\NewProductView.cs" />
     <Compile Include="Windows\AccountSettingsWindow.xaml.cs">
       <DependentUpon>AccountSettingsWindow.xaml</DependentUpon>
     </Compile>

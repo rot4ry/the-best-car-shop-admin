@@ -6,14 +6,37 @@ using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using FluentValidation;
+using TheBestCarShop___Admin.Viewmodels;
 
 namespace TheBestCarShop___Admin.Validators
 {
-    public class ProductValidator : AbstractValidator<Product>
+    public class NewProductValidator : AbstractValidator<NewProductView>
     {
-        public ProductValidator()
+        public NewProductValidator()
         {
             CascadeMode = CascadeMode.StopOnFirstFailure;
+
+            RuleFor(x => x.CarBrand)
+                .NotEmpty()
+                .WithMessage("Car brand must be chosen.")
+                .Must(x => x.ToString() != "");
+
+            RuleFor(x => x.NewCarBrand)
+                .NotEmpty()
+                .WithMessage("Car brand must be chosen.")
+                .Must(x => x.ToString() != "");
+
+            
+            RuleFor(x => x.CarModel)
+                .NotEmpty()
+                .WithMessage("Car model must not be empty.")
+                .Must(x => x.ToString() != "");
+            
+            RuleFor(x => x.NewCarModel)
+                .NotEmpty()
+                .WithMessage("Car model must not be empty.")
+                .Must(x => x.ToString() != "");
+
 
             RuleFor(x => x.CarFirstProdYear)
                 .NotEmpty()

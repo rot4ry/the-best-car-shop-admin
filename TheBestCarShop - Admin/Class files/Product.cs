@@ -157,21 +157,5 @@ namespace TheBestCarShop___Admin
                 }
             }
         }
-
-        private string errors;
-        public string Errors { 
-            get
-            {
-                return errors;
-            }
-            set
-            {
-                if(errors != value)
-                {
-                    errors = value;
-                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Errors"));
-                }
-            }
-        }
     }
 }

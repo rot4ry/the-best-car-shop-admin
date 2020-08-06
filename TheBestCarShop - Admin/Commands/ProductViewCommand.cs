@@ -9,12 +9,13 @@ using System.Windows.Input;
 using System.Windows.Media.Media3D;
 using TheBestCarShop___Admin.IN_PROGRESS;
 using TheBestCarShop___Admin.Validators;
+using TheBestCarShop___Admin.Viewmodels;
 
 namespace TheBestCarShop___Admin.Commands
 {
-    public class RegisterCommand : ICommand
+    public class ProductViewCommand : ICommand
     {
-        private ProductValidator _PRODUCTVALIDATOR = new ProductValidator();
+        private NewProductValidator _PRODUCTVALIDATOR = new NewProductValidator();
 
         public event EventHandler CanExecuteChanged
         {
@@ -24,20 +25,20 @@ namespace TheBestCarShop___Admin.Commands
 
         public bool CanExecute(object parameter)
         {
-            Product product = parameter as Product;
+            NewProductView productView = parameter as NewProductView;
             
-            if(product is null)
+            if(productView is null)
             {
                 return false;
             }
-            ValidationResult output = _PRODUCTVALIDATOR.Validate(product);
-            product.Errors = string.Join("\n", output.Errors);
+            ValidationResult output = _PRODUCTVALIDATOR.Validate(productView);
+            productView.Errors = string.Join("\n", output.Errors);
             return output.IsValid;
         }
 
         public void Execute(object parameter)
         {
-            MessageBox.Show("Hello", "Learning", MessageBoxButton.YesNo);
+            MessageBox.Show("Success!", "Product has been added to the database.", MessageBoxButton.OK);
         }
     }
 }
