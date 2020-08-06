@@ -62,7 +62,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Class files\Commands\ProductViewCommand.cs" />
-    <Compile Include="IN_PROGRESS\AddProductWindow.xaml.cs">
+    <Compile Include="Windows\AddProductWindow.xaml.cs">
       <DependentUpon>AddProductWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Class files\Validators\NewProductValidator.cs" />
@@ -86,7 +86,7 @@
     <Compile Include="TODO\ProductStatsWindow.xaml.cs">
       <DependentUpon>ProductStatsWindow.xaml</DependentUpon>
     </Compile>
-    <Page Include="IN_PROGRESS\AddProductWindow.xaml">
+    <Page Include="Windows\AddProductWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
