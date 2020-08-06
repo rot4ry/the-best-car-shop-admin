@@ -26,7 +26,7 @@ namespace TheBestCarShop___Admin.IN_PROGRESS
         private List<string> _ModelSRC          = new List<string>() {""};
         private List<string> _CategorySRC       = new List<string>() {""};
         private List<string> _ManufacturerSRC   = new List<string>() {""};
-        private List<string> _AvailableSRC      = new List<string>(){ "Yes", "No" };
+        private List<string> _AvailableSRC      = new List<string>(){ "true", "false" };
         
         public AddProductWindow()
         {
@@ -65,12 +65,8 @@ namespace TheBestCarShop___Admin.IN_PROGRESS
             
             double price;
             Double.TryParse(priceTB.Text, out price);       //check
-            if(price == 0)
-            {
-                //message box
-            }
 
-            string name = new TextRange(partNameTB.Document.ContentStart, partNameTB.Document.ContentEnd).Text;
+            string name = partNameRB.Text;
             
             string category = categoryCB.Text + newCategoryTB.Text;
             string manufacturer = manufacturerCB.Text + newManufacturerTB.Text;
@@ -80,20 +76,11 @@ namespace TheBestCarShop___Admin.IN_PROGRESS
             string isAvailable = isAvailableCB.Text;
             string quantity = quantityTB.Text;
 
-            Console.WriteLine(brand);
-            Console.WriteLine(model);
-            Console.WriteLine(fyear);
-            Console.WriteLine(lyear);
-            Console.WriteLine(price);
-            Console.WriteLine(name);
-            Console.WriteLine(category);
-            Console.WriteLine(manufacturer);
-            Console.WriteLine(code);
-            Console.WriteLine(isAvailable);
-            Console.WriteLine(quantity);
             
+            //if correct 
             //database insert
             
+           
             //AddProductWindow apw = new AddProductWindow();
             //this.Close();
             //apw.ShowDialog();

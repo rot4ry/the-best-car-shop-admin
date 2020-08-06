@@ -13,16 +13,9 @@ namespace TheBestCarShop___Admin.Viewmodels
          * This class is a modified version of Product class.
          * This should be used as a representation of what an user can see
          * while trying to add a new product to the database.
-         * 
-         * thus
-         * 
-         * This will have additional fields, correponding to the fields in AddProductWindow
          */
         
         public event PropertyChangedEventHandler PropertyChanged;
-
-        public int ProductID { get; private set; }
-
 
         private string carbrand;
         public string CarBrand
@@ -41,25 +34,6 @@ namespace TheBestCarShop___Admin.Viewmodels
             }
         }
 
-        private string newcarbrand;
-        public string NewCarBrand
-        {
-            get
-            {
-                return newcarbrand;
-            }
-            set
-            {
-                if (newcarbrand != value)
-                {
-                    newcarbrand = value;
-                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("NewCarBrand"));
-                }
-            }
-        }
-
-
-
         private string carmodel;
         public string CarModel
         {
@@ -73,23 +47,6 @@ namespace TheBestCarShop___Admin.Viewmodels
                 {
                     carmodel = value;
                     PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("CarModel"));
-                }
-            }
-        }
-
-        private string newcarmodel;
-        public string NewCarModel
-        {
-            get
-            {
-                return newcarmodel;
-            }
-            set
-            {
-                if (newcarmodel != value)
-                {
-                    newcarmodel = value;
-                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("NewCarModel"));
                 }
             }
         }
@@ -180,24 +137,6 @@ namespace TheBestCarShop___Admin.Viewmodels
             }
         }
 
-        private string newcategory;
-        public string NewCategory
-        {
-            get
-            {
-                return newcategory;
-            }
-            set
-            {
-                if (newcategory != value)
-                {
-                    newcategory = value;
-                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("NewCategory"));
-                }
-            }
-        }
-
-
 
         private string manufacturer;
         public string Manufacturer
@@ -212,23 +151,6 @@ namespace TheBestCarShop___Admin.Viewmodels
                 {
                     manufacturer = value;
                     PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Manufacturer"));
-                }
-            }
-        }
-
-        private string newmanufacturer;
-        public string NewManufacturer
-        {
-            get
-            {
-                return newmanufacturer;
-            }
-            set
-            {
-                if (newmanufacturer != value)
-                {
-                    newmanufacturer = value;
-                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("NewManufacturer"));
                 }
             }
         }
