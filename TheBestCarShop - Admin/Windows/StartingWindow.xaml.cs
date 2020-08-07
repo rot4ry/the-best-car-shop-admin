@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using TheBestCarShop___Admin.Class_files.Basics;
 
 namespace TheBestCarShop___Admin
 {

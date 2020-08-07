@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using TheBestCarShop___Admin.IN_PROGRESS;
+using TheBestCarShop___Admin.Class_files.Basics;
 
 namespace TheBestCarShop___Admin
 {

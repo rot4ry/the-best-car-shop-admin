@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TheBestCarShop___Admin.IN_PROGRESS"
-        xmlns:viewmodels="clr-namespace:TheBestCarShop___Admin.Viewmodels"
+        xmlns:viewmodels="clr-namespace:TheBestCarShop___Admin.Class_files.Viewmodels"
         mc:Ignorable="d"
         Title="SG-Admin: Add Product" 
         Height="588" 

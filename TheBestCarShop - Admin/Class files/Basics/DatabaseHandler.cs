@@ -9,7 +9,7 @@ using System.Runtime.CompilerServices;
 using System.Windows.Controls;
 using Dapper;
 
-namespace TheBestCarShop___Admin
+namespace TheBestCarShop___Admin.Class_files.Basics
 {
     public class DatabaseHandler
     {

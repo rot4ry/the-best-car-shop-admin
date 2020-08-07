@@ -1,7 +1,8 @@
 ﻿using System.Windows.Input;
-using TheBestCarShop___Admin.Commands;
+using TheBestCarShop___Admin.Class_files.Commands;
+using TheBestCarShop___Admin.Class_files.Views;
 
-namespace TheBestCarShop___Admin.Viewmodels
+namespace TheBestCarShop___Admin.Class_files.Viewmodels
 {
     public class AddProductViewModel
     {

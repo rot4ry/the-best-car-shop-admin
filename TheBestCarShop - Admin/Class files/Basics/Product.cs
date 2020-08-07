@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TheBestCarShop___Admin
+namespace TheBestCarShop___Admin.Class_files.Basics
 {
     public class Product : INotifyPropertyChanged
     {

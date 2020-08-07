@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace TheBestCarShop___Admin.Viewmodels
+namespace TheBestCarShop___Admin.Class_files.Views
 {
     public class NewProductView : INotifyPropertyChanged
     {

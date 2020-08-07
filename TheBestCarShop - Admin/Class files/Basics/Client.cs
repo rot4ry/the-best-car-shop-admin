@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace TheBestCarShop___Admin
+namespace TheBestCarShop___Admin.Class_files.Basics
 {
     public class Client : INotifyPropertyChanged
     {

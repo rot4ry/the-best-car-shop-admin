@@ -1,7 +1,8 @@
 ﻿using FluentValidation;
-using TheBestCarShop___Admin.Viewmodels;
+using TheBestCarShop___Admin.Class_files.Viewmodels;
+using TheBestCarShop___Admin.Class_files.Views;
 
-namespace TheBestCarShop___Admin.Validators
+namespace TheBestCarShop___Admin.Class_files.Validators
 {
     public class NewProductValidator : AbstractValidator<NewProductView>
     {

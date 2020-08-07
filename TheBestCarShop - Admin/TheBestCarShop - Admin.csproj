@@ -67,7 +67,7 @@
     </Compile>
     <Compile Include="Class files\Validators\NewProductValidator.cs" />
     <Compile Include="Class files\Viewmodels\AddProductViewModel.cs" />
-    <Compile Include="Class files\Viewmodels\NewProductView.cs" />
+    <Compile Include="Class files\Views\NewProductView.cs" />
     <Compile Include="Windows\AccountSettingsWindow.xaml.cs">
       <DependentUpon>AccountSettingsWindow.xaml</DependentUpon>
     </Compile>
@@ -102,9 +102,9 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Class files\Client.cs" />
-    <Compile Include="Class files\DatabaseHandler.cs" />
-    <Compile Include="Class files\Product.cs" />
+    <Compile Include="Class files\Basics\Client.cs" />
+    <Compile Include="Class files\Basics\DatabaseHandler.cs" />
+    <Compile Include="Class files\Basics\Product.cs" />
     <Compile Include="TODO\SettingsWindow.xaml.cs">
       <DependentUpon>SettingsWindow.xaml</DependentUpon>
     </Compile>
