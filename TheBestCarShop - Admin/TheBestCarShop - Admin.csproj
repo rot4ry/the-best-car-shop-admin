@@ -62,6 +62,8 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Class files\Commands\ProductViewCommand.cs" />
+    <Compile Include="Class files\Commands\ShowProductDetailsCommand.cs" />
+    <Compile Include="Class files\Viewmodels\ProductInListViewmodel.cs" />
     <Compile Include="Windows\AddProductWindow.xaml.cs">
       <DependentUpon>AddProductWindow.xaml</DependentUpon>
     </Compile>

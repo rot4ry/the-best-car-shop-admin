@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using TheBestCarShop___Admin.Class_files.Basics;
+using TheBestCarShop___Admin.Class_files.Viewmodels;
 
 namespace TheBestCarShop___Admin
 {
@@ -26,6 +27,7 @@ namespace TheBestCarShop___Admin
         
         private DatabaseHandler databaseHandler = new DatabaseHandler();
         private List<Product> _ProductList_SRC = new List<Product>();
+        private List<ProductInListViewmodel> Products = new List<ProductInListViewmodel>();
 
         private List<string> SearchConditionsList = new List<string>
         {
@@ -35,23 +37,29 @@ namespace TheBestCarShop___Admin
         public ProductListWindow()
         {
             InitializeComponent();
+            ManageSearchData();  
+        }
+            
+
+        private void ManageSearchData()
+        {
             _ProductList_SRC = databaseHandler.GetProductList();
-            searchResultsList.ItemsSource = _ProductList_SRC;
+            
+            foreach(Product product in _ProductList_SRC)
+            {
+                ProductInListViewmodel prodModel = new ProductInListViewmodel();
+                prodModel.Product = product;
+                
+                Products.Add(prodModel);
+            }
+
+            searchResultsList.ItemsSource = Products;
         }
 
         private void closeButton_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
-
-        private void detailsButton_Click(object sender, RoutedEventArgs e)
-        {
-            Console.WriteLine("test");
-        }
-
-
-
-        
 
     }
 }

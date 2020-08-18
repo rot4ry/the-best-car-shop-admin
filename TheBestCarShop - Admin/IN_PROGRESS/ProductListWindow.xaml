@@ -67,26 +67,26 @@
 
                     <GridViewColumn Header="ID"
                                     Width="40"
-                                    DisplayMemberBinding="{Binding ProductID, Mode=OneWay}"/>
+                                    DisplayMemberBinding="{Binding Product.ProductID, Mode=OneWay}"/>
 
                     <GridViewColumn Header="Brand"
                                     Width="100"
-                                    DisplayMemberBinding="{Binding CarBrand, Mode=OneWay}"/>
+                                    DisplayMemberBinding="{Binding Product.CarBrand, Mode=OneWay}"/>
 
                     <GridViewColumn Header="Model"
                                     Width="130"
-                                    DisplayMemberBinding="{Binding CarModel, Mode=OneWay}"/>
+                                    DisplayMemberBinding="{Binding Product.CarModel, Mode=OneWay}"/>
 
                     <GridViewColumn Header="Part name"
                                     Width="380"
-                                    DisplayMemberBinding="{Binding Name, Mode=OneWay}"/>
+                                    DisplayMemberBinding="{Binding Product.Name, Mode=OneWay}"/>
 
                     <GridViewColumn Header="Category"
                                     Width="120"
-                                    DisplayMemberBinding="{Binding Category, Mode=OneWay}"/>
+                                    DisplayMemberBinding="{Binding Product.Category, Mode=OneWay}"/>
 
                     <GridViewColumn Header="Manufacturer"
-                                    DisplayMemberBinding="{Binding Manufacturer, Mode=OneWay}"/>
+                                    DisplayMemberBinding="{Binding Product.Manufacturer, Mode=OneWay}"/>
 
                     <GridViewColumn Header="Details">
                         <GridViewColumn.CellTemplate>
@@ -100,7 +100,8 @@
                                         FontSize="12"
                                         FontWeight="Bold"
                                         BorderBrush="OrangeRed"
-                                        Click="detailsButton_Click"/>
+                                        Command="{Binding Command}"
+                                        CommandParameter="{Binding Product.ProductID}"/>
 
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
