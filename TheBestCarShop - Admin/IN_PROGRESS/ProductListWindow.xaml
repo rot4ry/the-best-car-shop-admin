@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TheBestCarShop___Admin"
         mc:Ignorable="d"
-        Title="ProductListWindow" 
+        Title="SG: Product list" 
         Height="622.5" 
         Width="1119.5"
         Background="Gray" 
@@ -13,11 +13,13 @@
         WindowStartupLocation="CenterScreen">
 
     <Grid>
-        <Rectangle x:Name="leftRectangle"  
+
+        
+        <!--COSMETICS-->
+        <Rectangle x:Name="middleRectangle"  
                     Fill="DarkSlateGray" 
                     Stroke="DarkSlateGray" 
-                    Margin="-2,-2,1,-3" 
-                    Grid.RowSpan="2"/>
+                    Margin="0,56,0,425"/>
 
         <Rectangle x:Name="topRectangle" 
                    Fill="DimGray" 
@@ -26,9 +28,22 @@
                    Height="58" 
                    VerticalAlignment="Top"/>
 
+        <Button x:Name="closeButton"
+                Content="Close" 
+                HorizontalAlignment="Right" 
+                Margin="0,10,10,0" 
+                VerticalAlignment="Top" 
+                Width="149" Height="34"
+                Background="DarkGray"
+                Foreground="OrangeRed"
+                FontSize="14"
+                FontWeight="Bold"
+                BorderBrush="OrangeRed"
+                BorderThickness="2"/>
+
         <Label x:Name="welcomeLabel" 
                Content="Product list" 
-               Margin="10,-2,10,0"
+               Margin="10,-2,175,0"
                HorizontalContentAlignment="Left"
                VerticalContentAlignment="Center"
                FontSize="28"

@@ -82,6 +82,23 @@ namespace TheBestCarShop___Admin.Class_files.Basics
             return result;
         }
 
+        public List<Product> GetProductList()
+        {
+            List<Product> products;
+            string select = "SELECT * FROM Products";
+
+            try
+            {
+                SqlConnection connection = new SqlConnection(this.connectionString);
+                products = connection.Query<Product>(select).ToList<Product>();
+            }
+            catch (Exception DatabaseHandlerException)
+            {
+                Console.WriteLine(DatabaseHandlerException.Message); return (List<Product>)null;
+            }
+            return products;
+        }
+
         public List<Product> GetAvailableProductsList()
         {
             List<Product> availableProductsList;

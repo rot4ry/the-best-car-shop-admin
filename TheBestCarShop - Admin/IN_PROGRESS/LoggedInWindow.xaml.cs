@@ -34,13 +34,15 @@ namespace TheBestCarShop___Admin
         //PRODUCTS BUTTONS
         private void productsButton_Click(object sender, RoutedEventArgs e)
         {
-            //show a list of products based on filters
             //TODO
+            ProductListWindow plw = new ProductListWindow();
+            this.Hide();
+            plw.ShowDialog();
+            this.Show();
         }
 
         private void newProductButton_Click(object sender, RoutedEventArgs e)
         {
-            //TODO
             AddProductWindow apw = new AddProductWindow();
             this.Hide();
             apw.ShowDialog();
