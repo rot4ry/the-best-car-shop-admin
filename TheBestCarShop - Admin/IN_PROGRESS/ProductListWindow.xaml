@@ -14,7 +14,7 @@
 
     <Grid>
 
-        
+
         <!--COSMETICS-->
         <Rectangle x:Name="middleRectangle"  
                     Fill="DarkSlateGray" 
@@ -39,7 +39,8 @@
                 FontSize="14"
                 FontWeight="Bold"
                 BorderBrush="OrangeRed"
-                BorderThickness="2"/>
+                BorderThickness="2" 
+                Click="closeButton_Click"/>
 
         <Label x:Name="welcomeLabel" 
                Content="Product list" 
@@ -51,6 +52,64 @@
                Foreground="Orange" 
                Height="58" 
                VerticalAlignment="Top"/>
+
+        <!--SEARCH RESULTS-->
+
+        <ListView x:Name="searchResultsList" 
+                  Margin="10,173,0,10"
+                  HorizontalAlignment="Left" 
+                  Width="1094">
+            
+            <!--Needs some styling using resources - TODO -->
+            <!--Fixed width is temporary, until resources are taken care of-->
+            <ListView.View>
+                <GridView>
+
+                    <GridViewColumn Header="ID"
+                                    Width="40"
+                                    DisplayMemberBinding="{Binding ProductID, Mode=OneWay}"/>
+
+                    <GridViewColumn Header="Brand"
+                                    Width="100"
+                                    DisplayMemberBinding="{Binding CarBrand, Mode=OneWay}"/>
+
+                    <GridViewColumn Header="Model"
+                                    Width="130"
+                                    DisplayMemberBinding="{Binding CarModel, Mode=OneWay}"/>
+
+                    <GridViewColumn Header="Part name"
+                                    Width="380"
+                                    DisplayMemberBinding="{Binding Name, Mode=OneWay}"/>
+
+                    <GridViewColumn Header="Category"
+                                    Width="120"
+                                    DisplayMemberBinding="{Binding Category, Mode=OneWay}"/>
+
+                    <GridViewColumn Header="Manufacturer"
+                                    DisplayMemberBinding="{Binding Manufacturer, Mode=OneWay}"/>
+
+                    <GridViewColumn Header="Details">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+
+                                <Button x:Name="detailsButton"
+                                        Content="More"
+                                        Width="100"
+                                        Background="DarkGray"
+                                        Foreground="OrangeRed"
+                                        FontSize="12"
+                                        FontWeight="Bold"
+                                        BorderBrush="OrangeRed"
+                                        Click="detailsButton_Click"/>
+
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+
+
+                </GridView>
+            </ListView.View>
+        </ListView>
     </Grid>
 
 </Window>

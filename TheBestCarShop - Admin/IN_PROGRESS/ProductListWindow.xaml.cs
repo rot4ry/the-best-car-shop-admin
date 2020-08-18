@@ -21,6 +21,9 @@ namespace TheBestCarShop___Admin
     /// </summary>
     public partial class ProductListWindow : Window
     {
+        //search engine, maybe based on one combo box (category of condition: name, brand, model, maybe not year and price..)
+        //combobox -> textbox for a name -> search button
+        
         private DatabaseHandler databaseHandler = new DatabaseHandler();
         private List<Product> _ProductList_SRC = new List<Product>();
 
@@ -33,15 +36,22 @@ namespace TheBestCarShop___Admin
         {
             InitializeComponent();
             _ProductList_SRC = databaseHandler.GetProductList();
+            searchResultsList.ItemsSource = _ProductList_SRC;
+        }
+
+        private void closeButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void detailsButton_Click(object sender, RoutedEventArgs e)
+        {
+            Console.WriteLine("test");
         }
 
 
 
-        //binding a list
-        //managing of the data grid
-        //search engine, maybe based on one combo box (category of condition: name, brand, model, maybe not year and price..)
-        //combobox -> textbox for a name -> search button
-        //
+        
 
     }
 }
