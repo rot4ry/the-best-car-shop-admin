@@ -5,6 +5,8 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using TheBestCarShop___Admin.Class_files.Basics;
+using TheBestCarShop___Admin.IN_PROGRESS;
 
 namespace TheBestCarShop___Admin.Class_files.Commands
 {
@@ -26,8 +28,9 @@ namespace TheBestCarShop___Admin.Class_files.Commands
 
         public void Execute(object parameter)
         {
-            Console.WriteLine($"Selected ID: {(int)parameter}");
-            //open ProductDetailsWindow here
+            //Console.WriteLine($"Selected ID: {(int)parameter}");
+            int ProductID = (int)parameter;
+            ProductDetailsWindow pdw = new ProductDetailsWindow(ProductID);
         }
     }
 }
