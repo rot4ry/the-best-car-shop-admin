@@ -28,9 +28,9 @@ namespace TheBestCarShop___Admin.Class_files.Commands
 
         public void Execute(object parameter)
         {
-            //Console.WriteLine($"Selected ID: {(int)parameter}");
             int ProductID = (int)parameter;
             ProductDetailsWindow pdw = new ProductDetailsWindow(ProductID);
+            pdw.ShowDialog();
         }
     }
 }

@@ -35,6 +35,19 @@ namespace TheBestCarShop___Admin.IN_PROGRESS
             {
                 Console.WriteLine(e.Message);
             }
+            
+            SetContexts();
+        }
+
+        private void SetContexts()
+        {
+            nameGrid.DataContext = DisplayedProduct;
+            carDetailsGrid.DataContext = DisplayedProduct;
+        }
+
+        private void closeButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

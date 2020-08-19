@@ -10,7 +10,9 @@ namespace TheBestCarShop___Admin.Class_files.Basics
     public class Product : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
-        
+
+        public string PeriodOfProduction => CarFirstProdYear.ToString() + " - " + CarLastProdYear.ToString();
+
         public int ProductID { get; private set; }
         
 
