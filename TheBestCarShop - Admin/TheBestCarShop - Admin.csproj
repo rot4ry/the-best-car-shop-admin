@@ -61,10 +61,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Class files\Basics\ProductStatistic.cs" />
     <Compile Include="Class files\Commands\ProductViewCommand.cs" />
     <Compile Include="Class files\Commands\ShowProductDetailsCommand.cs" />
     <Compile Include="Class files\Viewmodels\ProductInListViewmodel.cs" />
-    <Compile Include="IN_PROGRESS\ProductDetailsWindow.xaml.cs">
+    <Compile Include="Windows\ProductDetailsWindow.xaml.cs">
       <DependentUpon>ProductDetailsWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\AddProductWindow.xaml.cs">
@@ -91,7 +92,7 @@
     <Compile Include="TODO\ProductStatsWindow.xaml.cs">
       <DependentUpon>ProductStatsWindow.xaml</DependentUpon>
     </Compile>
-    <Page Include="IN_PROGRESS\ProductDetailsWindow.xaml">
+    <Page Include="Windows\ProductDetailsWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

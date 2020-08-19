@@ -11,8 +11,12 @@ namespace TheBestCarShop___Admin.Class_files.Basics
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
+        //variables used in ProductDetailsWindow, mostly cosmetics stuff, kinda needed tho
         public string PeriodOfProduction => CarFirstProdYear.ToString() + " - " + CarLastProdYear.ToString();
-
+        public string PriceFormatted => price.ToString().Remove(price.ToString().Length - 2);
+        
+        
+        //Required properties of Product class
         public int ProductID { get; private set; }
         
 
@@ -140,7 +144,7 @@ namespace TheBestCarShop___Admin.Class_files.Basics
             }
         }
 
-        public string PartCode { get; set; }
+        public string Code { get; set; }
         public bool IsAvailable { get; set; }
 
         private int quantity;

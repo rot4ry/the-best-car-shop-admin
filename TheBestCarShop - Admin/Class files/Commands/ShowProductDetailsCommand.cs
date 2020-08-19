@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
-using TheBestCarShop___Admin.Class_files.Basics;
-using TheBestCarShop___Admin.IN_PROGRESS;
+using TheBestCarShop___Admin.Windows;
 
 namespace TheBestCarShop___Admin.Class_files.Commands
 {

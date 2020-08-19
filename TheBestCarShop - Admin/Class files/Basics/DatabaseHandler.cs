@@ -82,6 +82,30 @@ namespace TheBestCarShop___Admin.Class_files.Basics
             return result;
         }
 
+        public int UpdateProductField(string column, string newValue, int productID)
+        {
+            int affected = 0;
+            string update = "UPDATE Products " +
+                           $"SET {column} = @newValue " +
+                            "WHERE ProductID = @productID ";
+
+            try
+            {
+                SqlConnection connection = new SqlConnection(this.connectionString);
+                affected = connection.Execute(update, new
+                {
+                    newValue = newValue,
+                    productID = productID
+                });
+                connection.Close();
+            }
+            catch(Exception DatabaseHandlerException)
+            {
+                Console.WriteLine(DatabaseHandlerException.Message);
+            }
+            return affected;
+        }
+
         public List<Product> GetProductList()
         {
             List<Product> products;
@@ -199,8 +223,6 @@ namespace TheBestCarShop___Admin.Class_files.Basics
 
             return categories;
         }
-
-
 
         public Product GetProduct(int id)
         {
@@ -374,7 +396,7 @@ namespace TheBestCarShop___Admin.Class_files.Basics
             string update = "UPDATE Clients " +
                            $"SET {columnName} = @value " +
                             "WHERE Username = @username " +
-                            "AND ClientID = @userID";
+                            "AND ClientID = @userID";   //ID alone would be enough and better
             try
             {
                 SqlConnection connection = new SqlConnection(this.connectionString);
@@ -417,6 +439,36 @@ namespace TheBestCarShop___Admin.Class_files.Basics
             }
             return affected;
         }
+
+        //STATISTICS RELATED METHODS
+        public ProductStatistic GetProductSalesDetails(int productID)
+        {
+            ProductStatistic productStatistic = new ProductStatistic();
+            string select = "SELECT Min(ReceivedDate) as FirstBought, " +
+                            "MAX(ReceivedDate) as LastBought, " +
+                            "SUM(Quantity) as AmountSold " +
+                            "FROM Orders INNER JOIN OrderDetails ON Orders.OrderID = OrderDetails.OrderID " +
+                            "WHERE IsPlaced = 'true' AND ProductID = @productID " +
+                            "GROUP BY ProductID";
+
+            try
+            {
+                SqlConnection connection = new SqlConnection(this.connectionString);
+                productStatistic = connection.QuerySingle<ProductStatistic>(select, 
+                                                                        new { 
+                                                                            productID = productID 
+                                                                        });
+                connection.Close();
+            }
+            catch(Exception DatabaseHandlerException)
+            {
+                Console.WriteLine(DatabaseHandlerException.Message);
+            }
+
+            return productStatistic;
+        }
+
+
     }
 }
 
