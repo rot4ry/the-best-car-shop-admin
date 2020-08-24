@@ -59,7 +59,7 @@
                   Margin="10,173,0,10"
                   HorizontalAlignment="Left" 
                   Width="1094">
-            
+
             <!--Needs some styling using resources - TODO -->
             <!--Fixed width is temporary, until resources are taken care of-->
             <ListView.View>
@@ -111,6 +111,53 @@
                 </GridView>
             </ListView.View>
         </ListView>
+
+        <!--SEARCH SECTION-->
+        <ComboBox x:Name="conditionsCB" 
+                  Margin="362,92,0,0" 
+                  VerticalAlignment="Top" 
+                  Height="33" 
+                  HorizontalAlignment="Left" 
+                  Width="230" SelectionChanged="conditionsCB_SelectionChanged"/>
+
+        <TextBox x:Name="conditionStringTB" 
+                 VerticalContentAlignment="Center"
+                 HorizontalContentAlignment="Center"
+                 Height="33" 
+                 Margin="612,92,177,0" 
+                 TextWrapping="Wrap" 
+                 TextAlignment="Justify"
+                 Text="" 
+                 VerticalAlignment="Top"
+                 BorderBrush="DarkCyan"
+                 Background="DarkCyan"
+                 Foreground="Azure"
+                 FontSize="16"
+                 FontWeight="Regular" />
+
+        <Button x:Name="searchButton"
+                Content="Search" 
+                Margin="0,92,10,0" 
+                VerticalAlignment="Top" 
+                Click="searchButton_Click" 
+                Height="33"
+                Background="DarkGray"
+                Foreground="OrangeRed"
+                FontSize="12"
+                FontWeight="Bold"
+                BorderBrush="OrangeRed" HorizontalAlignment="Right" Width="149"/>
+
+        <Label x:Name="infoLabel" 
+                Content="Enter your search conditions &#xD;&#xA;to find the desired product" 
+                Margin="10,63,789,0"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Center"
+                FontSize="24"
+                FontWeight="Light"
+                Foreground="Orange" 
+                Height="92" 
+                VerticalAlignment="Top"/>
+
     </Grid>
 
 </Window>

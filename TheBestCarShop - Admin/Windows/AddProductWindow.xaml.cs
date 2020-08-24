@@ -58,13 +58,13 @@ namespace TheBestCarShop___Admin.IN_PROGRESS
             string model = modelCB.Text + newModelTB.Text;
 
             int fyear;
-            Int32.TryParse(fProdYearTB.Text, out fyear);    //check
+            Int32.TryParse(fProdYearTB.Text, out fyear);   
 
             int lyear;
-            Int32.TryParse(lProdYearTB.Text, out lyear);    //check
+            Int32.TryParse(lProdYearTB.Text, out lyear);    
             
             double price;
-            Double.TryParse(priceTB.Text, out price);       //check
+            Double.TryParse(priceTB.Text, out price);      
 
             string name = partNameRB.Text;
             
