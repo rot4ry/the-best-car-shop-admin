@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows;
 using TheBestCarShop___Admin.Class_files.Basics;
 using TheBestCarShop___Admin.Class_files.Viewmodels;
 
-namespace TheBestCarShop___Admin
+namespace TheBestCarShop___Admin.Windows
 {
     /// <summary>
     /// Interaction logic for ProductListWindow.xaml
@@ -32,8 +31,7 @@ namespace TheBestCarShop___Admin
 
             ManageSearchData();  
         }
-            
-
+ 
         private void ManageSearchData()
         {
             Products_SRC.Clear();

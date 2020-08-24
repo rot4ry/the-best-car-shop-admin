@@ -6,6 +6,7 @@ C:\Users\rot4ry\Desktop\Programowanie_IV_Projekt_2\TheBestCarShop - Admin\bin\De
 C:\Users\rot4ry\Desktop\Programowanie_IV_Projekt_2\TheBestCarShop - Admin\bin\Debug\Dapper.xml
 C:\Users\rot4ry\Desktop\Programowanie_IV_Projekt_2\TheBestCarShop - Admin\bin\Debug\FluentValidation.xml
 C:\Users\rot4ry\Desktop\Programowanie_IV_Projekt_2\TheBestCarShop - Admin\obj\Debug\Windows\ProductDetailsWindow.baml
+C:\Users\rot4ry\Desktop\Programowanie_IV_Projekt_2\TheBestCarShop - Admin\obj\Debug\Windows\ProductListWindow.baml
 C:\Users\rot4ry\Desktop\Programowanie_IV_Projekt_2\TheBestCarShop - Admin\obj\Debug\Windows\ProductDetailsWindow.g.cs
 C:\Users\rot4ry\Desktop\Programowanie_IV_Projekt_2\TheBestCarShop - Admin\obj\Debug\Windows\AddProductWindow.g.cs
 C:\Users\rot4ry\Desktop\Programowanie_IV_Projekt_2\TheBestCarShop - Admin\obj\Debug\TODO\SettingsWindow.g.cs
@@ -14,7 +15,7 @@ C:\Users\rot4ry\Desktop\Programowanie_IV_Projekt_2\TheBestCarShop - Admin\obj\De
 C:\Users\rot4ry\Desktop\Programowanie_IV_Projekt_2\TheBestCarShop - Admin\obj\Debug\TODO\ClientListWindow.g.cs
 C:\Users\rot4ry\Desktop\Programowanie_IV_Projekt_2\TheBestCarShop - Admin\obj\Debug\TODO\ClientStatsWindow.g.cs
 C:\Users\rot4ry\Desktop\Programowanie_IV_Projekt_2\TheBestCarShop - Admin\obj\Debug\IN_PROGRESS\LoggedInWindow.g.cs
-C:\Users\rot4ry\Desktop\Programowanie_IV_Projekt_2\TheBestCarShop - Admin\obj\Debug\IN_PROGRESS\ProductListWindow.g.cs
+C:\Users\rot4ry\Desktop\Programowanie_IV_Projekt_2\TheBestCarShop - Admin\obj\Debug\Windows\ProductListWindow.g.cs
 C:\Users\rot4ry\Desktop\Programowanie_IV_Projekt_2\TheBestCarShop - Admin\obj\Debug\TODO\ProductStatsWindow.g.cs
 C:\Users\rot4ry\Desktop\Programowanie_IV_Projekt_2\TheBestCarShop - Admin\obj\Debug\App.g.cs
 C:\Users\rot4ry\Desktop\Programowanie_IV_Projekt_2\TheBestCarShop - Admin\obj\Debug\GeneratedInternalTypeHelper.g.cs
@@ -27,7 +28,6 @@ C:\Users\rot4ry\Desktop\Programowanie_IV_Projekt_2\TheBestCarShop - Admin\obj\De
 C:\Users\rot4ry\Desktop\Programowanie_IV_Projekt_2\TheBestCarShop - Admin\obj\Debug\TODO\ClientListWindow.baml
 C:\Users\rot4ry\Desktop\Programowanie_IV_Projekt_2\TheBestCarShop - Admin\obj\Debug\TODO\ClientStatsWindow.baml
 C:\Users\rot4ry\Desktop\Programowanie_IV_Projekt_2\TheBestCarShop - Admin\obj\Debug\IN_PROGRESS\LoggedInWindow.baml
-C:\Users\rot4ry\Desktop\Programowanie_IV_Projekt_2\TheBestCarShop - Admin\obj\Debug\IN_PROGRESS\ProductListWindow.baml
 C:\Users\rot4ry\Desktop\Programowanie_IV_Projekt_2\TheBestCarShop - Admin\obj\Debug\TODO\ProductStatsWindow.baml
 C:\Users\rot4ry\Desktop\Programowanie_IV_Projekt_2\TheBestCarShop - Admin\obj\Debug\TheBestCarShop - Admin.g.resources
 C:\Users\rot4ry\Desktop\Programowanie_IV_Projekt_2\TheBestCarShop - Admin\obj\Debug\TheBestCarShop___Admin.Properties.Resources.resources
@@ -36,4 +36,3 @@ C:\Users\rot4ry\Desktop\Programowanie_IV_Projekt_2\TheBestCarShop - Admin\obj\De
 C:\Users\rot4ry\Desktop\Programowanie_IV_Projekt_2\TheBestCarShop - Admin\obj\Debug\TheBestCarShop - Admin.csproj.CopyComplete
 C:\Users\rot4ry\Desktop\Programowanie_IV_Projekt_2\TheBestCarShop - Admin\obj\Debug\TheBestCarShop - Admin.exe
 C:\Users\rot4ry\Desktop\Programowanie_IV_Projekt_2\TheBestCarShop - Admin\obj\Debug\TheBestCarShop - Admin.pdb
-C:\Users\rot4ry\Desktop\Programowanie_IV_Projekt_2\TheBestCarShop - Admin\obj\Debug\TheBestCarShop - Admin.csprojAssemblyReference.cache

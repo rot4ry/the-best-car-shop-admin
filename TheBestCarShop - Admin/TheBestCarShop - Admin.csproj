@@ -86,7 +86,7 @@
     <Compile Include="IN_PROGRESS\LoggedInWindow.xaml.cs">
       <DependentUpon>LoggedInWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="IN_PROGRESS\ProductListWindow.xaml.cs">
+    <Compile Include="Windows\ProductListWindow.xaml.cs">
       <DependentUpon>ProductListWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="TODO\ProductStatsWindow.xaml.cs">
@@ -138,7 +138,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="IN_PROGRESS\ProductListWindow.xaml">
+    <Page Include="Windows\ProductListWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
