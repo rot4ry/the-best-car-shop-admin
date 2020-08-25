@@ -64,6 +64,7 @@
     <Compile Include="Class files\Basics\ProductStatistic.cs" />
     <Compile Include="Class files\Commands\ProductViewCommand.cs" />
     <Compile Include="Class files\Commands\ShowProductDetailsCommand.cs" />
+    <Compile Include="Class files\Validators\NewAdminValidator.cs" />
     <Compile Include="Class files\Viewmodels\ProductInListViewmodel.cs" />
     <Compile Include="Class files\Views\NewAdminView.cs" />
     <Compile Include="IN_PROGRESS\AddAdminWindow.xaml.cs">

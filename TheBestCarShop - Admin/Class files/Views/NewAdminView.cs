@@ -218,8 +218,24 @@ namespace TheBestCarShop___Admin.Class_files.Views
                 }
             }
         }
+
+
         private string password;
-        public string Password { get; set; }
+        public string Password 
+        {
+            get
+            {
+                return password;
+            }
+            set
+            {
+                if (password != value)
+                {
+                    password = value;
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Password"));
+                }
+            }
+        }
 
 
         //Validator errors
