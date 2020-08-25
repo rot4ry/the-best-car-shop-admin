@@ -24,7 +24,6 @@ namespace TheBestCarShop___Admin.Class_files.Basics
             {
                 return firstName;
             }
-
             set
             {
                 if (firstName != value)
@@ -43,7 +42,6 @@ namespace TheBestCarShop___Admin.Class_files.Basics
             {
                 return secondName;
             }
-
             set
             {
                 if (secondName != value)
@@ -62,7 +60,6 @@ namespace TheBestCarShop___Admin.Class_files.Basics
             {
                 return email;
             }
-
             set
             {
                 if (email != value)
@@ -81,7 +78,6 @@ namespace TheBestCarShop___Admin.Class_files.Basics
             {
                 return phoneNumber;
             }
-
             set
             {
                 if (phoneNumber != value)
