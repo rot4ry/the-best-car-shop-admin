@@ -1,36 +1,40 @@
 ﻿using FluentValidation.Results;
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using TheBestCarShop___Admin.Class_files.Validators;
-using TheBestCarShop___Admin.Class_files.Viewmodels;
 using TheBestCarShop___Admin.Class_files.Views;
 
 namespace TheBestCarShop___Admin.Class_files.Commands
 {
-    public class ProductViewCommand : ICommand
+    public class AddNewAdminCommand : ICommand
     {
-        private NewProductValidator _PRODUCTVALIDATOR = new NewProductValidator();
-
         public event EventHandler CanExecuteChanged
         {
             add { CommandManager.RequerySuggested += value; }
             remove { CommandManager.RequerySuggested -= value; }
         }
+        private NewAdminValidator _VALIDATOR = new NewAdminValidator();
 
         public bool CanExecute(object parameter)
         {
-            NewProductView productView = parameter as NewProductView;
-            if (productView is null)
+            NewAdminView newAdminView = parameter as NewAdminView;
+            if(newAdminView is null)
             {
                 return false;
             }
-
-            ValidationResult output = _PRODUCTVALIDATOR.Validate(productView);
-            productView.Errors = string.Join("\n", output.Errors);
+            
+            ValidationResult output = _VALIDATOR.Validate(newAdminView);
+            newAdminView.Errors = string.Join("\n", output.Errors);
             return output.IsValid;
         }
 
-        public void Execute(object parameter) { }
+        public void Execute(object parameter)
+        {
+            //add a new admin to the database
+        }
     }
 }
-

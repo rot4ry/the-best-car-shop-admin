@@ -33,7 +33,8 @@ namespace TheBestCarShop___Admin.IN_PROGRESS
         //Password,
 
 
-        //clientView -> validator -> command ->  viewmodel
+        //clientView -> validator -> command ->
+        //todo: viewmodel
 
         public AddAdminWindow()
         {
