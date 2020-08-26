@@ -62,9 +62,11 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Class files\Basics\ProductStatistic.cs" />
+    <Compile Include="Class files\Commands\AddNewAdminCommand.cs" />
     <Compile Include="Class files\Commands\ProductViewCommand.cs" />
     <Compile Include="Class files\Commands\ShowProductDetailsCommand.cs" />
     <Compile Include="Class files\Validators\NewAdminValidator.cs" />
+    <Compile Include="Class files\Viewmodels\AddAdminViewmodel.cs" />
     <Compile Include="Class files\Viewmodels\ProductInListViewmodel.cs" />
     <Compile Include="Class files\Views\NewAdminView.cs" />
     <Compile Include="IN_PROGRESS\AddAdminWindow.xaml.cs">
@@ -77,7 +79,7 @@
       <DependentUpon>AddProductWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Class files\Validators\NewProductValidator.cs" />
-    <Compile Include="Class files\Viewmodels\AddProductViewModel.cs" />
+    <Compile Include="Class files\Viewmodels\AddProductViewmodel.cs" />
     <Compile Include="Class files\Views\NewProductView.cs" />
     <Compile Include="Windows\AccountSettingsWindow.xaml.cs">
       <DependentUpon>AccountSettingsWindow.xaml</DependentUpon>

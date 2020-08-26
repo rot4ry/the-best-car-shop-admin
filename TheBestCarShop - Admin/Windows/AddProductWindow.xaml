@@ -14,7 +14,7 @@
         WindowStartupLocation="CenterScreen">
     
     <Window.DataContext>
-        <viewmodels:AddProductViewModel></viewmodels:AddProductViewModel>
+        <viewmodels:AddProductViewmodel></viewmodels:AddProductViewmodel>
     </Window.DataContext>
     
     <Grid>
