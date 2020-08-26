@@ -1,16 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+﻿using System.Windows;
 using TheBestCarShop___Admin.Class_files.Basics;
 
 namespace TheBestCarShop___Admin.IN_PROGRESS
@@ -38,12 +26,17 @@ namespace TheBestCarShop___Admin.IN_PROGRESS
         {
             InitializeComponent();
             _ADMIN = admin as Client;
-            //confirm adding a new administrator with a username and a password
         }
 
         private void closeButton_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void addAdminButton_Click(object sender, RoutedEventArgs e)
+        {
+            //insert into the DB
+            //open a windof for confirmation -> username and password
         }
     }
 }

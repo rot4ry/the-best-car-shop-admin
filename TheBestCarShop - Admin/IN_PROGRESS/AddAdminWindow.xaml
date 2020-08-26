@@ -3,8 +3,6 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:TheBestCarShop___Admin.IN_PROGRESS"
-        xmlns:viewmodels="clr-namespace:TheBestCarShop___Admin.Class_files.Viewmodels"
         mc:Ignorable="d"
         Title="SG-Admin: Add a new administrator" 
         Height="546" 
@@ -15,20 +13,30 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="67*"/>
-            <RowDefinition Height="492*"/>
+            <RowDefinition Height="62*"/>
+            <RowDefinition Height="342*"/>
+            <RowDefinition Height="113*"/>
         </Grid.RowDefinitions>
+
         <!--COSMETICS-->
         <Rectangle x:Name="topRectangle" 
                    Fill="DimGray" 
                    Margin="0,-2,0,0" 
                    Stroke="DimGray" 
-                   Height="69" 
+                   Height="64" 
                    VerticalAlignment="Top"/>
+
+        <Rectangle x:Name="bottomRectangle" 
+                    Fill="DimGray" 
+                    Margin="0,2,0,0" 
+                    Stroke="DimGray" 
+                    Height="111" 
+                    VerticalAlignment="Top" 
+                   Grid.Row="2"/>
 
         <Label x:Name="topLabel" 
                Content="Add a new administrator" 
-               Margin="20,0,140,0"
+               Margin="10,0,150,0"
                HorizontalContentAlignment="Left"
                VerticalContentAlignment="Center"
                FontSize="28"
@@ -36,7 +44,8 @@
                Foreground="Orange" 
                Height="61" 
                VerticalAlignment="Top"/>
-
+        
+        <!--FUNCTIONAL-->
         <Button x:Name="closeButton"
                 Content="Close" 
                 Margin="0,13,10,0" 
@@ -51,26 +60,20 @@
                 Click="closeButton_Click" 
                 HorizontalAlignment="Right" 
                 Width="125"/>
-
-        <TextBlock x:Name="errorsTB" 
-                    Margin="40,357,140,0" 
-                    TextWrapping="Wrap" 
-                    Text="VALIDATOR ERRORS" 
-                    VerticalAlignment="Top" 
-                    Height="81" 
-                    Grid.Row="1"
-                   Background="Bisque"/>
-
+        
         <ListBox x:Name="detailsLB" 
-                 Height="757" 
-                 Margin="40,10,40,-312" 
+                 Height="322" 
+                 Margin="40,10,40,0" 
                  VerticalAlignment="Top"
-                 Background="DarkSlateGray" Grid.Row="1">
+                 Background="DarkSlateGray" 
+                 Grid.Row="1" 
+                 ScrollViewer.HorizontalScrollBarVisibility="Disabled" 
+                 ScrollViewer.CanContentScroll="False">
 
             <!--User details-->
             <Grid x:Name="userDetailsGrid" 
                     Height="193" 
-                    Width="485"
+                    Width="471"
                     Background="Gray">
 
                 <Grid.ColumnDefinitions>
@@ -94,8 +97,12 @@
                          Height="31" 
                          Margin="10,10,10,0" 
                          TextWrapping="Wrap" 
-                         Text="fname" 
-                         VerticalAlignment="Top"/>
+                         VerticalAlignment="Top"
+                         BorderBrush="DarkCyan"
+                         Background="DarkCyan"
+                         Foreground="Azure"
+                         FontSize="16"
+                         FontWeight="Regular"/>
 
 
                 <!--SECOND NAME-->
@@ -114,8 +121,12 @@
                          Height="31" 
                          Margin="10,46,10,0" 
                          TextWrapping="Wrap" 
-                         Text="sname" 
-                         VerticalAlignment="Top"/>
+                         VerticalAlignment="Top"
+                         BorderBrush="DarkCyan"
+                         Background="DarkCyan"
+                         Foreground="Azure"
+                         FontSize="16"
+                         FontWeight="Regular"/>
 
 
                 <!--COMPANY NAME-->
@@ -133,8 +144,12 @@
                          Grid.Column="1" Height="31" 
                          Margin="10,82,10,0" 
                          TextWrapping="Wrap" 
-                         Text="cname" 
-                         VerticalAlignment="Top"/>
+                         VerticalAlignment="Top"
+                         BorderBrush="DarkCyan"
+                         Background="DarkCyan"
+                         Foreground="Azure"
+                         FontSize="16"
+                         FontWeight="Regular"/>
 
 
                 <!--EMAIL-->
@@ -153,8 +168,12 @@
                          Height="31" 
                          Margin="10,118,10,0" 
                          TextWrapping="Wrap" 
-                         Text="email" 
-                         VerticalAlignment="Top"/>
+                         VerticalAlignment="Top"
+                         BorderBrush="DarkCyan"
+                         Background="DarkCyan"
+                         Foreground="Azure"
+                         FontSize="16"
+                         FontWeight="Regular"/>
 
 
                 <!--PHONE-->
@@ -173,15 +192,19 @@
                          Height="31" 
                          Margin="10,154,10,0" 
                          TextWrapping="Wrap" 
-                         Text="phone" 
-                         VerticalAlignment="Top"/>
+                         VerticalAlignment="Top"
+                         BorderBrush="DarkCyan"
+                         Background="DarkCyan"
+                         Foreground="Azure"
+                         FontSize="16"
+                         FontWeight="Regular"/>
 
             </Grid>
 
             <!--Address details-->
             <Grid x:Name="addressDetailsGrid" 
                     Height="198" 
-                    Width="485"
+                    Width="471"
                     Background="Gray">
 
                 <Grid.ColumnDefinitions>
@@ -205,8 +228,12 @@
                          Height="31"
                          Margin="10,10,10,0" 
                          TextWrapping="Wrap" 
-                         Text="country" 
-                         VerticalAlignment="Top"/>
+                         VerticalAlignment="Top"
+                         BorderBrush="DarkCyan"
+                         Background="DarkCyan"
+                         Foreground="Azure"
+                         FontSize="16"
+                         FontWeight="Regular"/>
 
 
                 <!--CITY-->
@@ -225,8 +252,12 @@
                          Height="31" 
                          Margin="10,46,10,0" 
                          TextWrapping="Wrap" 
-                         Text="city" 
-                         VerticalAlignment="Top"/>
+                         VerticalAlignment="Top"
+                         BorderBrush="DarkCyan"
+                         Background="DarkCyan"
+                         Foreground="Azure"
+                         FontSize="16"
+                         FontWeight="Regular"/>
 
 
                 <!--STREET-->
@@ -245,8 +276,12 @@
                          Height="31" 
                          Margin="10,82,10,0" 
                          TextWrapping="Wrap" 
-                         Text="street" 
-                         VerticalAlignment="Top"/>
+                         VerticalAlignment="Top"
+                         BorderBrush="DarkCyan"
+                         Background="DarkCyan"
+                         Foreground="Azure"
+                         FontSize="16"
+                         FontWeight="Regular"/>
 
 
                 <!--POSTCODE-->
@@ -265,8 +300,12 @@
                          Height="31"
                          Margin="10,118,10,0" 
                          TextWrapping="Wrap" 
-                         Text="postcode" 
-                         VerticalAlignment="Top"/>
+                         VerticalAlignment="Top"
+                         BorderBrush="DarkCyan"
+                         Background="DarkCyan"
+                         Foreground="Azure"
+                         FontSize="16"
+                         FontWeight="Regular"/>
 
 
                 <!--BUILDING-->
@@ -285,14 +324,18 @@
                          Height="31" 
                          Margin="10,154,10,0" 
                          TextWrapping="Wrap" 
-                         Text="buildingnumber" 
-                         VerticalAlignment="Top"/>
+                         VerticalAlignment="Top"
+                         BorderBrush="DarkCyan"
+                         Background="DarkCyan"
+                         Foreground="Azure"
+                         FontSize="16"
+                         FontWeight="Regular"/>
             </Grid>
 
             <!--USERNAME-->
             <Grid x:Name="loginDetailsGrid_username" 
                     Height="108" 
-                    Width="485"
+                    Width="471"
                     Background="Gray">
 
                 <Grid.ColumnDefinitions>
@@ -316,14 +359,17 @@
                          Margin="10,10,10,0" 
                          TextWrapping="Wrap" 
                          Text="" 
-                         VerticalAlignment="Top"/>
+                         VerticalAlignment="Top"
+                         BorderBrush="DarkCyan"
+                         Background="DarkCyan"
+                         Foreground="Azure"
+                         FontSize="16"
+                         FontWeight="Regular"/>
 
                 <Button x:Name="generateUsernameButton"
                         Content="Generate username" 
-                        Grid.Column="1"
-                        HorizontalAlignment="Left" 
-                        Margin="10,55,0,0" 
-                        Width="270" 
+                        Grid.Column="1" 
+                        Margin="10,55,10,0" 
                         Height="37"
                         VerticalAlignment="Top"
                         Background="DarkGray"
@@ -338,7 +384,7 @@
             <!--PASSWORD-->
             <Grid x:Name="loginDetailsGrid_password" 
                     Height="186" 
-                    Width="485"
+                    Width="471"
                     Background="Gray">
 
                 <Grid.ColumnDefinitions>
@@ -361,14 +407,17 @@
                          Height="31" 
                          Margin="10,10,10,0" 
                          TextWrapping="Wrap" 
-                         VerticalAlignment="Top"/>
+                         VerticalAlignment="Top"
+                         BorderBrush="DarkCyan"
+                         Background="DarkCyan"
+                         Foreground="Azure"
+                         FontSize="16"
+                         FontWeight="Regular"/>
 
                 <Button x:Name="generatePasswordButton" 
-                        Content="Button" 
+                        Content="Generate password" 
                         Grid.Column="1" 
-                        HorizontalAlignment="Left" 
-                        Margin="10,55,0,0" 
-                        Width="270" 
+                        Margin="10,55,10,0" 
                         Height="37" 
                         VerticalAlignment="Top"
                         Background="DarkGray"
@@ -391,6 +440,27 @@
                        Background="DarkGray"/>
             </Grid>
         </ListBox>
+
+        <Button x:Name="addAdminButton" 
+                Content="Add" 
+                Margin="458,10,10,10"
+                Background="DarkGray"
+                Foreground="OrangeRed"
+                FontSize="14"
+                FontWeight="Bold"
+                BorderBrush="OrangeRed"
+                BorderThickness="2" 
+                Click="addAdminButton_Click" 
+                Grid.Row="2"/>
+        
+        <TextBlock x:Name="errorsTB" 
+                    Margin="10,10,146,10" 
+                    TextWrapping="Wrap" 
+                    Text="VALIDATOR ERRORS"
+                    Background="DarkGray"
+                    Foreground="OrangeRed"
+                    TextAlignment="Center"
+                    Grid.Row="2"/>
 
     </Grid>
 </Window>

@@ -1,19 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
-using TheBestCarShop___Admin.IN_PROGRESS;
-using TheBestCarShop___Admin.Windows;
+﻿using System.Windows;
 using TheBestCarShop___Admin.Class_files.Basics;
+using TheBestCarShop___Admin.Windows;
 
 namespace TheBestCarShop___Admin.IN_PROGRESS
 {
@@ -35,7 +22,6 @@ namespace TheBestCarShop___Admin.IN_PROGRESS
         //PRODUCTS BUTTONS
         private void productsButton_Click(object sender, RoutedEventArgs e)
         {
-            //TODO
             ProductListWindow plw = new ProductListWindow();
             this.Hide();
             plw.ShowDialog();
@@ -72,8 +58,12 @@ namespace TheBestCarShop___Admin.IN_PROGRESS
 
         private void newAdminButton_Click(object sender, RoutedEventArgs e)
         {
-            //add a new administrator
             //TODO
+            AddAdminWindow aaw = new AddAdminWindow(_ACCOUNTOWNER);
+            this.Hide();
+            aaw.ShowDialog();
+            this.Show();
+            
         }
 
         private void clientStatsButton_Click(object sender, RoutedEventArgs e)
