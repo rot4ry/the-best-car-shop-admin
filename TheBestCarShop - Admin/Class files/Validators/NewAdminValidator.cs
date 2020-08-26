@@ -1,9 +1,4 @@
 ﻿using FluentValidation;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TheBestCarShop___Admin.Class_files.Views;
 
 namespace TheBestCarShop___Admin.Class_files.Validators
@@ -33,12 +28,14 @@ namespace TheBestCarShop___Admin.Class_files.Validators
                 .NotEmpty()
                 .WithMessage("Email must not be empty.")
                 .EmailAddress()
-                .WithMessage("Email's format must be: username@domain");
+                .WithMessage("Email's format must be: username@domain.");
 
             RuleFor(x => x.PhoneNumber)
                 .NotEmpty()
                 .WithMessage("Phone number must not be empty.")
-                .Matches("/d/d/d/d/d/d/d/d/d")
+                .MinimumLength(9)
+                .WithMessage("Phone number must be 9 digits long.")
+                .Matches(@"\d\d\d\d\d\d\d\d\d")
                 .WithMessage("Phone number must only consist of digits.");
 
 
@@ -64,7 +61,7 @@ namespace TheBestCarShop___Admin.Class_files.Validators
             RuleFor(x => x.BuildingNumber)
                 .NotEmpty()
                 .WithMessage("Building number must not be empty.")
-                .Matches("/d*")
+                .Matches(@"\d+")
                 .WithMessage("Building number must consist of at least one digit.");
 
 
@@ -75,9 +72,8 @@ namespace TheBestCarShop___Admin.Class_files.Validators
 
             RuleFor(x => x.Password)
                 .NotEmpty()
-                .WithMessage("Password must not be empty.")
-                .MinimumLength(8)
-                .WithMessage("Password must be at least 8 characters long."); //must contain at least 1 number, etc.?                 
+                .WithMessage("Password must not be empty, please generate it using a button..");
+                
         }
     }
 }

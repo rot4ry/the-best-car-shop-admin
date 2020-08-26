@@ -32,6 +32,15 @@ namespace TheBestCarShop___Admin.IN_PROGRESS
         {
             this.Close();
         }
+        private void generateUsernameButton_Click(object sender, RoutedEventArgs e)
+        {
+            usernameTB.Text = "testLoginu";
+        }
+        private void generatePasswordButton_Click(object sender, RoutedEventArgs e)
+        {
+            passwordTB.Text = "testHasla";
+        }
+
 
         private void addAdminButton_Click(object sender, RoutedEventArgs e)
         {
