@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using TheBestCarShop___Admin.Class_files.Basics;
 
 namespace TheBestCarShop___Admin.IN_PROGRESS
 {
@@ -31,14 +32,18 @@ namespace TheBestCarShop___Admin.IN_PROGRESS
         //BuildingNumber,
         //Username,
         //Password,
+        private Client _ADMIN;
 
-
-        //clientView -> validator -> command ->
-        //todo: viewmodel
-
-        public AddAdminWindow()
+        public AddAdminWindow(Client admin)
         {
             InitializeComponent();
+            _ADMIN = admin as Client;
+            //confirm adding a new administrator with a username and a password
+        }
+
+        private void closeButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }
