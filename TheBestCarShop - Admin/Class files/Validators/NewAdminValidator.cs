@@ -33,10 +33,10 @@ namespace TheBestCarShop___Admin.Class_files.Validators
             RuleFor(x => x.PhoneNumber)
                 .NotEmpty()
                 .WithMessage("Phone number must not be empty.")
-                .MinimumLength(9)
-                .WithMessage("Phone number must be 9 digits long.")
                 .Matches(@"\d\d\d\d\d\d\d\d\d")
-                .WithMessage("Phone number must only consist of digits.");
+                .WithMessage("Phone number must only consist of digits.")
+                .MinimumLength(9)
+                .WithMessage("Phone number must be 9 digits long.");
 
 
             //Address

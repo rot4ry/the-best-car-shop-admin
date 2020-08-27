@@ -58,12 +58,10 @@ namespace TheBestCarShop___Admin.IN_PROGRESS
 
         private void newAdminButton_Click(object sender, RoutedEventArgs e)
         {
-            //TODO
-            AddAdminWindow aaw = new AddAdminWindow(_ACCOUNTOWNER);
+            AddAdminWindow aaw = new AddAdminWindow();
             this.Hide();
             aaw.ShowDialog();
-            this.Show();
-            
+            this.Show();    
         }
 
         private void clientStatsButton_Click(object sender, RoutedEventArgs e)

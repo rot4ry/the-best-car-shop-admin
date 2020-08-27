@@ -4,20 +4,18 @@ using System.Text;
 using System.Windows;
 using TheBestCarShop___Admin.Class_files.Basics;
 
-namespace TheBestCarShop___Admin.IN_PROGRESS
+namespace TheBestCarShop___Admin.Windows
 {
     /// <summary>
     /// Interaction logic for AddAdminWindow.xaml
     /// </summary>
     public partial class AddAdminWindow : Window
     {
-        private Client _ADMIN;
         private DatabaseHandler databaseHandler = new DatabaseHandler();
 
-        public AddAdminWindow(Client admin)
+        public AddAdminWindow()
         {
             InitializeComponent();
-            _ADMIN = admin as Client;
         }
 
         private void closeButton_Click(object sender, RoutedEventArgs e)
@@ -74,7 +72,6 @@ namespace TheBestCarShop___Admin.IN_PROGRESS
         private void addAdminButton_Click(object sender, RoutedEventArgs e)
         {
             addAdminButton.IsEnabled = false;
-            //open a window for confirmation -> username and password
             
             int result = databaseHandler.AddAdmin(new Client
                 {
