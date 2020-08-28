@@ -62,15 +62,15 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Class files\Basics\ProductStatistic.cs" />
-    <Compile Include="Class files\Commands\AddNewAdminCommand.cs" />
-    <Compile Include="Class files\Commands\ShowClientDetailsCommand.cs" />
-    <Compile Include="Class files\Viewmodels\ClientInListViewmodel.cs" />
-    <Compile Include="Class files\Commands\ProductViewCommand.cs" />
-    <Compile Include="Class files\Commands\ShowProductDetailsCommand.cs" />
+    <Compile Include="Class files\Commands\AddNewAdmin_Command.cs" />
+    <Compile Include="Class files\Commands\ShowClientDetails_Command.cs" />
+    <Compile Include="Class files\Viewmodels\ClientInList_Viewmodel.cs" />
+    <Compile Include="Class files\Commands\ProductView_Command.cs" />
+    <Compile Include="Class files\Commands\ShowProductDetails_Command.cs" />
     <Compile Include="Class files\Validators\NewAdminValidator.cs" />
-    <Compile Include="Class files\Viewmodels\AddAdminViewmodel.cs" />
-    <Compile Include="Class files\Viewmodels\ProductInListViewmodel.cs" />
-    <Compile Include="Class files\Views\NewAdminView.cs" />
+    <Compile Include="Class files\Viewmodels\AddAdmin_Viewmodel.cs" />
+    <Compile Include="Class files\Viewmodels\ProductInList_Viewmodel.cs" />
+    <Compile Include="Class files\Views\NewAdmin_View.cs" />
     <Compile Include="Windows\AddAdminWindow.xaml.cs">
       <DependentUpon>AddAdminWindow.xaml</DependentUpon>
     </Compile>
@@ -81,8 +81,8 @@
       <DependentUpon>AddProductWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Class files\Validators\NewProductValidator.cs" />
-    <Compile Include="Class files\Viewmodels\AddProductViewmodel.cs" />
-    <Compile Include="Class files\Views\NewProductView.cs" />
+    <Compile Include="Class files\Viewmodels\AddProduct_Viewmodel.cs" />
+    <Compile Include="Class files\Views\NewProduct_View.cs" />
     <Compile Include="Windows\AccountSettingsWindow.xaml.cs">
       <DependentUpon>AccountSettingsWindow.xaml</DependentUpon>
     </Compile>

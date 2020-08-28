@@ -1,13 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
+using TheBestCarShop___Admin.Class_files.Basics;
 
 namespace TheBestCarShop___Admin.Class_files.Commands
 {
-    public class ShowClientDetailsCommand : ICommand
+    public class ShowClientDetails_Command : ICommand
     {
         public event EventHandler CanExecuteChanged
         {
@@ -27,8 +24,7 @@ namespace TheBestCarShop___Admin.Class_files.Commands
 
         public void Execute(object parameter)
         {
-            int clientID = (int)parameter;
-            Console.WriteLine(clientID);
+            Client requestedClient = parameter as Client;
             //open client details window here using the id
         }
     }

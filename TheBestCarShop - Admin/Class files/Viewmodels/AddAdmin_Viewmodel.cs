@@ -9,15 +9,15 @@ using TheBestCarShop___Admin.Class_files.Views;
 
 namespace TheBestCarShop___Admin.Class_files.Viewmodels
 {
-    public class AddAdminViewmodel
+    public class AddAdmin_Viewmodel
     {
-        public NewAdminView AdminModel { get; set; }
+        public NewAdmin_View AdminModel { get; set; }
         public ICommand AdminValidationCommand { get; set; }
 
-        public AddAdminViewmodel()
+        public AddAdmin_Viewmodel()
         {
-            AdminModel = new NewAdminView();
-            AdminValidationCommand = new AddNewAdminCommand();
+            AdminModel = new NewAdmin_View();
+            AdminValidationCommand = new AddNewAdmin_Command();
         }
     }
 }

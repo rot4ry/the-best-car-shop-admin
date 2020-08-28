@@ -6,7 +6,7 @@ using TheBestCarShop___Admin.Class_files.Views;
 
 namespace TheBestCarShop___Admin.Class_files.Commands
 {
-    public class ProductViewCommand : ICommand
+    public class ProductView_Command : ICommand
     {
         private NewProductValidator _PRODUCTVALIDATOR = new NewProductValidator();
 
@@ -18,7 +18,7 @@ namespace TheBestCarShop___Admin.Class_files.Commands
 
         public bool CanExecute(object parameter)
         {
-            NewProductView productView = parameter as NewProductView;
+            NewProduct_View productView = parameter as NewProduct_View;
             if (productView is null)
             {
                 return false;

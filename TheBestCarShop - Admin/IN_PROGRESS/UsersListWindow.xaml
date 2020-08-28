@@ -118,15 +118,11 @@
                 FontSize="14"
                 FontWeight="Regular"
                 Foreground="Orange"/>
-        
-        <ListView x:Name="searchResultsLB" 
-                  HorizontalAlignment="Left" 
-                  Height="433" 
-                  Margin="10,10,0,0" 
+
+        <ListView x:Name="searchResultsLV" 
+                  Margin="10" 
                   Grid.Row="1" 
-                  VerticalAlignment="Top" 
-                  HorizontalContentAlignment="Center"
-                  Width="1094">
+                  HorizontalContentAlignment="Center">
 
             <ListView.View>
                 <GridView>
@@ -147,16 +143,17 @@
                                     DisplayMemberBinding="{Binding Client.Email, UpdateSourceTrigger=PropertyChanged}"/>
 
                     <GridViewColumn Header="Phone number"
-                                    Width="250"
+                                    Width="150"
                                     DisplayMemberBinding="{Binding Client.PhoneNumber, UpdateSourceTrigger=PropertyChanged}"/>
 
-                    <GridViewColumn>
+                    <GridViewColumn Header="See more"
+                                    Width="165">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
 
                                 <Button x:Name="usersDetailsButton"
-                                        Content="View user's details"
-                                        Width="100"
+                                        Content=" View user's details "
+                                        Width="150"
                                         Background="DarkGray"
                                         Foreground="OrangeRed"
                                         FontSize="12"
@@ -164,7 +161,7 @@
                                         BorderBrush="OrangeRed"
                                         Command="{Binding Command}"
                                         CommandParameter="{Binding Client.ClientID}"/>
-                                
+
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
@@ -172,8 +169,8 @@
 
                 </GridView>
             </ListView.View>
-            
-            
+
+
         </ListView>
 
 

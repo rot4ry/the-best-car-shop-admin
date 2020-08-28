@@ -14,7 +14,7 @@ namespace TheBestCarShop___Admin.Windows
     {
         private DatabaseHandler databaseHandler = new DatabaseHandler();
         private List<Product> _ProductList_BASIC_SRC = new List<Product>();
-        private List<ProductInListViewmodel> Products_SRC = new List<ProductInListViewmodel>();
+        private List<ProductInList_Viewmodel> Products_SRC = new List<ProductInList_Viewmodel>();
         //private ObservableCollection<ProductInListViewmodel> ProductsCollection = new ObservableCollection<ProductInListViewmodel>(); BETTER, not working at all though
         
         private List<string> SearchConditionsList = new List<string>
@@ -38,7 +38,7 @@ namespace TheBestCarShop___Admin.Windows
             
             foreach(Product product in _ProductList_BASIC_SRC)
             {
-                ProductInListViewmodel prodModel = new ProductInListViewmodel();
+                ProductInList_Viewmodel prodModel = new ProductInList_Viewmodel();
                 prodModel.Product = product;
                 
                 Products_SRC.Add(prodModel);

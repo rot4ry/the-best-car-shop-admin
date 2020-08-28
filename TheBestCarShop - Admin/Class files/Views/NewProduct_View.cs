@@ -2,7 +2,7 @@
 
 namespace TheBestCarShop___Admin.Class_files.Views
 {
-    public class NewProductView : INotifyPropertyChanged
+    public class NewProduct_View : INotifyPropertyChanged
     {
         /*
          * This class is a modified version of Product class.

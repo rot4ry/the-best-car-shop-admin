@@ -1,26 +1,32 @@
 ﻿using System.Windows;
-using System.Windows.Documents;
 using System.Collections.Generic;
 using TheBestCarShop___Admin.Class_files.Basics;
 using TheBestCarShop___Admin.Class_files.Viewmodels;
-using System;
 
 namespace TheBestCarShop___Admin.IN_PROGRESS
 {
     /// <summary>
-    /// Interaction logic for ClientListWindow.xaml
+    /// Interaction logic for UsersListWindow.xaml
     /// </summary>
     public partial class UsersListWindow : Window
     {
         private DatabaseHandler databaseHandler = new DatabaseHandler();
 
         private List<Client> clientList = new List<Client>();
-        private List<ClientInListViewmodel> _ClientList_SRC = new List<ClientInListViewmodel>();
-        
+        private List<ClientInList_Viewmodel> _ClientList_SRC = new List<ClientInList_Viewmodel>();
+
+        private List<string> _SearchConditions_SRC = new List<string>()
+        {
+            "None", "Only admins", "Only clients",
+            "ID", "First name", "Second name", "Email address", "Phone number"
+        };
+
+
         public UsersListWindow()
         {
             InitializeComponent();
             clientList = databaseHandler.GetClientsList();
+            conditionsCB.ItemsSource = _SearchConditions_SRC;
             ManageSearchData();
         }
 
@@ -30,17 +36,26 @@ namespace TheBestCarShop___Admin.IN_PROGRESS
 
             foreach(Client client in clientList)
             {
-                ClientInListViewmodel clientModel = new ClientInListViewmodel();
+                ClientInList_Viewmodel clientModel = new ClientInList_Viewmodel();
                 clientModel.Client = client;
                 _ClientList_SRC.Add(clientModel);
             }
 
-            searchResultsLB.ItemsSource = _ClientList_SRC;
+            searchResultsLV.ItemsSource = _ClientList_SRC;
         }
 
         private void conditionsCB_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
-
+            if( conditionsCB.SelectedIndex == 0 ||
+                conditionsCB.SelectedIndex == 1 ||
+                conditionsCB.SelectedIndex == 2  )
+            {
+                conditionStringTB.IsEnabled = false;
+            }
+            else
+            {
+                conditionStringTB.IsEnabled = true;
+            }
         }
 
         private void closeButton_Click(object sender, RoutedEventArgs e)
@@ -49,7 +64,9 @@ namespace TheBestCarShop___Admin.IN_PROGRESS
         }
         private void searchButton_Click(object sender, RoutedEventArgs e)
         {
-            System.Console.WriteLine("Searching");
+            //"None","Only admins", "Only clients"
+            //"ID", "First name", "Second name", "Email address", "Phone number",
+            //
         }
     }
 }

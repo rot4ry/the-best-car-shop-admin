@@ -13,7 +13,7 @@
         WindowStartupLocation="CenterScreen">
 
     <Window.DataContext>
-        <viewmodels:AddAdminViewmodel></viewmodels:AddAdminViewmodel>
+        <viewmodels:AddAdmin_Viewmodel></viewmodels:AddAdmin_Viewmodel>
     </Window.DataContext>
 
 

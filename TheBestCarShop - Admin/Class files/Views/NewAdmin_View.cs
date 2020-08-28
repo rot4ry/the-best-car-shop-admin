@@ -2,7 +2,7 @@
 
 namespace TheBestCarShop___Admin.Class_files.Views
 {
-    public class NewAdminView : INotifyPropertyChanged
+    public class NewAdmin_View : INotifyPropertyChanged
     {
         /*
          * This is a modified version of Client class

@@ -4,7 +4,7 @@ using TheBestCarShop___Admin.Windows;
 
 namespace TheBestCarShop___Admin.Class_files.Commands
 {
-    public class ShowProductDetailsCommand : ICommand
+    public class ShowProductDetails_Command : ICommand
     {
         public event EventHandler CanExecuteChanged
         {

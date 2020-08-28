@@ -3,7 +3,7 @@ using TheBestCarShop___Admin.Class_files.Views;
 
 namespace TheBestCarShop___Admin.Class_files.Validators
 {
-    public class NewAdminValidator : AbstractValidator<NewAdminView>
+    public class NewAdminValidator : AbstractValidator<NewAdmin_View>
     {
         public NewAdminValidator()
         {

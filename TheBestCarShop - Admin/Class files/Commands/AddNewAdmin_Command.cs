@@ -6,7 +6,7 @@ using TheBestCarShop___Admin.Class_files.Views;
 
 namespace TheBestCarShop___Admin.Class_files.Commands
 {
-    public class AddNewAdminCommand : ICommand
+    public class AddNewAdmin_Command : ICommand
     {
         public event EventHandler CanExecuteChanged
         {
@@ -17,7 +17,7 @@ namespace TheBestCarShop___Admin.Class_files.Commands
 
         public bool CanExecute(object parameter)
         {
-            NewAdminView newAdminView = parameter as NewAdminView;
+            NewAdmin_View newAdminView = parameter as NewAdmin_View;
             if(newAdminView is null)
             {
                 return false;
