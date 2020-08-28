@@ -36,5 +36,5 @@ C:\Users\rot4ry\Desktop\Programowanie_IV_Projekt_2\TheBestCarShop - Admin\obj\De
 C:\Users\rot4ry\Desktop\Programowanie_IV_Projekt_2\TheBestCarShop - Admin\obj\Debug\TheBestCarShop - Admin.csproj.CopyComplete
 C:\Users\rot4ry\Desktop\Programowanie_IV_Projekt_2\TheBestCarShop - Admin\obj\Debug\TheBestCarShop - Admin.exe
 C:\Users\rot4ry\Desktop\Programowanie_IV_Projekt_2\TheBestCarShop - Admin\obj\Debug\TheBestCarShop - Admin.pdb
-C:\Users\rot4ry\Desktop\Programowanie_IV_Projekt_2\TheBestCarShop - Admin\obj\Debug\IN_PROGRESS\ClientListWindow.g.cs
-C:\Users\rot4ry\Desktop\Programowanie_IV_Projekt_2\TheBestCarShop - Admin\obj\Debug\IN_PROGRESS\ClientListWindow.baml
+C:\Users\rot4ry\Desktop\Programowanie_IV_Projekt_2\TheBestCarShop - Admin\obj\Debug\IN_PROGRESS\UsersListWindow.g.cs
+C:\Users\rot4ry\Desktop\Programowanie_IV_Projekt_2\TheBestCarShop - Admin\obj\Debug\IN_PROGRESS\UsersListWindow.baml

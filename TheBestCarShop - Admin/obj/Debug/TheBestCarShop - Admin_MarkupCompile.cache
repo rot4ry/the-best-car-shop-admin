@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\rot4ry\Desktop\Programowanie_IV_Projekt_2\TheBestCarShop - Admin\App.xaml
-11-86943010
+11-811955345
 
-29-438054739
+29-47817633
 15-1450650812
-Windows\AddAdminWindow.xaml;Windows\ProductDetailsWindow.xaml;Windows\AddProductWindow.xaml;TODO\SettingsWindow.xaml;Windows\StartingWindow.xaml;Windows\AccountSettingsWindow.xaml;IN_PROGRESS\ClientListWindow.xaml;TODO\ClientStatsWindow.xaml;IN_PROGRESS\LoggedInWindow.xaml;Windows\ProductListWindow.xaml;TODO\ProductStatsWindow.xaml;
+Windows\AddAdminWindow.xaml;Windows\ProductDetailsWindow.xaml;Windows\AddProductWindow.xaml;TODO\SettingsWindow.xaml;Windows\StartingWindow.xaml;Windows\AccountSettingsWindow.xaml;IN_PROGRESS\UsersListWindow.xaml;TODO\ClientStatsWindow.xaml;IN_PROGRESS\LoggedInWindow.xaml;Windows\ProductListWindow.xaml;TODO\ProductStatsWindow.xaml;
 
 False
 

@@ -44,16 +44,12 @@ namespace TheBestCarShop___Admin.IN_PROGRESS
 
 
         //USERS BUTTONS
-        private void viewAdminsButton_Click(object sender, RoutedEventArgs e)
-        {
-            //show administrators list
-            //TODO
-        }
-
         private void viewUsersButton_Click(object sender, RoutedEventArgs e)
         {
-            //show all normal users
-            //TODO
+            UsersListWindow ulw = new UsersListWindow();
+            this.Hide();
+            ulw.ShowDialog();
+            this.Show();
         }
 
         private void newAdminButton_Click(object sender, RoutedEventArgs e)
@@ -66,8 +62,8 @@ namespace TheBestCarShop___Admin.IN_PROGRESS
 
         private void clientStatsButton_Click(object sender, RoutedEventArgs e)
         {
-            //show clients statistics
             //TODO
+            //show clients statistics
         }
 
 
@@ -87,8 +83,8 @@ namespace TheBestCarShop___Admin.IN_PROGRESS
 
         private void settingsButton_Click(object sender, RoutedEventArgs e)
         {
-            //show settings, change theme with resources?
             //TODO
+            //show settings, change theme with resources
         }
 
         private void logoutButton_Click(object sender, RoutedEventArgs e)

@@ -38,7 +38,7 @@
                Height="99" 
                VerticalAlignment="Top" 
                Grid.RowSpan="2"/>
-        
+
         <Rectangle x:Name="topRectangle"
                    Grid.Column="1" 
                    Fill="DimGray" 
@@ -90,6 +90,7 @@
                 BorderBrush="OrangeRed"
                 FontSize="14"
                 FontWeight="Bold" 
+                IsEnabled="false"
                 Click="settingsButton_Click"/>
 
         <Button x:Name="logoutButton" 
@@ -129,23 +130,8 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
-                <Button x:Name="viewAdminsButton" 
-                        Content="View admins" 
-                        Margin="10,10,0,10" 
-                        HorizontalContentAlignment="Center"
-                        VerticalContentAlignment="Center"
-                        Background="DarkGray"
-                        Foreground="OrangeRed"
-                        BorderBrush="OrangeRed"
-                        BorderThickness="2"
-                        FontSize="14"
-                        FontWeight="Bold" 
-                        HorizontalAlignment="Left" 
-                        Width="191" 
-                        Click="viewAdminsButton_Click"/>
-
                 <Button x:Name="viewUsersButton" 
-                        Content="View clients" 
+                        Content="View users" 
                         Margin="0,10,10,10" 
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
@@ -157,7 +143,7 @@
                         FontWeight="Bold" 
                         RenderTransformOrigin="0.717,0.507" 
                         HorizontalAlignment="Right" 
-                        Width="191" 
+                        Width="398" 
                         Click="viewUsersButton_Click"/>
 
                 <Button x:Name="newAdminButton" 
@@ -186,6 +172,7 @@
                         FontSize="14"
                         FontWeight="Bold" 
                         Grid.Row="2" 
+                        IsEnabled="false"
                         Click="clientStatsButton_Click"/>
 
             </Grid>

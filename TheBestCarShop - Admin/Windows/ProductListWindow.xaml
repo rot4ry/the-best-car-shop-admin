@@ -42,7 +42,7 @@
                 Click="closeButton_Click"/>
 
         <Label x:Name="welcomeLabel" 
-               Content="Product list" 
+               Content="Products list" 
                Margin="10,-2,175,0"
                HorizontalContentAlignment="Left"
                VerticalContentAlignment="Center"
@@ -146,7 +146,9 @@
                 Foreground="OrangeRed"
                 FontSize="12"
                 FontWeight="Bold"
-                BorderBrush="OrangeRed" HorizontalAlignment="Right" Width="149"/>
+                BorderBrush="OrangeRed" 
+                HorizontalAlignment="Right" 
+                Width="149"/>
 
         <Label x:Name="infoLabel" 
                 Content="Enter your search conditions &#xD;&#xA;to find the desired product" 
