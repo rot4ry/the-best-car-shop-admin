@@ -11,5 +11,19 @@ namespace TheBestCarShop___Admin.IN_PROGRESS
         {
             InitializeComponent();
         }
+
+        private void conditionsCB_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void closeButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+        private void searchButton_Click(object sender, RoutedEventArgs e)
+        {
+            System.Console.WriteLine("Searching");
+        }
     }
 }

@@ -2,7 +2,7 @@
 using TheBestCarShop___Admin.Class_files.Basics;
 using TheBestCarShop___Admin.IN_PROGRESS;
 
-namespace TheBestCarShop___Admin
+namespace TheBestCarShop___Admin.Windows
 {
     /// <summary>
     /// Interaction logic for StartingWindow.xaml

@@ -5,8 +5,158 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TheBestCarShop___Admin"
         mc:Ignorable="d"
-        Title="ClientListWindow" Height="450" Width="800">
+        Title="SG: Users list"
+        Height="622.5" 
+        Width="1119.5"
+        Background="Gray" 
+        ResizeMode="CanMinimize" 
+        WindowStartupLocation="CenterScreen">
+
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="140*"/>
+            <RowDefinition Height="453*"/>
+        </Grid.RowDefinitions>
+
+        <!--COSMETICS-->
+        <Rectangle x:Name="middleRectangle"  
+                    Fill="DarkSlateGray" 
+                    Stroke="DarkSlateGray" 
+                    Margin="0,56,0,0"/>
+
+        <Rectangle x:Name="topRectangle" 
+                   Fill="DimGray" 
+                   Margin="0,-2,0,0" 
+                   Stroke="DimGray" 
+                   Height="58" 
+                   VerticalAlignment="Top"/>
+
+        <Button x:Name="closeButton"
+                Content="Close" 
+                HorizontalAlignment="Right" 
+                Margin="0,10,10,0" 
+                VerticalAlignment="Top" 
+                Width="149" Height="34"
+                Background="DarkGray"
+                Foreground="OrangeRed"
+                FontSize="14"
+                FontWeight="Bold"
+                BorderBrush="OrangeRed"
+                BorderThickness="2" 
+                Click="closeButton_Click"/>
+
+        <Label x:Name="welcomeLabel" 
+               Content="Users list" 
+               Margin="10,-2,719,0"
+               HorizontalContentAlignment="Left"
+               VerticalContentAlignment="Center"
+               FontSize="28"
+               FontWeight="Light"
+               Foreground="Orange" 
+               Height="58" 
+               VerticalAlignment="Top"/>
+
+        <!--SEARCH SECTION-->
+        <ComboBox x:Name="conditionsCB" 
+                  Margin="10,94,0,0" 
+                  VerticalAlignment="Top" 
+                  Height="33" 
+                  HorizontalAlignment="Left" 
+                  Width="407" 
+                  SelectedItem="None"
+                  SelectionChanged="conditionsCB_SelectionChanged"/>
+
+        <TextBox x:Name="conditionStringTB" 
+                 VerticalContentAlignment="Center"
+                 HorizontalContentAlignment="Center"
+                 Height="33" 
+                 Margin="484,94,225,0" 
+                 TextWrapping="Wrap" 
+                 TextAlignment="Justify"
+                 Text="" 
+                 VerticalAlignment="Top"
+                 BorderBrush="DarkCyan"
+                 Background="DarkCyan"
+                 Foreground="Azure"
+                 FontSize="16"
+                 FontWeight="Regular" />
+
+        <Button x:Name="searchButton"
+                Content="Search" 
+                Margin="0,94,10,0" 
+                VerticalAlignment="Top" 
+                Click="searchButton_Click" 
+                Height="33"
+                Background="DarkGray"
+                Foreground="OrangeRed"
+                FontSize="12"
+                FontWeight="Bold"
+                BorderBrush="OrangeRed" 
+                HorizontalAlignment="Right" 
+                Width="149"/>
+
+        <Label x:Name="label1" 
+                Content="Pick a search condition " 
+                HorizontalAlignment="Left" 
+                Margin="10,56,0,0" 
+                VerticalAlignment="Top" 
+                Width="407"
+                Height="35"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center"
+                FontSize="14"
+                FontWeight="Regular"
+                Foreground="Orange"/>
+
+        <Label x:Name="label2"
+                Content="Enter a search phrase, e.g. part of user's name, address, etc..." 
+                Margin="484,56,225,0" 
+                VerticalAlignment="Top"
+                Height="35"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center"
+                FontSize="14"
+                FontWeight="Regular"
+                Foreground="Orange"/>
         
+        <ListView x:Name="searchResultsLB" 
+                  HorizontalAlignment="Left" 
+                  Height="433" 
+                  Margin="10,10,0,0" 
+                  Grid.Row="1" 
+                  VerticalAlignment="Top" 
+                  Width="1094">
+
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="User's ID"
+                                    DisplayMemberBinding="{Binding ClientID, UpdateSourceTrigger=PropertyChanged}"/>
+
+                    <GridViewColumn>
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+
+                                <Button x:Name="usersDetailsButton"
+                                        Content="View user's details"
+                                        Width="100"
+                                        Background="DarkGray"
+                                        Foreground="OrangeRed"
+                                        FontSize="12"
+                                        FontWeight="Bold"
+                                        BorderBrush="OrangeRed"/>
+                                <!--Command & command parameter-->
+                                
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+
+
+                </GridView>
+            </ListView.View>
+            
+            
+        </ListView>
+
+
     </Grid>
 </Window>
