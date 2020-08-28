@@ -390,6 +390,24 @@ namespace TheBestCarShop___Admin.Class_files.Basics
             }
         }
 
+        public List<Client> GetClientsList()
+        {
+            List<Client> clients = new List<Client>();
+            string select = "SELECT * FROM Clients ";
+
+            try
+            {
+                SqlConnection connection = new SqlConnection(this.connectionString);
+                clients = connection.Query<Client>(select).ToList();
+            }
+            catch(Exception DatabaseHandlerException)
+            {
+                Console.WriteLine(DatabaseHandlerException.Message);
+            }
+
+            return clients;
+        }
+
         public int UpdateClientField(string columnName, string value, string username, int userID)
         {
             int affected = 0;
@@ -467,8 +485,6 @@ namespace TheBestCarShop___Admin.Class_files.Basics
 
             return productStatistic;
         }
-
-
     }
 }
 

@@ -4,15 +4,15 @@ using TheBestCarShop___Admin.Class_files.Commands;
 
 namespace TheBestCarShop___Admin.Class_files.Viewmodels
 {
-    public class ProductInListViewmodel
+    public class ClientInListViewmodel
     {
-        public Product Product { get; set; }
+        public Client Client { get; set; }
         public ICommand Command { get; set; }
 
-        public ProductInListViewmodel()
+        public ClientInListViewmodel()
         {
-            Product = new Product();
-            Command = new ShowProductDetailsCommand();
-        } 
+            Client = new Client();
+            Command = new ShowClientDetailsCommand();
+        }
     }
 }

@@ -63,6 +63,8 @@
     </ApplicationDefinition>
     <Compile Include="Class files\Basics\ProductStatistic.cs" />
     <Compile Include="Class files\Commands\AddNewAdminCommand.cs" />
+    <Compile Include="Class files\Commands\ShowClientDetailsCommand.cs" />
+    <Compile Include="Class files\Viewmodels\ClientInListViewmodel.cs" />
     <Compile Include="Class files\Commands\ProductViewCommand.cs" />
     <Compile Include="Class files\Commands\ShowProductDetailsCommand.cs" />
     <Compile Include="Class files\Validators\NewAdminValidator.cs" />

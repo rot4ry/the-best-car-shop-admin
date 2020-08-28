@@ -1,9 +1,5 @@
 ﻿using FluentValidation.Results;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 using TheBestCarShop___Admin.Class_files.Validators;
 using TheBestCarShop___Admin.Class_files.Views;
@@ -32,9 +28,6 @@ namespace TheBestCarShop___Admin.Class_files.Commands
             return output.IsValid;
         }
 
-        public void Execute(object parameter)
-        {
-            //add a new admin to the database
-        }
+        public void Execute(object parameter) { }
     }
 }

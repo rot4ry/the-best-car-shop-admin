@@ -129,9 +129,18 @@
 
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="User's ID"
+                    <GridViewColumn Header="ID"
                                     DisplayMemberBinding="{Binding ClientID, UpdateSourceTrigger=PropertyChanged}"/>
 
+                    <GridViewColumn Header="First name"
+                                    DisplayMemberBinding="{Binding FirstName, UpdateSourceTrigger=PropertyChanged}"/>
+
+                    <GridViewColumn Header="Second name"
+                                    DisplayMemberBinding="{Binding SecondName, UpdateSourceTrigger=PropertyChanged}"/>
+
+                    <GridViewColumn Header="Email address"
+                                    DisplayMemberBinding="{Binding Email, UpdateSourceTrigger=PropertyChanged}"/>
+                    
                     <GridViewColumn>
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
