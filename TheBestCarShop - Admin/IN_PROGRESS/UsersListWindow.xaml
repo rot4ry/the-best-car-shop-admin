@@ -125,22 +125,31 @@
                   Margin="10,10,0,0" 
                   Grid.Row="1" 
                   VerticalAlignment="Top" 
+                  HorizontalContentAlignment="Center"
                   Width="1094">
 
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="ID"
-                                    DisplayMemberBinding="{Binding ClientID, UpdateSourceTrigger=PropertyChanged}"/>
+                                    Width="50"
+                                    DisplayMemberBinding="{Binding Client.ClientID, UpdateSourceTrigger=PropertyChanged}"/>
 
                     <GridViewColumn Header="First name"
-                                    DisplayMemberBinding="{Binding FirstName, UpdateSourceTrigger=PropertyChanged}"/>
+                                    Width="200"
+                                    DisplayMemberBinding="{Binding Client.FirstName, UpdateSourceTrigger=PropertyChanged}"/>
 
                     <GridViewColumn Header="Second name"
-                                    DisplayMemberBinding="{Binding SecondName, UpdateSourceTrigger=PropertyChanged}"/>
+                                    Width="200"
+                                    DisplayMemberBinding="{Binding Client.SecondName, UpdateSourceTrigger=PropertyChanged}"/>
 
                     <GridViewColumn Header="Email address"
-                                    DisplayMemberBinding="{Binding Email, UpdateSourceTrigger=PropertyChanged}"/>
-                    
+                                    Width="250"
+                                    DisplayMemberBinding="{Binding Client.Email, UpdateSourceTrigger=PropertyChanged}"/>
+
+                    <GridViewColumn Header="Phone number"
+                                    Width="250"
+                                    DisplayMemberBinding="{Binding Client.PhoneNumber, UpdateSourceTrigger=PropertyChanged}"/>
+
                     <GridViewColumn>
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
@@ -152,8 +161,9 @@
                                         Foreground="OrangeRed"
                                         FontSize="12"
                                         FontWeight="Bold"
-                                        BorderBrush="OrangeRed"/>
-                                <!--Command & command parameter-->
+                                        BorderBrush="OrangeRed"
+                                        Command="{Binding Command}"
+                                        CommandParameter="{Binding Client.ClientID}"/>
                                 
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>

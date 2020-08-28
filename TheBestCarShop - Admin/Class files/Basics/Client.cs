@@ -4,19 +4,27 @@ namespace TheBestCarShop___Admin.Class_files.Basics
 {
     public class Client : INotifyPropertyChanged
     {
-        public int ClientID { get; set; }
+        public event PropertyChangedEventHandler PropertyChanged;
+        
 
-        public string Country { get; set; }
-        public string City { get; set; }
-        public string Street { get; set; }
-        public string Postcode { get; set; }
-        public string BuildingNumber { get; set; }
-        public string CompanyName { get; set; }
-        public int IsAdmin { get; set; }
+        private int clientID;
+        public int ClientID 
+        {
+            get 
+            { 
+                return clientID; 
+            }
+            set 
+            {
+                if (clientID != value)
+                {
+                    clientID = value;
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ClientID"));
+                }
+            }
+        }
 
-
-
-        //changable
+        //User data
         private string firstName;
         public string FirstName
         {
@@ -48,6 +56,24 @@ namespace TheBestCarShop___Admin.Class_files.Basics
                 {
                     secondName = value;
                     PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SecondName"));
+                }
+            }
+        }
+
+
+        private string companyName;
+        public string CompanyName
+        {
+            get
+            {
+                return companyName;
+            }
+            set
+            {
+                if (companyName != value)
+                {
+                    companyName = value;
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("CompanyName"));
                 }
             }
         }
@@ -88,6 +114,98 @@ namespace TheBestCarShop___Admin.Class_files.Basics
             }
         }
 
+        //Address data
+        private string country;
+        public string Country
+        {
+            get
+            {
+                return country;
+            }
+            set
+            {
+                if (country != value)
+                {
+                    country = value;
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Country"));
+                }
+            }
+        }
+
+
+        private string city;
+        public string City
+        {
+            get
+            {
+                return city;
+            }
+            set
+            {
+                if (city != value)
+                {
+                    city = value;
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("City"));
+                }
+            }
+        }
+
+
+        private string street;
+        public string Street
+        {
+            get
+            {
+                return street;
+            }
+            set
+            {
+                if (street != value)
+                {
+                    street = value;
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Street"));
+                }
+            }
+        }
+
+
+        private string postcode;
+        public string Postcode
+        {
+            get
+            {
+                return postcode;
+            }
+            set
+            {
+                if (postcode != value)
+                {
+                    postcode = value;
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Postcode"));
+                }
+            }
+        }
+
+
+        private string buildingNumber;
+        public string BuildingNumber
+        {
+            get
+            {
+                return buildingNumber;
+            }
+            set
+            {
+                if (buildingNumber != value)
+                {
+                    buildingNumber = value;
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("BuildingNumber"));
+                }
+            }
+        }
+
+
+        //Login data
         private string username;
         public string Username
         {
@@ -104,10 +222,41 @@ namespace TheBestCarShop___Admin.Class_files.Basics
                 }
             }
         }
-        //changable but not visible for the user
-        public string Password { get; set; }
 
-        public event PropertyChangedEventHandler PropertyChanged;
+
+        private string password;
+        public string Password
+        {
+            get
+            {
+                return password;
+            }
+            set
+            {
+                if (password != value)
+                {
+                    password = value;
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Password"));
+                }
+            }
+        }
+
+        private int isadmin;
+        public int IsAdmin
+        {
+            get
+            {
+                return isadmin;
+            }
+            set
+            {
+                if (isadmin != value)
+                {
+                    isadmin = value;
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("IsAdmin"));
+                }
+            }
+        }
 
         public Client()
         {
