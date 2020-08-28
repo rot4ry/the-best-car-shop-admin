@@ -36,7 +36,8 @@ C:\Users\rot4ry\Desktop\Programowanie_IV_Projekt_2\TheBestCarShop - Admin\obj\De
 C:\Users\rot4ry\Desktop\Programowanie_IV_Projekt_2\TheBestCarShop - Admin\obj\Debug\TheBestCarShop - Admin.csproj.CopyComplete
 C:\Users\rot4ry\Desktop\Programowanie_IV_Projekt_2\TheBestCarShop - Admin\obj\Debug\TheBestCarShop - Admin.exe
 C:\Users\rot4ry\Desktop\Programowanie_IV_Projekt_2\TheBestCarShop - Admin\obj\Debug\TheBestCarShop - Admin.pdb
-C:\Users\rot4ry\Desktop\Programowanie_IV_Projekt_2\TheBestCarShop - Admin\obj\Debug\IN_PROGRESS\ClientDetailsWindow.g.cs
-C:\Users\rot4ry\Desktop\Programowanie_IV_Projekt_2\TheBestCarShop - Admin\obj\Debug\IN_PROGRESS\ClientDetailsWindow.baml
 C:\Users\rot4ry\Desktop\Programowanie_IV_Projekt_2\TheBestCarShop - Admin\obj\Debug\Windows\UsersListWindow.baml
 C:\Users\rot4ry\Desktop\Programowanie_IV_Projekt_2\TheBestCarShop - Admin\obj\Debug\Windows\UsersListWindow.g.cs
+C:\Users\rot4ry\Desktop\Programowanie_IV_Projekt_2\TheBestCarShop - Admin\obj\Debug\TheBestCarShop - Admin.csprojAssemblyReference.cache
+C:\Users\rot4ry\Desktop\Programowanie_IV_Projekt_2\TheBestCarShop - Admin\obj\Debug\Windows\ClientDetailsWindow.baml
+C:\Users\rot4ry\Desktop\Programowanie_IV_Projekt_2\TheBestCarShop - Admin\obj\Debug\Windows\ClientDetailsWindow.g.cs

@@ -1,7 +1,7 @@
 ﻿using System.Windows;
 using TheBestCarShop___Admin.Class_files.Basics;
 
-namespace TheBestCarShop___Admin.IN_PROGRESS
+namespace TheBestCarShop___Admin.Windows
 {
     /// <summary>
     /// Interaction logic for ClientDetailsWindow.xaml
@@ -13,7 +13,7 @@ namespace TheBestCarShop___Admin.IN_PROGRESS
         {
             InitializeComponent();
             DisplayedUser = requestedClient;
-
+            
             userDetailsGrid.DataContext     = DisplayedUser;
             accountDetailsGrid.DataContext  = DisplayedUser;
             addressDetailsGrid.DataContext  = DisplayedUser;
@@ -22,6 +22,18 @@ namespace TheBestCarShop___Admin.IN_PROGRESS
         private void closeButton_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void accountDetailsGrid_DataContextChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+            if(DisplayedUser.IsAdmin == 1)
+            {
+                adminInfo.Text = "Yes";
+            }
+            else if(DisplayedUser.IsAdmin == 0)
+            {
+                adminInfo.Text = "No";
+            }
         }
     }
 }

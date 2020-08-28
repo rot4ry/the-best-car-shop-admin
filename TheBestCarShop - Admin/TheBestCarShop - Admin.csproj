@@ -71,7 +71,7 @@
     <Compile Include="Class files\Viewmodels\AddAdmin_Viewmodel.cs" />
     <Compile Include="Class files\Viewmodels\ProductInList_Viewmodel.cs" />
     <Compile Include="Class files\Views\NewAdmin_View.cs" />
-    <Compile Include="IN_PROGRESS\ClientDetailsWindow.xaml.cs">
+    <Compile Include="Windows\ClientDetailsWindow.xaml.cs">
       <DependentUpon>ClientDetailsWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\AddAdminWindow.xaml.cs">
@@ -104,7 +104,7 @@
     <Compile Include="TODO\ProductStatsWindow.xaml.cs">
       <DependentUpon>ProductStatsWindow.xaml</DependentUpon>
     </Compile>
-    <Page Include="IN_PROGRESS\ClientDetailsWindow.xaml">
+    <Page Include="Windows\ClientDetailsWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -16,8 +16,8 @@
             <RowDefinition Height="56*"/>
             <RowDefinition Height="437*"/>
         </Grid.RowDefinitions>
-        <!--COSMETICS-->
 
+        <!--COSMETICS-->
         <Rectangle x:Name="topRectangle" 
                    Fill="DimGray" 
                    Margin="0,-2,0,0" 

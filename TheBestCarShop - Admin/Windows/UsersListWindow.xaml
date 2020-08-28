@@ -159,7 +159,7 @@
                                         FontWeight="Bold"
                                         BorderBrush="OrangeRed"
                                         Command="{Binding Command}"
-                                        CommandParameter="{Binding Client.ClientID}"/>
+                                        CommandParameter="{Binding Client}"/>
 
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
