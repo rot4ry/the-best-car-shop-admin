@@ -407,7 +407,8 @@
                         FontWeight="Bold"
                         BorderBrush="OrangeRed"
                         BorderThickness="2" 
-                        Click="updateAvailabilityButton_Click" Height="31"/>
+                        Click="updateAvailabilityButton_Click" 
+                        Height="31"/>
 
             </Grid>
 

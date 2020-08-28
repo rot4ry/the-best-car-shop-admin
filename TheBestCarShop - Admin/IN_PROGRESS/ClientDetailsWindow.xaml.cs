@@ -8,9 +8,20 @@ namespace TheBestCarShop___Admin.IN_PROGRESS
     /// </summary>
     public partial class ClientDetailsWindow : Window
     {
+        private Client DisplayedUser = new Client();
         public ClientDetailsWindow(Client requestedClient)
         {
             InitializeComponent();
+            DisplayedUser = requestedClient;
+
+            userDetailsGrid.DataContext     = DisplayedUser;
+            accountDetailsGrid.DataContext  = DisplayedUser;
+            addressDetailsGrid.DataContext  = DisplayedUser;
+        }
+
+        private void closeButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }
