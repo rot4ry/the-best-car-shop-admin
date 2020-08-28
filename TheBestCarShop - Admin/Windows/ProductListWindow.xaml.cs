@@ -82,7 +82,7 @@ namespace TheBestCarShop___Admin.Windows
                     }
                     else
                     {
-                        MessageBox.Show("Something went wrong.", "Check whether the requested ID is a number.", MessageBoxButton.OK);
+                        MessageBox.Show("Check whether the requested ID is a number.", "Something went wrong.", MessageBoxButton.OK);
                     }
                     break;
 

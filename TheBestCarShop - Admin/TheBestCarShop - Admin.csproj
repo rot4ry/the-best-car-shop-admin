@@ -71,6 +71,9 @@
     <Compile Include="Class files\Viewmodels\AddAdmin_Viewmodel.cs" />
     <Compile Include="Class files\Viewmodels\ProductInList_Viewmodel.cs" />
     <Compile Include="Class files\Views\NewAdmin_View.cs" />
+    <Compile Include="IN_PROGRESS\ClientDetailsWindow.xaml.cs">
+      <DependentUpon>ClientDetailsWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\AddAdminWindow.xaml.cs">
       <DependentUpon>AddAdminWindow.xaml</DependentUpon>
     </Compile>
@@ -86,7 +89,7 @@
     <Compile Include="Windows\AccountSettingsWindow.xaml.cs">
       <DependentUpon>AccountSettingsWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="IN_PROGRESS\UsersListWindow.xaml.cs">
+    <Compile Include="Windows\UsersListWindow.xaml.cs">
       <DependentUpon>UsersListWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="TODO\ClientStatsWindow.xaml.cs">
@@ -101,6 +104,10 @@
     <Compile Include="TODO\ProductStatsWindow.xaml.cs">
       <DependentUpon>ProductStatsWindow.xaml</DependentUpon>
     </Compile>
+    <Page Include="IN_PROGRESS\ClientDetailsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\AddAdminWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -139,7 +146,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="IN_PROGRESS\UsersListWindow.xaml">
+    <Page Include="Windows\UsersListWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
