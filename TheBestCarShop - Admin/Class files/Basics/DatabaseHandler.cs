@@ -331,7 +331,8 @@ namespace TheBestCarShop___Admin.Class_files.Basics
         {
             string select = "SELECT * FROM Clients " +
                             "WHERE Username = @username " +
-                            "AND Password = @password ";
+                            "AND Password = @password " +
+                            "AND IsAdmin = 'true' ";
 
             Client requestedClient = new Client();
 
