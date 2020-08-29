@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "0m33O/wOFkAvhqf98NVOpYpRE0xPrP/XU11ZvYsLjjh29JyLmRLi/PwGFxdHuxAvxmHS/9ZkSZzYZQEt09LxLA==",
+  "dgSpecHash": "wWpMKn9LPUhVl1nPKouKLwFgG4my+5qSI2sW0Bpv3IVbaOY893ZTBvUBvF7DmCha8Cgs2xOSOFvtLoJY41PMTA==",
   "success": true,
   "projectFilePath": "C:\\Users\\rot4ry\\Desktop\\Programowanie_IV_Projekt_2\\Database_Builder\\Database_Builder.csproj",
   "expectedPackageFiles": [
@@ -96,8 +96,7 @@
     "C:\\Users\\rot4ry\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\rot4ry\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\rot4ry\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\rot4ry\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
-    "C:\\Users\\rot4ry\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
+    "C:\\Users\\rot4ry\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
   ],
   "logs": []
 }
