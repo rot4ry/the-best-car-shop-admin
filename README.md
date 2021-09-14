@@ -1,1 +1,1 @@
-Drugi projekt z programowania.
+Admin app for TheBestCarShop management.
